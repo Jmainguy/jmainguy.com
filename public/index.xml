@@ -6,10 +6,20 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2019 13:15:51 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 09:51:52 -0500</lastBuildDate>
     
 	<atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ugly Drum Smoker</title>
+      <link>https://jmainguy.com/posts/ugly-drum-smoker/</link>
+      <pubDate>Wed, 06 Nov 2019 09:51:52 -0500</pubDate>
+      
+      <guid>https://jmainguy.com/posts/ugly-drum-smoker/</guid>
+      <description>My old horizontal barrel grill was falling apart, so I set out to replace it. After looking at Big Green Egg and Kamodo Joe reviews they seemed awesome, but the price was crazy and I didn&amp;rsquo;t want to be out 2k if I knocked it over on accident. (its porcelain, its gonna shatter if tipped over.)
+I also enjoy DIY and spending $2,000 on a smoker seemed to be at odds with smoking.</description>
+    </item>
     
     <item>
       <title>How to setup travis-ci with goreleaser for automated binary golang releases</title>
