@@ -1,6 +1,6 @@
 ---
 title: Fuck Lenovo and their T540P
-type: post
+
 date: 2014-10-23T01:21:15+00:00
 url: /index.php/fuck-lenovo-and-their-t540p/
 al2fb_facebook_link_id:

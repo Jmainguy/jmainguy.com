@@ -1,6 +1,6 @@
 ---
 title: My minecraft business is dead
-type: post
+
 date: 2017-04-16T23:51:00+00:00
 url: /index.php/my-minecraft-business-is-dead/
 al2fb_facebook_link_id:

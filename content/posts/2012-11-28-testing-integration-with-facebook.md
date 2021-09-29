@@ -1,6 +1,6 @@
 ---
 title: Testing Integration with Facebook
-type: post
+
 date: 2012-11-29T03:39:19+00:00
 url: /index.php/testing-integration-with-facebook/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2012-11-29T03:39:22+00:00
 al2fb_facebook_link_picture:
-  - post=http://jmainguy.com/wp-content/uploads/2012/11/Profile.png
+  - post=https://jmainguy.com/wp-content/uploads/2012/11/Profile.png
 al2fb_facebook_image_id:
   - 465
 categories:

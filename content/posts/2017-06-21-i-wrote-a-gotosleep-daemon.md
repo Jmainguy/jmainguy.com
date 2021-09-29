@@ -1,6 +1,6 @@
 ---
 title: I wrote a gotosleep daemon
-type: post
+
 date: 2017-06-21T19:00:30+00:00
 url: /index.php/i-wrote-a-gotosleep-daemon/
 al2fb_facebook_link_id:

@@ -1,6 +1,6 @@
 ---
 title: Labor Day weekend
-type: post
+
 date: 2010-09-04T17:04:01+00:00
 url: /index.php/labor-day-weekend/
 categories:

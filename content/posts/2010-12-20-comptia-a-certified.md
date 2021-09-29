@@ -1,6 +1,6 @@
 ---
 title: CompTIA A+ Certified
-type: post
+
 date: 2010-12-20T18:26:40+00:00
 url: /index.php/comptia-a-certified/
 categories:

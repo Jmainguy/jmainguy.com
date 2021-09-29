@@ -1,6 +1,6 @@
 ---
 title: Change of Scenery
-type: post
+
 date: 2011-02-02T19:05:24+00:00
 url: /index.php/change-of-scenery/
 categories:

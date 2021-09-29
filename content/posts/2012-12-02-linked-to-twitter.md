@@ -1,6 +1,6 @@
 ---
 title: Linked to Twitter
-type: post
+
 date: 2012-12-03T03:45:07+00:00
 url: /index.php/linked-to-twitter/
 al2fb_facebook_link_id:

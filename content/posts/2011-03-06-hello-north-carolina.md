@@ -1,6 +1,6 @@
 ---
 title: Hello North Carolina
-type: post
+
 date: 2011-03-06T14:05:09+00:00
 url: /index.php/hello-north-carolina/
 categories:

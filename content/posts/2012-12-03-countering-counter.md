@@ -1,6 +1,6 @@
 ---
 title: Countering Counter
-type: post
+
 date: 2012-12-03T16:16:37+00:00
 url: /index.php/countering-counter/
 al2fb_facebook_link_id:

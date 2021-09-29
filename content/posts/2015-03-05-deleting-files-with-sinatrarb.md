@@ -1,6 +1,6 @@
 ---
 title: deleting files with sinatrarb
-type: post
+
 date: 2015-03-05T14:23:04+00:00
 url: /index.php/deleting-files-with-sinatrarb/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2015-03-05T14:23:13+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

@@ -1,6 +1,6 @@
 ---
 title: Somebody has a case of the mondays
-type: post
+
 date: 2010-09-20T14:41:55+00:00
 url: /index.php/somebody-has-a-case-of-the-mondays/
 categories:

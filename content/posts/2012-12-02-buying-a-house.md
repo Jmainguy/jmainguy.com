@@ -1,6 +1,6 @@
 ---
 title: Buying a House
-type: post
+
 date: 2012-12-02T18:10:47+00:00
 url: /index.php/buying-a-house/
 al2fb_facebook_link_id:

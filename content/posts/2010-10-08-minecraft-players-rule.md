@@ -1,6 +1,6 @@
 ---
 title: Minecraft Players Rule
-type: post
+
 date: 2010-10-08T14:33:46+00:00
 url: /index.php/minecraft-players-rule/
 categories:

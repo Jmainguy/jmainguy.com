@@ -1,6 +1,6 @@
 ---
 title: 'Old School Football review – 1991 Pigskin Classic #1 Florida State vs #19 BYU'
-type: post
+
 date: 2017-07-06T23:40:46+00:00
 url: /index.php/old-school-football-review-1991-pigskin-classic-1-florida-state-vs-19-byu/
 al2fb_facebook_link_id:

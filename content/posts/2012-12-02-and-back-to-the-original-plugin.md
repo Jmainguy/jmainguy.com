@@ -1,6 +1,6 @@
 ---
 title: And back to the original plugin
-type: post
+
 date: 2012-12-02T23:28:02+00:00
 url: /index.php/and-back-to-the-original-plugin/
 al2fb_facebook_link_id:

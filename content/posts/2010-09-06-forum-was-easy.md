@@ -1,6 +1,6 @@
 ---
 title: Forum was easy
-type: post
+
 date: 2010-09-05T20:27:08+00:00
 url: /index.php/forum-was-easy/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Smallgrits Macbook
-type: post
+
 date: 2012-09-12T18:07:34+00:00
 url: /index.php/smallgrits-macbook/
 categories:

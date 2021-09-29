@@ -1,6 +1,6 @@
 ---
 title: My son has Leukemia
-type: post
+
 date: 2015-12-05T20:03:17+00:00
 url: /index.php/my-son-has-leukemia/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2015-12-05T20:03:27+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

@@ -1,6 +1,6 @@
 ---
 title: Saturday, Time to do stuff I don’t enjoy
-type: post
+
 date: 2012-09-08T18:40:50+00:00
 url: /index.php/saturday-time-to-do-stuff-i-dont-enjoy/
 categories:

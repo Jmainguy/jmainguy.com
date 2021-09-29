@@ -1,6 +1,6 @@
 ---
 title: Registered Sex Offender
-type: post
+
 date: 2010-09-17T16:10:47+00:00
 url: /index.php/registered-sex-offender/
 categories:

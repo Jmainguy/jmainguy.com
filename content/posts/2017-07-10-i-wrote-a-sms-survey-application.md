@@ -1,6 +1,6 @@
 ---
 title: I wrote a sms survey application
-type: post
+
 date: 2017-07-10T18:26:08+00:00
 url: /index.php/i-wrote-a-sms-survey-application/
 al2fb_facebook_link_id:

@@ -1,6 +1,6 @@
 ---
 title: 'Chasing the cheese truck #AmericanMeltdown'
-type: post
+
 date: 2015-07-08T20:25:34+00:00
 url: /index.php/chasing-the-cheese-truck-americanmeltdown/
 al2fb_facebook_link_id:

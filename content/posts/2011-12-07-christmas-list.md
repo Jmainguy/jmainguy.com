@@ -1,6 +1,6 @@
 ---
 title: Christmas List
-type: post
+
 date: 2011-12-08T02:30:20+00:00
 url: /index.php/christmas-list/
 categories:

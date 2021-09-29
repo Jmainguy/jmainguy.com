@@ -1,6 +1,6 @@
 ---
 title: Goals for Jan
-type: post
+
 date: 2012-01-12T13:42:05+00:00
 url: /index.php/goals-for-jan/
 categories:

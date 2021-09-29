@@ -1,6 +1,6 @@
 ---
 title: sinatrarb-virt-manager
-type: post
+
 date: 2015-07-03T03:52:11+00:00
 url: /index.php/sinatrarb-virt-manager/
 al2fb_facebook_link_id:

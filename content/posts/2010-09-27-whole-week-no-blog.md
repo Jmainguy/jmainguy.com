@@ -1,6 +1,6 @@
 ---
 title: Whole week no blog?
-type: post
+
 date: 2010-09-27T17:35:05+00:00
 url: /index.php/whole-week-no-blog/
 categories:

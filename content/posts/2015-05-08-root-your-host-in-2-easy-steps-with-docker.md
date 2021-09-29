@@ -1,6 +1,6 @@
 ---
 title: Root your host in 2 easy steps with Docker
-type: post
+
 date: 2015-05-09T03:37:49+00:00
 url: /index.php/root-your-host-in-2-easy-steps-with-docker/
 al2fb_facebook_link_id:

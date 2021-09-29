@@ -1,6 +1,6 @@
 ---
 title: New Job, New Town, I love it
-type: post
+
 date: 2011-05-17T16:48:18+00:00
 url: /index.php/new-job-new-town-i-love-it/
 categories:

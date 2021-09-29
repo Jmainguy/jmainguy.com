@@ -1,6 +1,6 @@
 ---
 title: Openshift online is cool if you play by the rules
-type: post
+
 date: 2016-10-16T02:06:27+00:00
 url: /index.php/openshift-online-is-cool-if-you-play-by-the-rules/
 al2fb_facebook_link_id:

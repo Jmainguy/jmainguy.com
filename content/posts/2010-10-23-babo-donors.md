@@ -1,6 +1,6 @@
 ---
 title: Babo Donors
-type: post
+
 date: 2010-10-23T06:25:02+00:00
 url: /index.php/babo-donors/
 categories:

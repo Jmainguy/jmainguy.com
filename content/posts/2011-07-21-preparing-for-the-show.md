@@ -1,6 +1,6 @@
 ---
 title: Setlist
-type: post
+
 date: 2011-07-22T00:38:03+00:00
 url: /index.php/preparing-for-the-show/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: All moved in
-type: post
+
 date: 2013-02-24T02:15:36+00:00
 url: /index.php/all-moved-in/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2013-02-24T02:15:52+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

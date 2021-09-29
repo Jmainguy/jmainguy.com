@@ -1,6 +1,6 @@
 ---
 title: Under Contract
-type: post
+
 date: 2012-12-06T17:04:32+00:00
 url: /index.php/under-contract/
 al2fb_facebook_link_id:

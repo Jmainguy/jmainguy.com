@@ -1,6 +1,6 @@
 ---
 title: Blake hotel survey
-type: post
+
 date: 2013-06-12T21:00:31+00:00
 url: /index.php/blake-hotel-survey/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2013-06-12T21:00:39+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

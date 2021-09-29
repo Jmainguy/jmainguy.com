@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Jonathan Mainguy">
+    <meta name="description" content="I recently created a stock price operator for Kubernetes, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same API I was using for the stock, also had some Covid-19 data in it as well.
+The code was pretty quick to work out thanks to the great API docs and examples.
+package main import ( &#34;context&#34; &#34;fmt&#34; finnhub &#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34; ) func main() { cfg := finnhub.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Covid Data as of 9-29-2021"/>
+<meta name="twitter:description" content="I recently created a stock price operator for Kubernetes, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same API I was using for the stock, also had some Covid-19 data in it as well.
+The code was pretty quick to work out thanks to the great API docs and examples.
+package main import ( &#34;context&#34; &#34;fmt&#34; finnhub &#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34; ) func main() { cfg := finnhub."/>
+
+    <meta property="og:title" content="Covid Data as of 9-29-2021" />
+<meta property="og:description" content="I recently created a stock price operator for Kubernetes, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same API I was using for the stock, also had some Covid-19 data in it as well.
+The code was pretty quick to work out thanks to the great API docs and examples.
+package main import ( &#34;context&#34; &#34;fmt&#34; finnhub &#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34; ) func main() { cfg := finnhub." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jmainguy.com/posts/covid-data-9-29-2021/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-29T13:33:06-04:00" />
+<meta property="article:modified_time" content="2021-09-29T13:33:06-04:00" />
+
+
+
+    <title>
+  Covid Data as of 9-29-2021 · Jonathan Mainguy
+</title>
+
+    
+      <link rel="canonical" href="https://jmainguy.com/posts/covid-data-9-29-2021/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.88.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Jonathan Mainguy
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jmainguy.com/posts/covid-data-9-29-2021/">
+              Covid Data as of 9-29-2021
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-09-29T13:33:06-04:00'>
+                September 29, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I recently created a <a href="https://github.com/Jmainguy/stockop">stock price operator for Kubernetes</a>, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same <a href="https://finnhub.io/docs/api/">API</a> I was using for the stock, also had some Covid-19 data in it as well.</p>
+<p>The code was pretty quick to work out thanks to the great API docs and examples.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-weight:bold">package</span> main
+
+<span style="font-weight:bold">import</span> (
+	<span style="font-style:italic">&#34;context&#34;</span>
+	<span style="font-style:italic">&#34;fmt&#34;</span>
+
+	finnhub <span style="font-style:italic">&#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34;</span>
+)
+
+<span style="font-weight:bold">func</span> main() {
+        cfg := finnhub.NewConfiguration()
+        cfg.AddDefaultHeader(<span style="font-style:italic">&#34;X-Finnhub-Token&#34;</span>, <span style="font-style:italic">&#34;c50beiaad3ic9bdl2tf0&#34;</span>)
+        finnhubClient := finnhub.NewAPIClient(cfg).DefaultApi
+
+        <span style="font-style:italic">// Covid-19
+</span><span style="font-style:italic"></span>        covid19, _, _ := finnhubClient.Covid19(context.Background()).Execute()
+        fmt.Println(<span style="font-style:italic">&#34;State, TotalCases, TotalDeaths, MortalityRate, Updated&#34;</span>)
+        <span style="font-weight:bold">for</span> _, covidInfo := <span style="font-weight:bold">range</span> covid19 {
+                percentageOFCaseToDeath := *covidInfo.Death / *covidInfo.Case * 100
+                fmt.Printf(
+                        <span style="font-style:italic">&#34;%+v, %.0f, %.0f, %.2f, %+v\n&#34;</span>,
+                        *covidInfo.State, *covidInfo.Case, *covidInfo.Death,
+                        percentageOFCaseToDeath, *covidInfo.Updated,
+                )
+        }
+}
+</code></pre></div><p>Using the code above, I could get the data into a csv base, which I could then manipulate easily with the <code>sort</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./convid | grep -v &#39;Washington, D.C&#39; | sort -t, -k4 -h | tail -5
+New Jersey, 1150246, 27380, 2.38, 2021-09-29 19:02:03
+Grand Princess, 103, 3, 2.91, 2021-04-20 17:00:47
+Navajo Nation, 30366, 1262, 4.16, 2021-04-20 17:00:47
+Veteran Affair, 250417, 11558, 4.62, 2021-04-20 17:00:47
+Northern Mariana Islands, 31, 2, 6.45, 2021-04-20 17:00:47
+</code></pre></div><p>Here we can see that the Northern Mariana Islands (I have no idea where this is, but I believe they have a trench) has the highest rate, however the sample size is too small to really take it any futher.</p>
+<p>The next two highest groups are the VA and the Navajo Nation, pretty interesting to see such a high mortality rate for the Navajo and Veterans, would love to understand why this is.</p>
+<p>It is cool the Navajo Nation has data like this, why dont more first nation tribes have this kind of data? Something for me to look into another time.</p>
+<p>Ultimately, I think I would need more data sources, ones that update more often than Finnhub here, also would like to be able to see a states total population, vaccine counts, and range of data overtime, to see the valleys and peaks in the data.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Take it easy</p>
+      
+      
+        ©
+        
+          2010 -
+        
+        2021
+         Jonathan Mainguy 
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

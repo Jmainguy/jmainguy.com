@@ -1,6 +1,6 @@
 ---
 title: Installing Mono 3.0.1 on Centos Linux 6.3
-type: post
+
 date: 2012-12-02T22:53:08+00:00
 url: /index.php/installing-mono-3-0-1-on-centos-linux-6-3/
 al2fb_facebook_link_id:

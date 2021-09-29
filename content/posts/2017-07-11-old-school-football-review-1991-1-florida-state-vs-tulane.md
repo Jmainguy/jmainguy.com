@@ -1,6 +1,6 @@
 ---
 title: 'Old School Football review – 1991 #1 Florida State vs Tulane'
-type: post
+
 date: 2017-07-11T04:08:00+00:00
 url: /index.php/old-school-football-review-1991-1-florida-state-vs-tulane/
 al2fb_facebook_link_id:

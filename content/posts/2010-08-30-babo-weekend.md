@@ -1,6 +1,6 @@
 ---
 title: Babo Weekend
-type: post
+
 date: 2010-08-30T14:46:40+00:00
 url: /index.php/babo-weekend/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Goodbye Maryland
-type: post
+
 date: 2011-02-24T20:48:20+00:00
 url: /index.php/goodbye-maryland/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Success at work yesterday
-type: post
+
 date: 2012-07-03T14:18:53+00:00
 url: /index.php/success-at-work-yesterday/
 categories:

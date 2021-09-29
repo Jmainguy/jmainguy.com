@@ -1,6 +1,6 @@
 ---
 title: 'Miami Dolphins #1'
-type: post
+
 date: 2013-08-04T23:37:51+00:00
 url: /index.php/miami-dolphins-1/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2013-08-04T23:37:56+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

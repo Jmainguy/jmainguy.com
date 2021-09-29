@@ -1,6 +1,6 @@
 ---
 title: Website Headaches
-type: post
+
 date: 2010-08-24T13:21:06+00:00
 url: /index.php/website-headaches/
 categories:

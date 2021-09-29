@@ -1,6 +1,6 @@
 ---
 title: Jon’s Monday night
-type: post
+
 date: 2012-08-07T02:51:45+00:00
 url: /index.php/jons-monday-night/
 categories:

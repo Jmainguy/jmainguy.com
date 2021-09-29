@@ -1,6 +1,6 @@
 ---
 title: I wrote https://soh.re from scratch go check it out
-type: post
+
 date: 2017-05-01T17:23:44+00:00
 url: /index.php/i-wrote-httpssoh-re-from-scratch-go-check-it-out/
 al2fb_facebook_link_id:

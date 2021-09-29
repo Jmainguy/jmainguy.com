@@ -1,6 +1,6 @@
 ---
 title: Moral Dilemma
-type: post
+
 date: 2013-05-09T17:18:09+00:00
 url: /index.php/moral-dilemma/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2013-05-09T17:18:14+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

@@ -1,6 +1,6 @@
 ---
 title: NC Drivers License Written Test
-type: post
+
 date: 2011-07-15T05:47:02+00:00
 url: /index.php/nc-drivers-license-written-test/
 categories:

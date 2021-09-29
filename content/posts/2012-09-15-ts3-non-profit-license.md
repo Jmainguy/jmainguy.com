@@ -1,6 +1,6 @@
 ---
 title: TS3 Non Profit License
-type: post
+
 date: 2012-09-15T04:38:35+00:00
 url: /index.php/ts3-non-profit-license/
 categories:

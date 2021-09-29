@@ -1,6 +1,6 @@
 ---
 title: Seth’s Funeral – Saturday at 11am in Garner, NC
-type: post
+
 date: 2016-04-28T13:59:57+00:00
 url: /index.php/seths-funeral-saturday-at-11am-in-garner-nc/
 al2fb_facebook_link_id:

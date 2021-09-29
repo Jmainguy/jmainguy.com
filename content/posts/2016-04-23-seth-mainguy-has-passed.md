@@ -1,6 +1,6 @@
 ---
 title: Seth Mainguy has passed
-type: post
+
 date: 2016-04-24T00:58:44+00:00
 url: /index.php/seth-mainguy-has-passed/
 al2fb_facebook_nolike:

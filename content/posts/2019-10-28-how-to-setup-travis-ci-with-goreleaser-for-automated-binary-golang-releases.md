@@ -1,7 +1,7 @@
 ---
 title: How to setup travis-ci with goreleaser for automated binary golang releases
 author: Jonathan Mainguy
-type: post
+
 date: 2019-10-28T13:15:51+00:00
 url: /index.php/how-to-setup-travis-ci-with-goreleaser-for-automated-binary-golang-releases/
 categories:

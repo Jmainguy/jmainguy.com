@@ -6,10 +6,17 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Nov 2019 09:51:52 -0500</lastBuildDate>
-    
-	<atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 29 Sep 2021 13:33:06 -0400</lastBuildDate><atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Covid Data as of 9-29-2021</title>
+      <link>https://jmainguy.com/posts/covid-data-9-29-2021/</link>
+      <pubDate>Wed, 29 Sep 2021 13:33:06 -0400</pubDate>
+      
+      <guid>https://jmainguy.com/posts/covid-data-9-29-2021/</guid>
+      <description>I recently created a stock price operator for Kubernetes, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same API I was using for the stock, also had some Covid-19 data in it as well.
+The code was pretty quick to work out thanks to the great API docs and examples.
+package main import ( &amp;#34;context&amp;#34; &amp;#34;fmt&amp;#34; finnhub &amp;#34;github.com/Finnhub-Stock-API/finnhub-go/v2&amp;#34; ) func main() { cfg := finnhub.</description>
+    </item>
     
     <item>
       <title>Ugly Drum Smoker</title>
@@ -46,7 +53,7 @@ I discovered that the differences between operating systems is enough that compi
       <pubDate>Mon, 25 Sep 2017 15:07:52 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/the-flag-the-national-anthem-and-what-they-mean-to-me/</guid>
-      <description>My earliest memory of reverence for the flag, was seeing it flying on a huge pole in front of my Grandpa&amp;#8217;s house. We would go see him once a year for thanksgiving and my cousins would come as well, was always a really good time. pulling up and seeing that flag meant we had arrived from the long 12 hour trip (a lifetime for a van full of kids and tiger electronic handheld games).</description>
+      <description>My earliest memory of reverence for the flag, was seeing it flying on a huge pole in front of my Grandpa’s house. We would go see him once a year for thanksgiving and my cousins would come as well, was always a really good time. pulling up and seeing that flag meant we had arrived from the long 12 hour trip (a lifetime for a van full of kids and tiger electronic handheld games).</description>
     </item>
     
     <item>
@@ -57,7 +64,7 @@ I discovered that the differences between operating systems is enough that compi
       <guid>https://jmainguy.com/index.php/old-school-football-review-1991-1-florida-state-vs-tulane/</guid>
       <description>FSU vs Tulane
 Casey Weldon, and Amp Lee tear up the Tulane Defense all game, doing anything they want. 31 points before getting pulled at the end of the third.
-Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver and into the hands of a defender, not the QB&amp;#8217;s fault. Next drive Brad completes a TD pass to one of the tight ends. Marking 4 TE touchdowns in this game.</description>
+Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver and into the hands of a defender, not the QB’s fault. Next drive Brad completes a TD pass to one of the tight ends. Marking 4 TE touchdowns in this game.</description>
     </item>
     
     <item>
@@ -67,7 +74,7 @@ Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver
       
       <guid>https://jmainguy.com/index.php/i-wrote-a-sms-survey-application/</guid>
       <description>My pastor was looking for a sms survey service, requirements: A number to give out, a way to gather the responses, easy to use, cheap as possible. Googling turned up a few results with no clear pricing and salesmen, one I found was about $50 a month. Since I work at a telephone company, I decided just to make one using our API.
-I am calling the application &amp;#8220;Survey Hail&amp;#8221;, as its a survey service, and a play of words on the pastors name.</description>
+I am calling the application “Survey Hail”, as its a survey service, and a play of words on the pastors name.</description>
     </item>
     
     <item>
@@ -77,7 +84,7 @@ I am calling the application &amp;#8220;Survey Hail&amp;#8221;, as its a survey 
       
       <guid>https://jmainguy.com/index.php/old-school-football-review-1991-pigskin-classic-1-florida-state-vs-19-byu/</guid>
       <description>I recently started watching old school football games, so I figured I would write a review while I am at it. I love the Noles, so I will be watching their games.
-The year is 1991, FSU is preseason ranked #1 in the nation, and has for some reason, opted to open the year at a &amp;#8220;neutral&amp;#8221; site in Anaheim California, Disneyland, against the Heisman trophy winner, Ty Detmer lead #19 BYU Cougars.</description>
+The year is 1991, FSU is preseason ranked #1 in the nation, and has for some reason, opted to open the year at a “neutral” site in Anaheim California, Disneyland, against the Heisman trophy winner, Ty Detmer lead #19 BYU Cougars.</description>
     </item>
     
     <item>
@@ -88,7 +95,7 @@ The year is 1991, FSU is preseason ranked #1 in the nation, and has for some rea
       <guid>https://jmainguy.com/index.php/i-wrote-a-gotosleep-daemon/</guid>
       <description>I watch youtube / twitch at night to go to sleep to. I am too lazy to open a command line and say shutdown in 120 minutes or so. So instead I wrote a tool, which reads a config, and shuts down at the time specified every night.
 https://github.com/Jmainguy/gotosleep
-Currently only works on Linux as that&amp;#8217;s what I use, and I doubt anybody else will use this.</description>
+Currently only works on Linux as that’s what I use, and I doubt anybody else will use this.</description>
     </item>
     
     <item>
@@ -106,7 +113,7 @@ Currently only works on Linux as that&amp;#8217;s what I use, and I doubt anybod
       <pubDate>Sun, 14 May 2017 23:34:51 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/mothers-day-wings/</guid>
-      <description>Did pancakes, bacon, cinnamon rolls, and mimosas&amp;#8217;s for brunch, Leah cooked it all up, it was too delicious to take pictures of. Ended up doing grilled wings for dinner, shoulda cooked 4-5 more but they were great.</description>
+      <description>Did pancakes, bacon, cinnamon rolls, and mimosas’s for brunch, Leah cooked it all up, it was too delicious to take pictures of. Ended up doing grilled wings for dinner, shoulda cooked 4-5 more but they were great.</description>
     </item>
     
     <item>
@@ -115,7 +122,7 @@ Currently only works on Linux as that&amp;#8217;s what I use, and I doubt anybod
       <pubDate>Fri, 12 May 2017 17:01:41 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/i-got-dk64-working-again/</guid>
-      <description>About 16 years ago a low life scum bag stole my Expansion Card for the N64. This was needed for DK64 to work, so since then I have not been able to play. I finally bit the bullet and purchased an expansion card on ebay (about $20 USD) and it booted right up. Now to play through it from scratch =)Love that red color Japanese words. Sitting in its new home Booted up no problem.</description>
+      <description>About 16 years ago a low life scum bag stole my Expansion Card for the N64. This was needed for DK64 to work, so since then I have not been able to play. I finally bit the bullet and purchased an expansion card on ebay (about $20 USD) and it booted right up. Now to play through it from scratch =)Love that red colorJapanese words.Sitting in its new homeBooted up no problem.</description>
     </item>
     
     <item>
@@ -135,7 +142,7 @@ Once its nearly done, grill your buns and top burgers with cheese. Leave burgers
       
       <guid>https://jmainguy.com/index.php/i-wrote-httpssoh-re-from-scratch-go-check-it-out/</guid>
       <description>I have always wanted a interactive website that looks like a Linux shell. When @ChrisShort tweeted about GoTTY, I knew I had the essential piece I was missing.
-GoTTY – Share Your Linux Terminal (TTY) as a Web Application &amp;#8211; https://t.co/qU3r49NLvk  &amp;mdash; ChriSSHort ??? (@ChrisShort) April 24, 2017  I wanted each page reload to bring a fresh copy of the site (because people are mean and will wreck the shell they are in on purpose, I know I would).</description>
+I wanted each page reload to bring a fresh copy of the site (because people are mean and will wreck the shell they are in on purpose, I know I would). I wanted it to be secure (I do not want people ddosing others, or bringing down my infra), and I wanted to have a few fun things for them to do (like play crawl, or chat on IRC).</description>
     </item>
     
     <item>
@@ -153,7 +160,7 @@ GoTTY – Share Your Linux Terminal (TTY) as a Web Application &amp;#8211; https
       <pubDate>Sun, 23 Apr 2017 00:42:05 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/bbq-day-was-a-success/</guid>
-      <description>Did a BBQ day, our good friends Dustin and Liz came to help eat it all. Wings, Ribs, and slow cooked pulled pork. It was great.Aux grill, to get coals hot enough to transfer to pig grill Fan to feed the fires the oxygen it craves. Oxygen entry point, careful its hot. 250 degrees, hard work trying to keep it consistent. mmmm delicious smoke Pork and Ribs ready to come off.</description>
+      <description>Did a BBQ day, our good friends Dustin and Liz came to help eat it all. Wings, Ribs, and slow cooked pulled pork. It was great.Aux grill, to get coals hot enough to transfer to pig grillFan to feed the fires the oxygen it craves.Oxygen entry point, careful its hot.250 degrees, hard work trying to keep it consistent.mmmm delicious smokePork and Ribs ready to come off.Grilled wings, biggest hit of the night.</description>
     </item>
     
     <item>
@@ -162,8 +169,7 @@ GoTTY – Share Your Linux Terminal (TTY) as a Web Application &amp;#8211; https
       <pubDate>Sat, 22 Apr 2017 15:26:44 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/a-full-morning/</guid>
-      <description>Went to the store for some drip pans, put the pork on the bbq, made flapjacks. Mmmm delicious flapjacks.6 pounds, bone in. Cook for 6ish hours at 250, Flapjacks and Sausage on the griddle
-Looking forward to tonight, gonna do some wings and ribs as well.Ribs marinating East Carolina Sauce ready to go</description>
+      <description>Went to the store for some drip pans, put the pork on the bbq, made flapjacks. Mmmm delicious flapjacks.6 pounds, bone in.Cook for 6ish hours at 250,Flapjacks and Sausage on the griddleLooking forward to tonight, gonna do some wings and ribs as well.Ribs marinatingEast Carolina Sauce ready to go</description>
     </item>
     
     <item>
@@ -172,7 +178,7 @@ Looking forward to tonight, gonna do some wings and ribs as well.Ribs marinating
       <pubDate>Thu, 20 Apr 2017 17:46:29 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/i-had-lunch-today-and-bought-some-cigar-boxes/</guid>
-      <description>Barrett asked for pictures from Lunch, so here they are. He is a jerk and should come to lunch next time.They make some great food here. I got the buffalo chicken wrap today. My table for today, all by my lonesome. At the smoke shop grabbing boxes, really nice inside. Sweet moose. Classic size box, the best for making guitars. Nice looking wood. Cool latch What I made my first guitar out of, good box.</description>
+      <description>Barrett asked for pictures from Lunch, so here they are. He is a jerk and should come to lunch next time.They make some great food here. I got the buffalo chicken wrap today.My table for today, all by my lonesome.At the smoke shop grabbing boxes, really nice inside.Sweet moose.Classic size box, the best for making guitars.Nice looking wood.Cool latchWhat I made my first guitar out of, good box.What a sweet tree</description>
     </item>
     
     <item>
@@ -190,8 +196,7 @@ Looking forward to tonight, gonna do some wings and ribs as well.Ribs marinating
       <pubDate>Wed, 08 Mar 2017 03:24:20 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/i-made-a-guitar-hanger/</guid>
-      <description>I need more guitar hangers, and they cost $10 a pop from amazon, also I can only place them on studs, which limits where I can place them. The solution was a guitar hanger which ended up costing about the same ($23 for wood board, $10 for all hangers, $7 for stain). I think it looks great though.So nice
-5x hangers
+      <description>I need more guitar hangers, and they cost $10 a pop from amazon, also I can only place them on studs, which limits where I can place them. The solution was a guitar hanger which ended up costing about the same ($23 for wood board, $10 for all hangers, $7 for stain). I think it looks great though.So nice5x hangers
 http://www.homedepot.com/p/Everbilt-Heavy-Duty-Screw-In-Tool-Hanger-24255/205020421
 1x oak board
 Go to home depot lumber section and pick one out</description>
@@ -203,7 +208,7 @@ Go to home depot lumber section and pick one out</description>
       <pubDate>Thu, 16 Feb 2017 01:14:57 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/cooked-some-barbacoa/</guid>
-      <description>Made some Barbacoa for burrito&amp;#8217;s tonight, really turned out great. You sear some chuck roast, mix a bunch of other stuff in a blender, then pour over the beef in a slow cooker, cook up for 6 hours, shred, enjoy. Michael and Leah made some cilantro lime rice and black beans to go with it.The delicious shredded barbacoa in the slow cooker. Cilantro lime rice. All ready to be rolled up.</description>
+      <description>Made some Barbacoa for burrito’s tonight, really turned out great. You sear some chuck roast, mix a bunch of other stuff in a blender, then pour over the beef in a slow cooker, cook up for 6 hours, shred, enjoy. Michael and Leah made some cilantro lime rice and black beans to go with it.The delicious shredded barbacoa in the slow cooker.Cilantro lime rice.All ready to be rolled up.Followed these two videos for the beef and rice recipes.</description>
     </item>
     
     <item>
@@ -213,8 +218,7 @@ Go to home depot lumber section and pick one out</description>
       
       <guid>https://jmainguy.com/index.php/i-made-some-burgers/</guid>
       <description>I decided to make some burgers for dinner. Went to the store and got boneless chuck eye steak, some chips, potato bread, and soda.
-Got home and cut up the chuck into small enough chunks to form a patty.Only used one of these and wrapped the rest. Made two patties easy. Nice and fatty.
-Cooked the bacon first, so I could add it to the burger later, and hopefully get some grease in the pan for the burgers to cook in (turkey bacon let me down)Leah loves turkey bacon, didn&amp;#8217;t produce any grease for cooking the burger like I was hoping for.</description>
+Got home and cut up the chuck into small enough chunks to form a patty.Only used one of these and wrapped the rest. Made two patties easy.Nice and fatty.Cooked the bacon first, so I could add it to the burger later, and hopefully get some grease in the pan for the burgers to cook in (turkey bacon let me down)Leah loves turkey bacon, didn’t produce any grease for cooking the burger like I was hoping for.</description>
     </item>
     
     <item>
@@ -224,7 +228,7 @@ Cooked the bacon first, so I could add it to the burger later, and hopefully get
       
       <guid>https://jmainguy.com/index.php/ho-made-pizza-night/</guid>
       <description>I enjoy pizza, so I decided to make some. Made the dough yesterday, let it sit overnight in the fridge, then topped and baked tonight. Delicious
-Dough coming out of the fridge.Topped with Fresh Mozz, Pepperoni, Olives stuffed with garlic, more fresh garlic, Sauce has garlic in it as well.Coming out of the oven. Followed this Recipe for the dough. Could not find 00 flour so I used bread flour instead, will have to buy some 00 online.</description>
+Followed this Recipe for the dough. Could not find 00 flour so I used bread flour instead, will have to buy some 00 online.</description>
     </item>
     
     <item>
@@ -234,8 +238,7 @@ Dough coming out of the fridge.Topped with Fresh Mozz, Pepperoni, Olives stuffed
       
       <guid>https://jmainguy.com/index.php/i-handmade-a-guitar/</guid>
       <description>Finally wrapped up my big guitar project. Finished the guitar yesterday and learned how to play it correctly today (have to use a slide or it wont sound right). Pretty happy with how it turned out.
-Metal rod for nut. Straight cut headstock. Wood burned fret markers made by hand. Metal rod again for the bridge. Will clean up these sound holes later this week. Piezo jack pickup.
-I have no idea why my phone recorded this vertically, I placed it horizontally and all.</description>
+Metal rod for nut. Straight cut headstock.Wood burned fret markersmade by hand.Metal rod again for the bridge. Will clean up these sound holes later this week.Piezo jack pickup.I have no idea why my phone recorded this vertically, I placed it horizontally and all.</description>
     </item>
     
     <item>
@@ -244,8 +247,7 @@ I have no idea why my phone recorded this vertically, I placed it horizontally a
       <pubDate>Mon, 21 Nov 2016 02:48:45 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/i-made-some-audio-cables/</guid>
-      <description>I needed a 3.5mm to 3.5mm to connect my digital to audio connect (dac) to my headphone amp (which makes headphones sound better). So I spent alot of time last week and made one.love that color. Wont get it confused with other peoples cords ever.
-Then today I spent about 6 hours making another cord. This one was to connect my Electronic Drum kit to the mixer at church. I needed a 3.</description>
+      <description>I needed a 3.5mm to 3.5mm to connect my digital to audio connect (dac) to my headphone amp (which makes headphones sound better). So I spent alot of time last week and made one.love that color. Wont get it confused with other peoples cords ever.Then today I spent about 6 hours making another cord. This one was to connect my Electronic Drum kit to the mixer at church. I needed a 3.</description>
     </item>
     
     <item>
@@ -291,7 +293,7 @@ Following the service, a reception will be held at Lake Benson park located 921 
       <pubDate>Sun, 24 Apr 2016 00:58:44 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/seth-mainguy-has-passed/</guid>
-      <description>Today Seth passed away. 8/20/14 &amp;#8211; 4/23/16</description>
+      <description>Today Seth passed away. 8/20/14 – 4/23/16</description>
     </item>
     
     <item>
@@ -300,7 +302,7 @@ Following the service, a reception will be held at Lake Benson park located 921 
       <pubDate>Thu, 11 Feb 2016 20:10:29 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/the-original-pokemon-is-pretty-bad/</guid>
-      <description>Got nostalgic, installed retro-pi on my raspberry pi and been playing Pokemon Red on it. It is not as good as I remembered it. First, despite being for the Game Boy Color, its not in color. WTF? Second, you cannot bind a key to an item or move, like say I want select to be the bicycle, or select to be the cut move to cut down bushes, nope. Third, Pokebox&amp;#8217;s get full?</description>
+      <description>Got nostalgic, installed retro-pi on my raspberry pi and been playing Pokemon Red on it. It is not as good as I remembered it. First, despite being for the Game Boy Color, its not in color. WTF? Second, you cannot bind a key to an item or move, like say I want select to be the bicycle, or select to be the cut move to cut down bushes, nope. Third, Pokebox’s get full?</description>
     </item>
     
     <item>
@@ -309,7 +311,7 @@ Following the service, a reception will be held at Lake Benson park located 921 
       <pubDate>Sat, 05 Dec 2015 20:03:17 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/my-son-has-leukemia/</guid>
-      <description>At Seth&amp;#8217;s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia.
+      <description>At Seth’s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia.
 So far we have completed two 30 day rounds of inpatient hospital care, with another 2 more to go. This is typically 10 days of chemotherapy followed by 20 days of waiting for you immune system to recover, and then you get about a week to 10 days at home before you start the next round.</description>
     </item>
     
@@ -319,9 +321,9 @@ So far we have completed two 30 day rounds of inpatient hospital care, with anot
       <pubDate>Mon, 17 Aug 2015 20:27:55 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/install-cyanogenmod-12-1-on-galaxy-s3/</guid>
-      <description>Phone broke over the weekend, now I get to use the wife&amp;#8217;s old S3 to replace my S3, I hope it can do the job =). I insist on using cyanogenmod on my phones as its an awesome OS. This is how I installed it today from my Fedora 22 laptop.
- Install needed tools on Laptop   a. dnf install android-tools heimdall
- Download gapps, cyanogenmod, and CWM   a.</description>
+      <description>Phone broke over the weekend, now I get to use the wife’s old S3 to replace my S3, I hope it can do the job =). I insist on using cyanogenmod on my phones as its an awesome OS. This is how I installed it today from my Fedora 22 laptop.
+ Install needed tools on Laptop  a. dnf install android-tools heimdall
+Download gapps, cyanogenmod, and CWM  a. http://download2.</description>
     </item>
     
     <item>
@@ -339,7 +341,7 @@ So far we have completed two 30 day rounds of inpatient hospital care, with anot
       <pubDate>Fri, 03 Jul 2015 03:52:11 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/sinatrarb-virt-manager/</guid>
-      <description>A client asked me to write him a web app, which would let him stop/start/restart his VM&amp;#8217;s he hosts via libvirt. This is the initial implementation to answer his request.
+      <description>A client asked me to write him a web app, which would let him stop/start/restart his VM’s he hosts via libvirt. This is the initial implementation to answer his request.
 I next need to add logins for this to be useful at all, but its neat how easy sinatrarb makes creating a web app.
 https://github.com/Jmainguy/sinatrarb-virt-manager is the code
 http://phy01.standouthost.com:8080/ is the demo, go nuts.
@@ -365,8 +367,8 @@ jmainguy then complains that he cant share data among-st his containers via -v v
       <description>With sinatrarb you can create a quick web app in ruby very easily, their documentation is great.
 http://www.sinatrarb.com/intro.html
 One thing you can do, is send a file, like say a tar file.
-send_file &amp;#8220;certs/#{filename}/#{filename}.tar&amp;#8221;, :filename =&amp;gt; &amp;#8220;#{filename}.tar&amp;#8221;
-I was hosting this on openshift which has a hard drive limitation of 1gb, so I needed to cleanup after each send. Turns out, you cannot simply place FileUtils.rm_rf(&amp;#8216;directorypath/name&amp;#8217;) after send_file to do the job.</description>
+send_file “certs/#{filename}/#{filename}.tar”, :filename =&amp;gt; “#{filename}.tar”
+I was hosting this on openshift which has a hard drive limitation of 1gb, so I needed to cleanup after each send. Turns out, you cannot simply place FileUtils.rm_rf(‘directorypath/name’) after send_file to do the job.</description>
     </item>
     
     <item>
@@ -414,8 +416,8 @@ RENAME TABLE new_table TO tblemailtemplates;</description>
       
       <guid>https://jmainguy.com/index.php/miami-dolphins-1/</guid>
       <description>I am pysched for tonights game, the first step towards our dominance of the AFC East. However Let me say a few things about our team.
- Ryan Tannehill is a mediocre wide receiver, his backup is a winner, not a Dan Marino but the best QB we have is Matt Moore, he should be starting.
- Jeff Ireland is an idiot, who makes idiotic choices. We need him gone yesterday.</description>
+  Ryan Tannehill is a mediocre wide receiver, his backup is a winner, not a Dan Marino but the best QB we have is Matt Moore, he should be starting.
+  Jeff Ireland is an idiot, who makes idiotic choices. We need him gone yesterday.</description>
     </item>
     
     <item>
@@ -425,8 +427,7 @@ RENAME TABLE new_table TO tblemailtemplates;</description>
       
       <guid>https://jmainguy.com/index.php/blake-hotel-survey/</guid>
       <description>The Blake hotel in Charlotte is awful, but they asked me to fill out a survey to get a grip on my experience. Here it is, [ Warning curse words]
-&amp;nbsp;
-There is nowhere to idle car while checking in. Doorman disappeared when they saw us pull up.
+ There is nowhere to idle car while checking in. Doorman disappeared when they saw us pull up.
 Website site WiFi, once checked in you find out it is $9 a day. This is free at every hotel I have ever stayed at, or choose to stay at again in the future.</description>
     </item>
     
@@ -455,16 +456,12 @@ Website site WiFi, once checked in you find out it is $9 a day. This is free at 
       
       <guid>https://jmainguy.com/index.php/working-from-home-today/</guid>
       <description>My Office in the bedroom
-&amp;nbsp;
-
-&amp;nbsp;
-Hallway between Bedroom and Leah&amp;#8217;s office
+ 
+ Hallway between Bedroom and Leah’s office
  
-Leah&amp;#8217;s unpacked office with temp desk until real one is procured.
+Leah’s unpacked office with temp desk until real one is procured.
 
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;</description>
+   </description>
     </item>
     
     <item>
@@ -482,11 +479,8 @@ Leah&amp;#8217;s unpacked office with temp desk until real one is procured.
       <pubDate>Sun, 17 Feb 2013 16:40:37 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/old-glory/</guid>
-      <description>[][1]Old Glory The new house came with a flag pole and flag, reminds me of Grandpa Creel
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;</description>
+      <description>The new house came with a flag pole and flag, reminds me of Grandpa Creel
+    </description>
     </item>
     
     <item>
@@ -496,7 +490,7 @@ Leah&amp;#8217;s unpacked office with temp desk until real one is procured.
       
       <guid>https://jmainguy.com/index.php/officially-homeowners/</guid>
       <description>Finally signed all the papers and got the Keys. Leah and I are now officially homeowners / Slaves to the bank.
-[][1]Original art piece I created on our bedroom wall.[][2]Back sliding doors[][3]Political stand on the dining room wall[][4]Leah in Master Bedroom next to Art[][5]Master Bedroom Closet[][6]View from Master bedroom door[][7]Nascar / Projector / Bonus room[][8]Carolina Blue guest room, Magoo will be staying in this one.[][9]View of upstairs hallway[][10]Second floor bathroom.[][11]Real Guest room where the queen bed will go.</description>
+  </description>
     </item>
     
     <item>
@@ -550,9 +544,9 @@ Leah&amp;#8217;s unpacked office with temp desk until real one is procured.
       <pubDate>Sun, 02 Dec 2012 22:53:08 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/installing-mono-3-0-1-on-centos-linux-6-3/</guid>
-      <description>So you want to run windows .exe&amp;#8217;s on your shiny Linux server, time to catch mono.
+      <description>So you want to run windows .exe’s on your shiny Linux server, time to catch mono.
 To install mono first install your dependencies.
-yum install bison gettext glib2 freetype fontconfig libpng libpng-devel libX11 libX11-devel glib2-devel libgdi* libexif glibc-devel urw-fonts java unzip gcc gcc-c++ automake autoconf libtool make bzip2 wget cd /usr/local/src  wget http://download.mono-project.com/sources/mono/mono-3.0.1.tar.bz2  tar jxf mono-3.0.1.tar.bz2  cd mono-3.0.1  ./configure --prefix=/opt/mono  make &amp;&amp; make install  Congrats, you now have Mono installed and can run some Windows .</description>
+Congrats, you now have Mono installed and can run some Windows .exe’s such as Terraria or Minecraft Classic.</description>
     </item>
     
     <item>
@@ -608,7 +602,7 @@ So to get your website to post to Facebook, you have to create a dev account wit
       <pubDate>Wed, 12 Sep 2012 18:07:34 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/smallgrits-macbook/</guid>
-      <description>Maggie moved in with us a few weeks ago to attend NC State. Her 2 year old Macbook Pro stopped booting up a few days later. I was able to run a diagnostic on the pc and discovered one of the Ram cards was giving an error. After removing the offending ram the issue persisted. Maggie took the pc to the mac-store for the &amp;#8220;Genius&amp;#8217;s&amp;#8221; to take a look. They convinced her it was a bad hard drive and could fix it for $200.</description>
+      <description>Maggie moved in with us a few weeks ago to attend NC State. Her 2 year old Macbook Pro stopped booting up a few days later. I was able to run a diagnostic on the pc and discovered one of the Ram cards was giving an error. After removing the offending ram the issue persisted. Maggie took the pc to the mac-store for the “Genius’s” to take a look. They convinced her it was a bad hard drive and could fix it for $200.</description>
     </item>
     
     <item>
@@ -617,7 +611,7 @@ So to get your website to post to Facebook, you have to create a dev account wit
       <pubDate>Sat, 08 Sep 2012 18:40:50 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/saturday-time-to-do-stuff-i-dont-enjoy/</guid>
-      <description>Started the day off by cleaning up the Jmainguy.com site, noticed the A records for mc.jmainguy.com wasn&amp;#8217;t correct. After some research saw that I had two A records, removed the bogus records and it should resolve correctly in a few hours. Also noticed the nsd3 server wasnt running for ns3.vpsaddict.com so I restarted that. ran update-rc.d nsd3 defaults to make sure its being loaded up at boot.
+      <description>Started the day off by cleaning up the Jmainguy.com site, noticed the A records for mc.jmainguy.com wasn’t correct. After some research saw that I had two A records, removed the bogus records and it should resolve correctly in a few hours. Also noticed the nsd3 server wasnt running for ns3.vpsaddict.com so I restarted that. ran update-rc.d nsd3 defaults to make sure its being loaded up at boot.
 Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netflix, watched some college football, so far no good games on.</description>
     </item>
     
@@ -628,8 +622,8 @@ Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netfli
       
       <guid>https://jmainguy.com/index.php/jons-monday-night/</guid>
       <description>The Hall of Fame NFL game was this past weekend, and I missed it (Was helping a buddy move). So tonight I had to do 2 things before I could relax after a hard day.
- Configure OpenVPN on my German node so I can browse the internet as your average German would.
- Buy the Euro NFL Game Pass online streaming package so I can watch my Dolphins all year (Superbowl for sure this year).</description>
+  Configure OpenVPN on my German node so I can browse the internet as your average German would.
+  Buy the Euro NFL Game Pass online streaming package so I can watch my Dolphins all year (Superbowl for sure this year).</description>
     </item>
     
     <item>
@@ -639,10 +633,10 @@ Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netfli
       
       <guid>https://jmainguy.com/index.php/jon-cooks-a-meal/</guid>
       <description>Today for lunch I decided I wanted Grilled Cheese and Tomato soup with Goldfish. There are a few issues with this decision.
- Leah does not like melted cheese on bread, and refuses to make it for me.
- We dont have tomoto soup or goldfish
- I either buy or have Leah make my food.
-  However despite these obstacles I had my dream meal today. I went to the store and purchased the materials, and them made the meal myself.</description>
+  Leah does not like melted cheese on bread, and refuses to make it for me.
+  We dont have tomoto soup or goldfish
+  I either buy or have Leah make my food.
+  However despite these obstacles I had my dream meal today.</description>
     </item>
     
     <item>
@@ -651,8 +645,7 @@ Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netfli
       <pubDate>Sun, 15 Jul 2012 00:47:09 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/setlist-2-0/</guid>
-      <description>Now with HTML5 instead of googles audio player which they appear to have taken offline.
-http://jmainguy.com/setlist</description>
+      <description>Now with HTML5 instead of googles audio player which they appear to have taken offline.</description>
     </item>
     
     <item>
@@ -681,7 +674,7 @@ The second task was to get rotating images on a timer with alt text via javascri
       <pubDate>Wed, 20 Jun 2012 18:51:00 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/wurm/</guid>
-      <description>Started playing Wurm again the other day, I enjoy it quite a bit and hopefully don&amp;#8217;t get burned out again.
+      <description>Started playing Wurmagain the other day, I enjoy it quite a bit and hopefully don’t get burned out again.
 Day 1. Spent the day replanting my crops, mining rocks from the mine, turning said rocks into bricks, using said bricks to repair house and fences. After that I went adventuring and found a Champion Dog, a Champion Cave Bug, a Slow Deer, a Raging Deer, a Sly Dog, a Hardened Dog, and 3-4 Scared Unicorns, which I tamed and brought back home.</description>
     </item>
     
@@ -701,8 +694,7 @@ Day 1. Spent the day replanting my crops, mining rocks from the mine, turning sa
       
       <guid>https://jmainguy.com/index.php/away-on-business/</guid>
       <description>Sorry for not updating this at all since before January, life has been going well, I am now drumming for my local church, and this week Sequoia sent me on a install trip to Savannah Georgia. Savannah is very fun and I took a few pictures.
-Local game shop had this rare item in the window, the Nintendo Power Glove.&amp;ldquo;Behold the Power&amp;rdquo;
-My Hotel room
+Local game shop had this rare item in the window, the Nintendo Power Glove.&amp;ldquo;Behold the Power&amp;rdquo;My Hotel room
 
 View from Hotel window.</description>
     </item>
@@ -724,9 +716,7 @@ View from Hotel window.</description>
       <pubDate>Thu, 08 Dec 2011 02:30:20 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/christmas-list/</guid>
-      <description>touchstone I wouldnt pay more then $40 for this  Touchstone Link at Walmart
- newegg.com giftcards  Newegg.com
- RHCSA/RHCE Red Hat Linux Certification Study Guide (Exams EX200 &amp;amp; EX300), 6th Edition (Certification Press) by Michael Jang Paperback  Amazon Link</description>
+      <description> touchstone I wouldnt pay more then $40 for this  &amp;lt;a href=http://www.walmart.com/ip/HP-TouchPad-Touchstone-Charging-Dock-Stand/16641540?ci_sku=16641540&amp;amp;ci_src=14110944&amp;amp;sourceid=1500000000000003142050&amp;gt;Touchstone Link at Walmartnewegg.com giftcards  Newegg.comRHCSA/RHCE Red Hat Linux Certification Study Guide (Exams EX200 &amp;amp; EX300), 6th Edition (Certification Press) by Michael Jang Paperback  Amazon Link</description>
     </item>
     
     <item>
@@ -736,7 +726,7 @@ View from Hotel window.</description>
       
       <guid>https://jmainguy.com/index.php/where-did-you-sleep-last-night/</guid>
       <description>Fascinated with this song right now.
-Black girl, black girl, don&amp;#8217;t lie to me, tell me where did you sleep last night. In the pines, in the pines, where the sun dont ever shine, I would shiver the whole night through.</description>
+Black girl, black girl, don’t lie to me, tell me where did you sleep last night. In the pines, in the pines, where the sun dont ever shine, I would shiver the whole night through.</description>
     </item>
     
     <item>
@@ -754,11 +744,11 @@ Black girl, black girl, don&amp;#8217;t lie to me, tell me where did you sleep l
       <pubDate>Fri, 15 Jul 2011 05:47:02 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/nc-drivers-license-written-test/</guid>
-      <description>In densely packed snow you should&amp;#8230;use chains or snow tires.
-If you must drive during heavy snow or fog, use your&amp;#8230; low-beam headlights.
-Alcohol-related highway deaths account for&amp;#8230; 38% of all traffic fatalities.
-If you accumulate 7 or more points on your traffic record you may&amp;#8230; attend a Driver Improvement Clinic to deduct three points from your driving record.
-The traffic conviction that adds the highest number of points (5) to your driving record is&amp;#8230; passing a stopped school bus that is loading or unloading children.</description>
+      <description>In densely packed snow you should…use chains or snow tires.
+If you must drive during heavy snow or fog, use your… low-beam headlights.
+Alcohol-related highway deaths account for… 38% of all traffic fatalities.
+If you accumulate 7 or more points on your traffic record you may… attend a Driver Improvement Clinic to deduct three points from your driving record.
+The traffic conviction that adds the highest number of points (5) to your driving record is… passing a stopped school bus that is loading or unloading children.</description>
     </item>
     
     <item>
@@ -803,7 +793,7 @@ The traffic conviction that adds the highest number of points (5) to your drivin
       <pubDate>Sun, 06 Feb 2011 14:49:22 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/vacation/</guid>
-      <description>Ft Lauderdale is awesome, we are having a blast. So far we haven&amp;#8217;t done much other then visit family but thats what we like to do. It really is a pleasure to be able to relax and not worry about anything.</description>
+      <description>Ft Lauderdale is awesome, we are having a blast. So far we haven’t done much other then visit family but thats what we like to do. It really is a pleasure to be able to relax and not worry about anything.</description>
     </item>
     
     <item>
@@ -929,7 +919,7 @@ The traffic conviction that adds the highest number of points (5) to your drivin
       <pubDate>Thu, 02 Sep 2010 02:04:49 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/minecraft/</guid>
-      <description>Starting hosting a Minecraft server and playing on Titans account, its alot of fun and very addicting, I wasted alot of time on it today and the day before. I really enjoy building thins in the game, and directing the flow of water or lava. as usual if you want to play connect to my server by typing this in command console. &amp;#8220;ping jmainguy.com&amp;#8221; then use the ip you get from that.</description>
+      <description>Starting hosting a Minecraft server and playing on Titans account, its alot of fun and very addicting, I wasted alot of time on it today and the day before. I really enjoy building thins in the game, and directing the flow of water or lava. as usual if you want to play connect to my server by typing this in command console. “ping jmainguy.com” then use the ip you get from that.</description>
     </item>
     
     <item>
@@ -947,7 +937,7 @@ The traffic conviction that adds the highest number of points (5) to your drivin
       <pubDate>Mon, 30 Aug 2010 14:46:40 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/babo-weekend/</guid>
-      <description>Friday night a little after 6 the rndlabs.ca servers for baboviolent 2 went down, and they haven&amp;#8217;t come back up yet. this is the longest period of time that they have been done in the last three years. Over its history the servers where first provided by the creators dZb and Daivuk, then when they didnt want to pay for servers for a free game Vamp stepped up and paid for about a year, then Deathray took over when Vamp got sick of doing it, and now?</description>
+      <description>Friday night a little after 6 the rndlabs.ca servers for baboviolent 2 went down, and they haven’t come back up yet. this is the longest period of time that they have been done in the last three years. Over its history the servers where first provided by the creators dZb and Daivuk, then when they didnt want to pay for servers for a free game Vamp stepped up and paid for about a year, then Deathray took over when Vamp got sick of doing it, and now?</description>
     </item>
     
     <item>
@@ -974,7 +964,7 @@ The traffic conviction that adds the highest number of points (5) to your drivin
       <pubDate>Mon, 23 Aug 2010 23:34:19 +0000</pubDate>
       
       <guid>https://jmainguy.com/index.php/obert/</guid>
-      <description>This website was built with the help of many individuals who took the time to explain to me my errors and how to fix them, one of them &amp;#8220;obert-&amp;#8221; from the #wordpress channel on the freenode server; took time to help me setup this blog page and I want to personally thank him for his efforts. Thank you obert</description>
+      <description>This website was built with the help of many individuals who took the time to explain to me my errors and how to fix them, one of them “obert-” from the #wordpress channel on the freenode server; took time to help me setup this blog page and I want to personally thank him for his efforts. Thank you obert</description>
     </item>
     
   </channel>

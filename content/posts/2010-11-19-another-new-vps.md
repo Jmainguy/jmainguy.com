@@ -1,6 +1,6 @@
 ---
 title: Another new VPS
-type: post
+
 date: 2010-11-18T23:25:33+00:00
 url: /index.php/another-new-vps/
 categories:

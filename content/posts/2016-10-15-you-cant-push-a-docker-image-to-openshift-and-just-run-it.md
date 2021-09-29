@@ -1,6 +1,6 @@
 ---
 title: You can’t push a docker image to Openshift and just run it
-type: post
+
 date: 2016-10-15T21:03:43+00:00
 url: /index.php/you-cant-push-a-docker-image-to-openshift-and-just-run-it/
 al2fb_facebook_link_id:

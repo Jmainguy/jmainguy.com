@@ -1,6 +1,6 @@
 ---
 title: The original pokemon is pretty bad
-type: post
+
 date: 2016-02-11T20:10:29+00:00
 url: /index.php/the-original-pokemon-is-pretty-bad/
 al2fb_facebook_link_id:
@@ -8,7 +8,7 @@ al2fb_facebook_link_id:
 al2fb_facebook_link_time:
   - 2016-02-11T20:42:39+00:00
 al2fb_facebook_link_picture:
-  - media=http://jmainguy.com/?al2fb_image=1
+  - media=https://jmainguy.com/?al2fb_image=1
 categories:
   - General
 

@@ -1,6 +1,6 @@
 ---
 title: The flag, the national anthem, and what they mean to me.
-type: post
+
 date: 2017-09-25T15:07:52+00:00
 url: /index.php/the-flag-the-national-anthem-and-what-they-mean-to-me/
 al2fb_facebook_link_id:

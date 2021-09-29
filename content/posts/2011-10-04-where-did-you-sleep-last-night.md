@@ -1,6 +1,6 @@
 ---
 title: Where did you sleep last night
-type: post
+
 date: 2011-10-04T06:44:16+00:00
 url: /index.php/where-did-you-sleep-last-night/
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Minecraft
-type: post
+
 date: 2010-09-02T02:04:49+00:00
 url: /index.php/minecraft/
 categories:

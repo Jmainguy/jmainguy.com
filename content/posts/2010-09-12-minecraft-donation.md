@@ -1,6 +1,6 @@
 ---
 title: Minecraft Donation
-type: post
+
 date: 2010-09-12T16:43:41+00:00
 url: /index.php/minecraft-donation/
 categories:
