@@ -1,7 +1,6 @@
 ---
 title: "Mifare Ultralight Ev1 48"
 date: 2023-07-06T08:39:20-04:00
-type: post
 draft: false
 ---
 
