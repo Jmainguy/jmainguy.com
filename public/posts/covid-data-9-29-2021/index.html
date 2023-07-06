@@ -70,7 +70,7 @@ package main import ( &#34;context&#34; &#34;fmt&#34; finnhub &#34;github.com/Fi
 
     
 
-    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="generator" content="Hugo 0.101.0" />
   </head>
 
   
@@ -149,40 +149,40 @@ package main import ( &#34;context&#34; &#34;fmt&#34; finnhub &#34;github.com/Fi
         
         <p>I recently created a <a href="https://github.com/Jmainguy/stockop">stock price operator for Kubernetes</a>, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same <a href="https://finnhub.io/docs/api/">API</a> I was using for the stock, also had some Covid-19 data in it as well.</p>
 <p>The code was pretty quick to work out thanks to the great API docs and examples.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="font-weight:bold">package</span> main
-
-<span style="font-weight:bold">import</span> (
-	<span style="font-style:italic">&#34;context&#34;</span>
-	<span style="font-style:italic">&#34;fmt&#34;</span>
-
-	finnhub <span style="font-style:italic">&#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34;</span>
-)
-
-<span style="font-weight:bold">func</span> main() {
-        cfg := finnhub.NewConfiguration()
-        cfg.AddDefaultHeader(<span style="font-style:italic">&#34;X-Finnhub-Token&#34;</span>, <span style="font-style:italic">&#34;c50beiaad3ic9bdl2tf0&#34;</span>)
-        finnhubClient := finnhub.NewAPIClient(cfg).DefaultApi
-
-        <span style="font-style:italic">// Covid-19
-</span><span style="font-style:italic"></span>        covid19, _, _ := finnhubClient.Covid19(context.Background()).Execute()
-        fmt.Println(<span style="font-style:italic">&#34;State, TotalCases, TotalDeaths, MortalityRate, Updated&#34;</span>)
-        <span style="font-weight:bold">for</span> _, covidInfo := <span style="font-weight:bold">range</span> covid19 {
-                percentageOFCaseToDeath := *covidInfo.Death / *covidInfo.Case * 100
-                fmt.Printf(
-                        <span style="font-style:italic">&#34;%+v, %.0f, %.0f, %.2f, %+v\n&#34;</span>,
-                        *covidInfo.State, *covidInfo.Case, *covidInfo.Death,
-                        percentageOFCaseToDeath, *covidInfo.Updated,
-                )
-        }
-}
-</code></pre></div><p>Using the code above, I could get the data into a csv base, which I could then manipulate easily with the <code>sort</code> command.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./convid | grep -v &#39;Washington, D.C&#39; | sort -t, -k4 -h | tail -5
-New Jersey, 1150246, 27380, 2.38, 2021-09-29 19:02:03
-Grand Princess, 103, 3, 2.91, 2021-04-20 17:00:47
-Navajo Nation, 30366, 1262, 4.16, 2021-04-20 17:00:47
-Veteran Affair, 250417, 11558, 4.62, 2021-04-20 17:00:47
-Northern Mariana Islands, 31, 2, 6.45, 2021-04-20 17:00:47
-</code></pre></div><p>Here we can see that the Northern Mariana Islands (I have no idea where this is, but I believe they have a trench) has the highest rate, however the sample size is too small to really take it any futher.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="font-weight:bold">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="font-style:italic">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="font-style:italic">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	finnhub <span style="font-style:italic">&#34;github.com/Finnhub-Stock-API/finnhub-go/v2&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">func</span> main() {
+</span></span><span style="display:flex;"><span>        cfg := finnhub.NewConfiguration()
+</span></span><span style="display:flex;"><span>        cfg.AddDefaultHeader(<span style="font-style:italic">&#34;X-Finnhub-Token&#34;</span>, <span style="font-style:italic">&#34;c50beiaad3ic9bdl2tf0&#34;</span>)
+</span></span><span style="display:flex;"><span>        finnhubClient := finnhub.NewAPIClient(cfg).DefaultApi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">// Covid-19
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>        covid19, _, _ := finnhubClient.Covid19(context.Background()).Execute()
+</span></span><span style="display:flex;"><span>        fmt.Println(<span style="font-style:italic">&#34;State, TotalCases, TotalDeaths, MortalityRate, Updated&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="font-weight:bold">for</span> _, covidInfo := <span style="font-weight:bold">range</span> covid19 {
+</span></span><span style="display:flex;"><span>                percentageOFCaseToDeath := *covidInfo.Death / *covidInfo.Case * 100
+</span></span><span style="display:flex;"><span>                fmt.Printf(
+</span></span><span style="display:flex;"><span>                        <span style="font-style:italic">&#34;%+v, %.0f, %.0f, %.2f, %+v\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                        *covidInfo.State, *covidInfo.Case, *covidInfo.Death,
+</span></span><span style="display:flex;"><span>                        percentageOFCaseToDeath, *covidInfo.Updated,
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Using the code above, I could get the data into a csv base, which I could then manipulate easily with the <code>sort</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ ./convid | grep -v &#39;Washington, D.C&#39; | sort -t, -k4 -h | tail -5
+</span></span><span style="display:flex;"><span>New Jersey, 1150246, 27380, 2.38, 2021-09-29 19:02:03
+</span></span><span style="display:flex;"><span>Grand Princess, 103, 3, 2.91, 2021-04-20 17:00:47
+</span></span><span style="display:flex;"><span>Navajo Nation, 30366, 1262, 4.16, 2021-04-20 17:00:47
+</span></span><span style="display:flex;"><span>Veteran Affair, 250417, 11558, 4.62, 2021-04-20 17:00:47
+</span></span><span style="display:flex;"><span>Northern Mariana Islands, 31, 2, 6.45, 2021-04-20 17:00:47
+</span></span></code></pre></div><p>Here we can see that the Northern Mariana Islands (I have no idea where this is, but I believe they have a trench) has the highest rate, however the sample size is too small to really take it any futher.</p>
 <p>The next two highest groups are the VA and the Navajo Nation, pretty interesting to see such a high mortality rate for the Navajo and Veterans, would love to understand why this is.</p>
 <p>It is cool the Navajo Nation has data like this, why dont more first nation tribes have this kind of data? Something for me to look into another time.</p>
 <p>Ultimately, I think I would need more data sources, ones that update more often than Finnhub here, also would like to be able to see a states total population, vaccine counts, and range of data overtime, to see the valleys and peaks in the data.</p>
@@ -216,7 +216,7 @@ Northern Mariana Islands, 31, 2, 6.45, 2021-04-20 17:00:47
         
           2010 -
         
-        2021
+        2023
          Jonathan Mainguy 
       
       
@@ -229,7 +229,7 @@ Northern Mariana Islands, 31, 2, 6.45, 2021-04-20 17:00:47
 
     
       
-      <script src="/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js" integrity="sha256-A7F3afT5GuNWZ&#43;HyocqMFvUFYlds&#43;Q/zKzF5kmkU2qU="></script>
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
     
 
     
