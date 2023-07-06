@@ -23,7 +23,6 @@ paginate = 10
   hideCopyright = false
   since = 2010
 
-  maxSeeAlsoItems = 5
   colorScheme = "auto"
   hideColorSchemeToggle = false
 
