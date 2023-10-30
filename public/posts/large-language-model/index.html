@@ -159,7 +159,7 @@ Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Huggi
   </a>
 </h2>
 <p>To my surprise, I discovered that I&rsquo;d only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a Btrfs LUKS encrypted partition. Here are the commands that worked for me:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find out the name of my active crypt
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find out the name of my active crypt
 </span></span><span style="display:flex;"><span>dmsetup status
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Resize it to the maximum partition size
@@ -186,7 +186,7 @@ Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Huggi
   </a>
 </h2>
 <p>When I came back to hacking, my quest to experiment with LLMs unveiled an unexpected revelation: I thought I had 32GB of RAM, but it turns out I only had 16GB. It had been a few years since I built this PC, my second ever, so it was definitely time for an upgrade. I turned to chatGPT for guidance on figuring out my motherboard and current RAM without cracking open the case:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find RAM details
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find RAM details
 </span></span><span style="display:flex;"><span>sudo dmidecode --type 17
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># Discover motherboard info

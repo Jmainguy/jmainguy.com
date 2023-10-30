@@ -3,9 +3,10 @@ baseURL = "https://jmainguy.com"
 theme = "hugo-coder"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-pygmentsStyle = "bw"
 pygmentsCodeFences = true
+pygmentsStyle = "solarized-light"
 pygmentsCodeFencesGuessSyntax = true
+pygmentsUseClasses = false
 paginate = 10
 
 [params]
