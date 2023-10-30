@@ -8,11 +8,11 @@ I found myself feeling unfulfilled on a Saturday, watching some rather lackluste
 
 ## Exploring LLMs with Hugging Face
 
-In the past, I'd dabbled with using [Hugging Face](https://huggingface.co/) for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leaderboard was a model called [ShiningValiant](https://huggingface.co/ValiantLabs/ShiningValiant). However, it came with a significant requirement - downloading around 300GB of data. I thought, "Do I have enough disk space for this?"
+In the past, I'd dabbled with using [Hugging Face](https://huggingface.co/) for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leader board was a model called [ShiningValiant](https://huggingface.co/ValiantLabs/ShiningValiant). However, it came with a significant requirement - downloading around 300GB of data. I thought, "Do I have enough disk space for this?"
 
 ## A Disk Space Dilemma
 
-To my surprise, I discovered that I'd only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a Btrfs LUKS encrypted partition. Here are the commands that worked for me:
+To my surprise, I discovered that I'd only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a btrfs LUKS encrypted partition. Here are the commands that worked for me:
 
 
 ```/bin/bash
@@ -62,7 +62,7 @@ By the way, did you know that even when Amazon or other retailers do not collect
 
 While eagerly awaiting the arrival of my new RAM, I continued to experiment with LLMs for the next couple of days. I attempted to use ROCm/PyTorch with my Radeon card (gfx803), but I soon learned that my card was considered too old and no longer supported. Trying to build the necessary software myself proved challenging and even if I succeeded, it would have been a temporary hack.
 
-I enjoyed playuing with [text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main) and was able to get it working on cpu, but the speeds were horrendous. 
+I enjoyed playing with [text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main) and was able to get it working on cpu, but the speeds were horrendous. 
 
 [chat-ui](https://github.com/huggingface/chat-ui) looks interesting and I might play with that if I ever get good speeds with these models.
 

@@ -151,14 +151,14 @@ Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Huggi
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>In the past, I&rsquo;d dabbled with using <a href="https://huggingface.co/">Hugging Face</a> for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leaderboard was a model called <a href="https://huggingface.co/ValiantLabs/ShiningValiant">ShiningValiant</a>. However, it came with a significant requirement - downloading around 300GB of data. I thought, &ldquo;Do I have enough disk space for this?&rdquo;</p>
+<p>In the past, I&rsquo;d dabbled with using <a href="https://huggingface.co/">Hugging Face</a> for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leader board was a model called <a href="https://huggingface.co/ValiantLabs/ShiningValiant">ShiningValiant</a>. However, it came with a significant requirement - downloading around 300GB of data. I thought, &ldquo;Do I have enough disk space for this?&rdquo;</p>
 <h2 id="a-disk-space-dilemma">
   A Disk Space Dilemma
   <a class="heading-link" href="#a-disk-space-dilemma">
     <i class="fa fa-link" aria-hidden="true"></i>
   </a>
 </h2>
-<p>To my surprise, I discovered that I&rsquo;d only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a Btrfs LUKS encrypted partition. Here are the commands that worked for me:</p>
+<p>To my surprise, I discovered that I&rsquo;d only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a btrfs LUKS encrypted partition. Here are the commands that worked for me:</p>
 <div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find out the name of my active crypt
 </span></span><span style="display:flex;"><span>dmsetup status
 </span></span><span style="display:flex;"><span>
@@ -206,7 +206,7 @@ Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Huggi
   </a>
 </h2>
 <p>While eagerly awaiting the arrival of my new RAM, I continued to experiment with LLMs for the next couple of days. I attempted to use ROCm/PyTorch with my Radeon card (gfx803), but I soon learned that my card was considered too old and no longer supported. Trying to build the necessary software myself proved challenging and even if I succeeded, it would have been a temporary hack.</p>
-<p>I enjoyed playuing with <a href="https://github.com/oobabooga/text-generation-webui/tree/main">text-generation-webui</a> and was able to get it working on cpu, but the speeds were horrendous.</p>
+<p>I enjoyed playing with <a href="https://github.com/oobabooga/text-generation-webui/tree/main">text-generation-webui</a> and was able to get it working on cpu, but the speeds were horrendous.</p>
 <p><a href="https://github.com/huggingface/chat-ui">chat-ui</a> looks interesting and I might play with that if I ever get good speeds with these models.</p>
 <h2 id="summary">
   Summary
