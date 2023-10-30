@@ -56,7 +56,7 @@ inxi -M
 
 With this newfound information, I headed to [PC Part Picker](https://pcpartpicker.com/) to see what upgrades were possible. It helped me select a [fantastic 64GB RAM kit](https://pcpartpicker.com/product/KdgQzy/corsair-vengeance-lpx-64-gb-4-x-16-gb-ddr4-3200-memory-cmk64gx4m4e3200c16) for approximately $155 after tax.
 
-By the way, did you know that even when Amazon or other retailers collect sales tax for you, you're still responsible for it? Failing to pay your owed taxes can lead to a cumbersome monthly chore of filling out a [sales and use tax](https://www.ncdor.gov/taxes-forms/sales-and-use-tax) form.
+By the way, did you know that even when Amazon or other retailers do not collect sales tax for you, you're still responsible for it? Failing to pay your owed taxes can lead to a cumbersome monthly chore of filling out a [sales and use tax](https://www.ncdor.gov/taxes-forms/sales-and-use-tax) form. Companies that collect sales tax are actually doing you a favor and saving you from this burden. If you do not like sales tax, take it up with your elected representatives.
 
 ## Waiting for the RAM and Future Endeavors
 
