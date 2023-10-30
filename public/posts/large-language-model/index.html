@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Jonathan Mainguy">
+    <meta name="description" content="I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a fascinating article about Google investing $2 billion into a company I had never even heard of.
+Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Hugging Face for generating AI-driven images, back when it was the hottest trend a few months ago.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Large Language Model: A Journey into AI and PC Upgrades"/>
+<meta name="twitter:description" content="I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a fascinating article about Google investing $2 billion into a company I had never even heard of.
+Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Hugging Face for generating AI-driven images, back when it was the hottest trend a few months ago."/>
+
+    <meta property="og:title" content="Large Language Model: A Journey into AI and PC Upgrades" />
+<meta property="og:description" content="I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a fascinating article about Google investing $2 billion into a company I had never even heard of.
+Exploring LLMs with Hugging Face In the past, I&rsquo;d dabbled with using Hugging Face for generating AI-driven images, back when it was the hottest trend a few months ago." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jmainguy.com/posts/large-language-model/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-30T00:00:00+00:00" />
+
+
+
+    <title>
+  Large Language Model: A Journey into AI and PC Upgrades · Jonathan Mainguy
+</title>
+
+    
+      <link rel="canonical" href="https://jmainguy.com/posts/large-language-model/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Jonathan Mainguy
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jmainguy.com/posts/large-language-model/">
+              Large Language Model: A Journey into AI and PC Upgrades
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2023-10-30T00:00:00Z'>
+                October 30, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a <a href="https://news.ycombinator.com/item?id=38048155">fascinating article about Google investing $2 billion into a company I had never even heard of</a>.</p>
+<h2 id="exploring-llms-with-hugging-face">
+  Exploring LLMs with Hugging Face
+  <a class="heading-link" href="#exploring-llms-with-hugging-face">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>In the past, I&rsquo;d dabbled with using <a href="https://huggingface.co/">Hugging Face</a> for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leaderboard was a model called <a href="https://huggingface.co/ValiantLabs/ShiningValiant">ShiningValiant</a>. However, it came with a significant requirement - downloading around 300GB of data. I thought, &ldquo;Do I have enough disk space for this?&rdquo;</p>
+<h2 id="a-disk-space-dilemma">
+  A Disk Space Dilemma
+  <a class="heading-link" href="#a-disk-space-dilemma">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>To my surprise, I discovered that I&rsquo;d only partitioned 500GB of my 2TB NVMe disk. Without wasting any time, I used parted to delete the unused 200GB partition and resize the main one to a whopping 1TB. Then, it was time to tackle extending a Btrfs LUKS encrypted partition. Here are the commands that worked for me:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find out the name of my active crypt
+</span></span><span style="display:flex;"><span>dmsetup status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Resize it to the maximum partition size
+</span></span><span style="display:flex;"><span>cryptsetup resize luks-03bdbe6b-c97c-4541-959e-cf83ea6f7f31
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Extend the file system
+</span></span><span style="display:flex;"><span>btrfs filesystem resize max /
+</span></span></code></pre></div><p>After installing llm and experimenting with various models, my PC suddenly froze because it was running low on RAM.</p>
+<p>I like to take a break when running into issues, as it helps resolve most problems when you come back with a fresh mindset. I started playing some guitar and before I knew it my kids had surrounded me with their instruments. Cora Beth was on the Keys, while Deacon was rocking out with his Ukelele he got for his birthday recently. We ran through a good set list.</p>
+<ul>
+<li>Smells Like Teen Spirit</li>
+<li>Dammit</li>
+<li>I&rsquo;ll Fly Away</li>
+<li>Star Spangled Banner</li>
+<li>Amazing Grace</li>
+<li>Brain Stew</li>
+<li>Die, Die My Darling</li>
+<li>Last Caress</li>
+</ul>
+<h2 id="the-ram-revelation">
+  The RAM Revelation
+  <a class="heading-link" href="#the-ram-revelation">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>When I came back to hacking, my quest to experiment with LLMs unveiled an unexpected revelation: I thought I had 32GB of RAM, but it turns out I only had 16GB. It had been a few years since I built this PC, my second ever, so it was definitely time for an upgrade. I turned to chatGPT for guidance on figuring out my motherboard and current RAM without cracking open the case:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Find RAM details
+</span></span><span style="display:flex;"><span>sudo dmidecode --type 17
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Discover motherboard info
+</span></span><span style="display:flex;"><span>inxi -M
+</span></span></code></pre></div><h2 id="the-pc-part-picker-solution">
+  The PC Part Picker Solution
+  <a class="heading-link" href="#the-pc-part-picker-solution">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>With this newfound information, I headed to <a href="https://pcpartpicker.com/">PC Part Picker</a> to see what upgrades were possible. It helped me select a <a href="https://pcpartpicker.com/product/KdgQzy/corsair-vengeance-lpx-64-gb-4-x-16-gb-ddr4-3200-memory-cmk64gx4m4e3200c16">fantastic 64GB RAM kit</a> for approximately $155 after tax.</p>
+<p>By the way, did you know that even when Amazon or other retailers collect sales tax for you, you&rsquo;re still responsible for it? Failing to pay your owed taxes can lead to a cumbersome monthly chore of filling out a <a href="https://www.ncdor.gov/taxes-forms/sales-and-use-tax">sales and use tax</a> form.</p>
+<h2 id="waiting-for-the-ram-and-future-endeavors">
+  Waiting for the RAM and Future Endeavors
+  <a class="heading-link" href="#waiting-for-the-ram-and-future-endeavors">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>While eagerly awaiting the arrival of my new RAM, I continued to experiment with LLMs for the next couple of days. I attempted to use ROCm/PyTorch with my Radeon card (gfx803), but I soon learned that my card was considered too old and no longer supported. Trying to build the necessary software myself proved challenging and even if I succeeded, it would have been a temporary hack.</p>
+<p>I enjoyed playuing with <a href="https://github.com/oobabooga/text-generation-webui/tree/main">text-generation-webui</a> and was able to get it working on cpu, but the speeds were horrendous.</p>
+<p><a href="https://github.com/huggingface/chat-ui">chat-ui</a> looks interesting and I might play with that if I ever get good speeds with these models.</p>
+<h2 id="summary">
+  Summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>In 2023, the consensus seems to be that for AI/ML, you should be using an Nvidia GPU. Their 40x series appears to be outstanding, with some people even vouching for the 30x series if you can find a good deal. Personally, I&rsquo;m getting an M2 Macbook from work in about a month, and it&rsquo;s rumored to be quite capable for AI/ML. So, I&rsquo;ll be revisiting my AI experiments without having to spend more on a GPU for the time being.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Take it easy</p>
+      
+      
+        ©
+        
+          2010 -
+        
+        2023
+         Jonathan Mainguy 
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

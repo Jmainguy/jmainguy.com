@@ -11,3 +11,15 @@ hugo new posts/my-first-post.md
 ```
 hugo server -D
 ```
+
+
+## Deploy changes
+```
+hugo
+git add .
+git commit -m 'feat: new posts'
+git push
+ssh phy01.standouthost.com
+cd /opt/jmainguy
+git pull
+```

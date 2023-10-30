@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jonathan Mainguy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Jul 2023 15:53:23 -0400</lastBuildDate><atom:link href="https://jmainguy.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jmainguy.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Large Language Model: A Journey into AI and PC Upgrades</title>
+      <link>https://jmainguy.com/posts/large-language-model/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jmainguy.com/posts/large-language-model/</guid>
+      <description>I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a fascinating article about Google investing $2 billion into a company I had never even heard of.
+Exploring LLMs with Hugging Face In the past, I&amp;rsquo;d dabbled with using Hugging Face for generating AI-driven images, back when it was the hottest trend a few months ago.</description>
+    </item>
+    
     <item>
       <title>Enterprise Linux</title>
       <link>https://jmainguy.com/posts/enterprise-linux/</link>
