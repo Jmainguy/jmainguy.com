@@ -1,6 +1,6 @@
 ---
 title: "My Time at CVS"
-date: 2024-03-18T09:07:21-05:00
+date: 2024-03-18
 draft: false
 ---
 
