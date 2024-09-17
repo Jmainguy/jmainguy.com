@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jmainguy.com/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <loc>https://jmainguy.com/posts/a-good-ci-system/</loc>
+    <lastmod>2024-09-17T11:46:51-04:00</lastmod>
   </url><url>
-    <loc>https://jmainguy.com/posts/my-time-at-cvs/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <loc>https://jmainguy.com/</loc>
+    <lastmod>2024-09-17T11:46:51-04:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/</loc>
+    <lastmod>2024-09-17T11:46:51-04:00</lastmod>
+  </url><url>
+    <loc>https://jmainguy.com/posts/my-time-at-cvs/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/errors/</loc>
