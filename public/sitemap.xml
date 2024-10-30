@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jmainguy.com/</loc>
-    <lastmod>2024-10-15T12:41:54-04:00</lastmod>
+    <loc>https://jmainguy.com/posts/end-of-an-era/</loc>
+    <lastmod>2024-10-30T12:35:16-04:00</lastmod>
   </url><url>
-    <loc>https://jmainguy.com/posts/multi-arch-hybrid-cloud/</loc>
-    <lastmod>2024-10-15T12:41:54-04:00</lastmod>
+    <loc>https://jmainguy.com/</loc>
+    <lastmod>2024-10-30T12:35:16-04:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/</loc>
+    <lastmod>2024-10-30T12:35:16-04:00</lastmod>
+  </url><url>
+    <loc>https://jmainguy.com/posts/multi-arch-hybrid-cloud/</loc>
     <lastmod>2024-10-15T12:41:54-04:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/a-good-ci-system/</loc>

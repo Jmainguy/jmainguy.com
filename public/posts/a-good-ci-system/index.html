@@ -14,18 +14,22 @@
 Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing.">
     <meta name="keywords" content="blog,developer,personal">
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="A Good Ci System"/>
-<meta name="twitter:description" content="What makes a good Continuous Integration system? I believe a good CI system should
-Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing."/>
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A Good Ci System">
+  <meta name="twitter:description" content="What makes a good Continuous Integration system? I believe a good CI system should
+Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing.">
 
-    <meta property="og:title" content="A Good Ci System" />
-<meta property="og:description" content="What makes a good Continuous Integration system? I believe a good CI system should
-Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jmainguy.com/posts/a-good-ci-system/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-09-17T11:46:51-04:00" />
-<meta property="article:modified_time" content="2024-09-17T11:46:51-04:00" />
-
+    <meta property="og:url" content="https://jmainguy.com/posts/a-good-ci-system/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="A Good Ci System">
+  <meta property="og:description" content="What makes a good Continuous Integration system? I believe a good CI system should
+Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-17T11:46:51-04:00">
+    <meta property="article:modified_time" content="2024-09-17T11:46:51-04:00">
 
 
     <title>
@@ -66,7 +70,7 @@ Require minimal to no effort on the part of the Application Developers to mainta
 
     
 
-    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Hugo 0.126.2">
   </head>
 
   
@@ -153,7 +157,7 @@ Require minimal to no effort on the part of the Application Developers to mainta
 <li>provide all information produced from testing / checks / scans inside the Pull Request / Merge Request.</li>
 </ul>
 <p>I believe in the theoretical Application Developer who knows nothing, other than their specific language of choice. They have no desire to learn DevOps, SRE, System Administration, or Platform Engineering. They want to make great applications quickly, without red tape, and without being blocked by other teams.</p>
-<p><img src="/images/903.jpg" alt="Know Nothing"></p>
+<p><img alt="Know Nothing" src="/images/903.jpg"></p>
 <p>The system needs to support this Application Developer persona, while acknowledging they know more about their codebase than we ever will. So we trust them to let us know when the CI system needs to add new features that all teams using that language will benefit from. We also trust them when they require more from their CI than the organizational standards require.</p>
 <p>To this point, this week I added an easily maintained reusable workflow for use by my application developer (myself), in all their projects. I use golang in almost all my codebases, so that was the language I supported in the CI system. <a href="https://github.com/Jmainguy/golang-workflows">https://github.com/Jmainguy/golang-workflows</a>.</p>
 <p>The magic is in <a href="https://github.com/Jmainguy/golang-workflows/blob/main/.github/workflows/golang-ci.yml">https://github.com/Jmainguy/golang-workflows/blob/main/.github/workflows/golang-ci.yml</a> which runs</p>
@@ -189,7 +193,7 @@ Require minimal to no effort on the part of the Application Developers to mainta
 </span></span></code></pre></div><p>So they always get the latest major version one without any changes on their end. If a new major version is cut, <a href="https://github.com/renovatebot/renovate">Renovate</a> is configured to look at all my repositories and open a Pull Request asking the developer to upgrade to the latest release at their convenience.</p>
 <p>Before I added the reusable-workflow approach this week, each repo had its own workflows which looked similar but were mildly different and out of date with each other. This was causing my CI runs to fail on almost all my repositories for lack of effort on my Application Developer persona to keep them up to date. After migrating all my repos are passing their testing, and cutting releases. This solves 50% of my CI/CD needs, CD is next =).</p>
 <p>I was quite happy to see my github notifications go from scary to empty after merging all the PR&rsquo;s.</p>
-<p><img src="/images/clean-notifications.png" alt="Clean Notifications"></p>
+<p><img alt="Clean Notifications" src="/images/clean-notifications.png"></p>
 
       </div>
 
@@ -239,6 +243,9 @@ Require minimal to no effort on the part of the Application Developers to mainta
     
 
     
+  
+
+
 
     
 

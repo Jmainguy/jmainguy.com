@@ -13,16 +13,20 @@
     <meta name="description" content="Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead.">
     <meta name="keywords" content="blog,developer,personal">
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Double Speed"/>
-<meta name="twitter:description" content="Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead."/>
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Double Speed">
+  <meta name="twitter:description" content="Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead.">
 
-    <meta property="og:title" content="Double Speed" />
-<meta property="og:description" content="Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jmainguy.com/posts/double-speed/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-11-06T07:55:01-05:00" />
-<meta property="article:modified_time" content="2023-11-06T07:55:01-05:00" />
-
+    <meta property="og:url" content="https://jmainguy.com/posts/double-speed/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="Double Speed">
+  <meta property="og:description" content="Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-11-06T07:55:01-05:00">
+    <meta property="article:modified_time" content="2023-11-06T07:55:01-05:00">
 
 
     <title>
@@ -63,7 +67,7 @@
 
     
 
-    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Hugo 0.126.2">
   </head>
 
   
@@ -146,10 +150,10 @@
 <p>My next course of action was to reinstall the OS, I was able to install the Debian 11 quite quickly using <a href="https://www.linode.com/">Linode&rsquo;s </a> web based UI. After logging into the new server, I followed the DO tutorial from earlier and had a Wireguard Server, and Client on my Desktop connecting to it. I was blown away, the speed was basically no different than being off the VPN, the VPN connects / disconnects quickly when asked. When rebooting the server my Desktop automatically reconnects to it. I was sold, no more OpenVPN for me, Wireguard is new best friend.</p>
 <p>So now that I got Wireguard working, lets add a client to my router so the whole house can be on the VPN for games. We have a <a href="https://www.netgear.com/home/wifi/routers/r7000/">Netgear Nighthawk R7000</a>, with <a href="https://freshtomato.org/">Tomato</a> installed. Some quick googling revealed Wireguard is not officially supported, but <a href="https://wiki.freshtomato.org/doku.php/wireguard_on_freshtomato">could be enabled for Arm based devices</a>. I updated Tomato to the latest release and attempted to follow the tutorial. However the very first step of <code>modprobe</code> failed. Despite my router being arm, and the tutorial claiming it should work, it did not. I was not going to be able to get a whole house vpn working on this. I googled for some newer routers I could pick up at best buy, and they look quite nice, however I could not really justify spending $300 for a new router I did not really need. Foiled once more.</p>
 <p>Leah has been complaining about the wireless access in her office at the front of the house, and with my router no being able to do Wireguard I took a good look at why I was even using it anymore. You see, I have ATT Fiber coming into the house, connected to a ATT Modem / Router combo, which I disabled the wireless on and then connected my Netgear router into. I decided to give the ATT Router another shot by enabling its wireless and unplugged the Netgear, with the idea being I can turn it into a dumb AP and place it in Leah&rsquo;s office once I get a long enough ethernet cord. I went backup stairs to check the connection and now I was getting 2x as fast speeds on fast.com</p>
-<p><img src="https://i.imgur.com/OZHy4UB.png" alt="fast.com"></p>
+<p><img alt="fast.com" src="https://i.imgur.com/OZHy4UB.png"></p>
 <p>I had been plugged into the router before, so apparently the Netgear was limiting me somehow. Cool, double speeds never hurt and now I am getting very close to the speeds advertised / I am paying for.</p>
 <p>I went ahead and installed Debian over another VM I had with <a href="https://buyvm.net/">BuyVM</a> and installed Wireguard there. I then noticed I had not had a third nameserver running when I always wanted 3, so I went into my Oracle Cloud Always free instance and spun up a 4cpu 24gig of ram Arm server with Ubuntu, the closest Oracle lets me get to Debian. I set that up with wireguard and updated me DNS. I now have NYC, Atlanta, and Frankfurt as VPN destinations for my VPN needs.</p>
-<p>I rounded out the day by updating the packages on all my vm&rsquo;s and hosts, and upgrading NextCloud from 21 to 27. Running the <a href="https://scan.nextcloud.com/">Nextcloud Security scanner</a> against my instance gave me a very rewarding feeling <img src="https://i.imgur.com/CzOUAYs.png" alt="very rewarding feeling"></p>
+<p>I rounded out the day by updating the packages on all my vm&rsquo;s and hosts, and upgrading NextCloud from 21 to 27. Running the <a href="https://scan.nextcloud.com/">Nextcloud Security scanner</a> against my instance gave me a very rewarding feeling <img alt="very rewarding feeling" src="https://i.imgur.com/CzOUAYs.png"></p>
 
       </div>
 
@@ -199,6 +203,9 @@
     
 
     
+  
+
+
 
     
 

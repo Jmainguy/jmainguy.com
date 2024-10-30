@@ -17,24 +17,28 @@ drop table tblemailtemplates;
 RENAME TABLE new_table TO tblemailtemplates;">
     <meta name="keywords" content="blog,developer,personal">
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Delete email template duplicates from WHMCS"/>
-<meta name="twitter:description" content="After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Delete email template duplicates from WHMCS">
+  <meta name="twitter:description" content="After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.
 CREATE TABLE new_table AS
 SELECT * FROM tblemailtemplates WHERE 1 GROUP BY name;
 drop table tblemailtemplates;
-RENAME TABLE new_table TO tblemailtemplates;"/>
+RENAME TABLE new_table TO tblemailtemplates;">
 
-    <meta property="og:title" content="Delete email template duplicates from WHMCS" />
-<meta property="og:description" content="After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.
+    <meta property="og:url" content="https://jmainguy.com/index.php/delete-email-template-duplicates-from-whmcs/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="Delete email template duplicates from WHMCS">
+  <meta property="og:description" content="After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.
 CREATE TABLE new_table AS
 SELECT * FROM tblemailtemplates WHERE 1 GROUP BY name;
 drop table tblemailtemplates;
-RENAME TABLE new_table TO tblemailtemplates;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jmainguy.com/index.php/delete-email-template-duplicates-from-whmcs/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2013-10-20T03:16:26+00:00" />
-<meta property="article:modified_time" content="2013-10-20T03:16:26+00:00" />
-
+RENAME TABLE new_table TO tblemailtemplates;">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2013-10-20T03:16:26+00:00">
+    <meta property="article:modified_time" content="2013-10-20T03:16:26+00:00">
 
 
     <title>
@@ -75,7 +79,7 @@ RENAME TABLE new_table TO tblemailtemplates;" />
 
     
 
-    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Hugo 0.126.2">
   </head>
 
   
@@ -209,6 +213,9 @@ RENAME TABLE new_table TO tblemailtemplates;" />
     
 
     
+  
+
+
 
     
 

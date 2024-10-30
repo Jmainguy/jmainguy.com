@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Jonathan Mainguy">
+    <meta name="description" content="For the past few weeks, I have been migrating all my hosted services over to my new kubernetes cluster running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my hetzner server any longer.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="End of an Era">
+  <meta name="twitter:description" content="For the past few weeks, I have been migrating all my hosted services over to my new kubernetes cluster running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my hetzner server any longer.">
+
+    <meta property="og:url" content="https://jmainguy.com/posts/end-of-an-era/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="End of an Era">
+  <meta property="og:description" content="For the past few weeks, I have been migrating all my hosted services over to my new kubernetes cluster running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my hetzner server any longer.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-30T12:35:16-04:00">
+    <meta property="article:modified_time" content="2024-10-30T12:35:16-04:00">
+
+
+    <title>
+  End of an Era · Jonathan Mainguy
+</title>
+
+    
+      <link rel="canonical" href="https://jmainguy.com/posts/end-of-an-era/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.126.2">
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Jonathan Mainguy
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jmainguy.com/posts/end-of-an-era/">
+              End of an Era
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2024-10-30T12:35:16-04:00'>
+                October 30, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>For the past few weeks, I have been migrating all my hosted services over to my new <a href="https://jmainguy.com/posts/multi-arch-hybrid-cloud/">kubernetes cluster</a> running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my <a href="https://www.hetzner.com/">hetzner</a> server any longer. Which makes me sad.</p>
+<p>This is a testament to how great a provider Hetzner is. Their servers are fairly priced, offer plenty of bandwidth, great support team, and a really fun and intuitive web interface for managing them. I have been using Hetzner for over a decade, back when I got started with minecraft hosting, and they have never let me down. While I do not need my hetzner server in my new setup, I would love to need to use hetzner again in the future when I can justify a large dedicated server again.</p>
+<p><img alt="End of an era" src="/images/cancel-hetzner.png"></p>
+<p>So which services were interesting to move?</p>
+<h2 id="sohre">
+  soh.re
+  <a class="heading-link" href="#sohre">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>If you havent visited <a href="https://soh.re">soh.re</a> go ahead and check it out. It drops you into the terminal of a docker container, that goes away when you close your browser tab. This is one of my favorite services I host.</p>
+<p>I had not visited its infrastructure in some time and came to learn that I had made it quite complicated. I had Haproxy going to Haproxy on each VM, that then shifted traffic to either a static container for issuing the websocket upgrade, or the final docker container for serving the content.</p>
+<p>After moving it to my kubernetes cluster, I was able to remove the need for both haproxy and the static websocket upgrade container on each VM, instead running the container on kubernetes for the upgrade. (the payload still happens on VM&rsquo;s outside of kubernetes).</p>
+<p>I had to use DestinationRules, and serviceEntries for routing traffic to external services outside the cluster, which was fun to learn about. You can view the code <a href="https://github.com/Standouthost/helm-charts/tree/main/sohre/templates">here</a> if you are interested in seeing how it is done.</p>
+<h2 id="flightssohre">
+  flights.soh.re
+  <a class="heading-link" href="#flightssohre">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://flights.soh.re">flights.soh.re</a> runs off a raspberry pi in my bedroom for serving a website showing planes flying over my house. So instead of redirecting to the pi from haproxy, now I redirect to it from istio on kubernetes. Similar to how soh.re above works, destinationRules and serviceEntries. Its code is <a href="https://github.com/Standouthost/helm-charts/tree/main/flights">here</a></p>
+<h2 id="rightwaypropertycarecom">
+  rightwaypropertycare.com
+  <a class="heading-link" href="#rightwaypropertycarecom">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://rightwaypropertycare.com">rightwaypropertycare.com</a> is my brothers power washing business website. It runs on wordpress, which I learned during this migration project only supports MySQL type databases. I figured everyone supported postgres, but I was wrong. I tried a few different MySQL / MariaDB operators for spinning up mysql clusters, but was underwhelmed with each one I tried. They did not work following their quickstart documentation, which drove me to just spinning up a simple mariadb container as part of the rightway deployment. The website also uses a microservice for combatting spam I wrote. You can see its code <a href="https://github.com/Jmainguy/wp-spam">here</a>. I found out during the migration that it has been down for a few months, which made me sad. I feel much better now that I have it on the k8s cluster as it should not go down again, and will be easier to view if it does.</p>
+<p>The database for wordpress needs Persistent storage. Which I had setup previously using longhorn. During the migration I saw I was getting sub 1mbps speeds writing to the storage, which I decided was unacceptable. Digging into the issue, I saw writing directly to the disks using my favorite <a href="https://lowendtalk.com/discussion/42/test-the-disk-i-o-of-your-vps">dd test</a> I was getting 450mbps speeds on the <strong>black-intel</strong>, but 40mbps speeds on the <strong>lenovo laptop</strong> and <strong>white-amd nodes</strong>. I went ahead and purchased a new drive for each to match what I had in the black-intel. I then reinstalled debian / k3s on the new drives and took out the old spinning slow drives.</p>
+<p><img alt="Drives" src="/images/drives.png"></p>
+<p>I also saw that I was trying to use iscsi over wireguard to germany which was 130ms away. A very smart storage engineer at RedHat once explained to me one of his cardinal rules that has always stuck with me, don&rsquo;t send storage across a firewall. So I went into my longhorn UI and disabled the german host from being a storage provider.</p>
+<p><img alt="Disabled" src="/images/disabled.png"></p>
+<p>I then also determined to never host anything on the german node that requires persistent storage, which for now was done via cordoning that node so it only handles control plane duties for now. In the future I will use taints / annotations to keep PVC&rsquo;s / amd64 requirements away from it.</p>
+<p>After making these changes I went from sub 1mbps to above 300mbps speeds on the PVC&rsquo;s.</p>
+<p><strong>Before</strong></p>
+<p><img alt="Slow Transfer" src="/images/slow-transfer.png"></p>
+<p><strong>After</strong></p>
+<p><img alt="Fast Transfer" src="/images/fast-transfer.png"></p>
+<h2 id="etherpadsohre">
+  etherpad.soh.re
+  <a class="heading-link" href="#etherpadsohre">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://etherpad.soh.re">etherpad.soh.re</a> is a site I use as a scratchpad / way to share christmas list with relatives easy. It can be used for much more, we used it at Redhat for collaboratively taking notes during meetings.</p>
+<p>It had a mariadb database on my german server, and I wanted to migrate it to postgres when moving to the new cluster. I decided on postgres because it had some fantastic operators and people always rave about how much they love postgres. I tried a few different operators but ended up using <a href="https://cloudnative-pg.io/">cloutnative-pg</a> because its in the CNCF, and supported postgres 17 which some of the others did not. It was pretty simple to setup and I found it to be a great operator.</p>
+<p>Doing the migration I learned about another great tool called <a href="https://github.com/dimitri/pgloader">pgloader</a> This connects to the old mariadb database, and the new postgres database, and then transfers and transforms the data. I really enjoyed using it and was quite impressed it just worked.</p>
+<h2 id="the-rest">
+  The rest
+  <a class="heading-link" href="#the-rest">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>The rest of websites were pretty straightforward static html websites. I was able to write a <a href="https://github.com/standouthost/helm-webapp">helm chart</a> they could all use to deliver their content in a uniform manner. This chart is pretty opinionated for my setup using istio, but you can get an idea from it.</p>
+<p>Full list of websites and their certificates being provided by LetsEncrypt via cert-manager</p>
+<p><img alt="All sites" src="/images/all-hosts.png"></p>
+<p>Shout out to my friend <a href="https://stackoverflow.com/users/33204/slm">Sam</a> for encouraging me to write more of these blog posts, it means a ton to me.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Take it easy</p>
+      
+      
+        ©
+        
+          2010 -
+        
+        2024
+         Jonathan Mainguy 
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+  
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

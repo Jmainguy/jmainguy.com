@@ -15,20 +15,24 @@ I knew from past experience k3s was easy to setup and was able to scale and add 
 Some requirements for my new cluster were as follows">
     <meta name="keywords" content="blog,developer,personal">
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Multi Arch Hybrid Cloud"/>
-<meta name="twitter:description" content="A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Multi Arch Hybrid Cloud">
+  <meta name="twitter:description" content="A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.
 I knew from past experience k3s was easy to setup and was able to scale and add more nodes easily as well, so I started there.
-Some requirements for my new cluster were as follows"/>
+Some requirements for my new cluster were as follows">
 
-    <meta property="og:title" content="Multi Arch Hybrid Cloud" />
-<meta property="og:description" content="A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.
+    <meta property="og:url" content="https://jmainguy.com/posts/multi-arch-hybrid-cloud/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="Multi Arch Hybrid Cloud">
+  <meta property="og:description" content="A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.
 I knew from past experience k3s was easy to setup and was able to scale and add more nodes easily as well, so I started there.
-Some requirements for my new cluster were as follows" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jmainguy.com/posts/multi-arch-hybrid-cloud/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-10-15T12:41:54-04:00" />
-<meta property="article:modified_time" content="2024-10-15T12:41:54-04:00" />
-
+Some requirements for my new cluster were as follows">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-15T12:41:54-04:00">
+    <meta property="article:modified_time" content="2024-10-15T12:41:54-04:00">
 
 
     <title>
@@ -69,7 +73,7 @@ Some requirements for my new cluster were as follows" />
 
     
 
-    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Hugo 0.126.2">
   </head>
 
   
@@ -148,7 +152,7 @@ Some requirements for my new cluster were as follows" />
         
         <p>A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.</p>
 <p>I knew from past experience <a href="https://k3s.io/">k3s</a> was easy to setup and was able to scale and add more nodes easily as well, so I started there.</p>
-<p><img src="/images/k3s.png" alt="Easy"></p>
+<p><img alt="Easy" src="/images/k3s.png"></p>
 <p>Some requirements for my new cluster were as follows</p>
 <ul>
 <li>inexpensive, I am quite cheap.</li>
@@ -412,8 +416,8 @@ Some requirements for my new cluster were as follows" />
 </span></span><span style="display:flex;"><span>k3s-soh-re      Ready    control-plane,master   4d23h   v1.31.1+k3s1   10.0.0.4      10.0.0.4      Ubuntu 24.04.1 LTS               6.8.0-1013-oracle   containerd://1.7.21-k3s2
 </span></span><span style="display:flex;"><span>lenovo-laptop   Ready    &lt;none&gt;                 4d22h   v1.31.1+k3s1   10.0.0.6      10.0.0.6      Debian GNU/Linux <span style="color:#2aa198;font-weight:bold">12</span> (bookworm)   6.1.0-26-amd64      containerd://1.7.21-k3s2
 </span></span><span style="display:flex;"><span>white-amd       Ready    &lt;none&gt;                 4d6h    v1.31.1+k3s1   10.0.0.2      10.0.0.2      Debian GNU/Linux <span style="color:#2aa198;font-weight:bold">12</span> (bookworm)   6.1.0-25-amd64      containerd://1.7.21-k3s2
-</span></span></code></pre></div><p><img src="/images/IMG20241013084544.jpg" alt="Towers"></p>
-<p><img src="/images/IMG20241013084552.jpg" alt="Spahghetti"></p>
+</span></span></code></pre></div><p><img alt="Towers" src="/images/IMG20241013084544.jpg"></p>
+<p><img alt="Spahghetti" src="/images/IMG20241013084552.jpg"></p>
 <p>When wanting to upgrade k3s version in the future, we can wget the binary from a github release <a href="https://github.com/k3s-io/k3s/releases">https://github.com/k3s-io/k3s/releases</a> and place in <code>/usr/local/bin/</code></p>
 <h2 id="adding-new-hostnames-for-ingress-on-the-cluster">
   Adding new hostnames for ingress on the cluster
@@ -500,6 +504,9 @@ Some requirements for my new cluster were as follows" />
     
 
     
+  
+
+
 
     
 

@@ -4,10 +4,17 @@
     <title>Posts on Jonathan Mainguy</title>
     <link>https://jmainguy.com/posts/</link>
     <description>Recent content in Posts on Jonathan Mainguy</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Oct 2024 12:41:54 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2024 12:35:16 -0400</lastBuildDate>
     <atom:link href="https://jmainguy.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>End of an Era</title>
+      <link>https://jmainguy.com/posts/end-of-an-era/</link>
+      <pubDate>Wed, 30 Oct 2024 12:35:16 -0400</pubDate>
+      <guid>https://jmainguy.com/posts/end-of-an-era/</guid>
+      <description>For the past few weeks, I have been migrating all my hosted services over to my new kubernetes cluster running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my hetzner server any longer.</description>
+    </item>
     <item>
       <title>Multi Arch Hybrid Cloud</title>
       <link>https://jmainguy.com/posts/multi-arch-hybrid-cloud/</link>
