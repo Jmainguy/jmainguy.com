@@ -189,7 +189,7 @@
   </a>
 </h2>
 <p><a href="https://etherpad.soh.re">etherpad.soh.re</a> is a site I use as a scratchpad / way to share christmas list with relatives easy. It can be used for much more, we used it at Redhat for collaboratively taking notes during meetings.</p>
-<p>It had a mariadb database on my german server, and I wanted to migrate it to postgres when moving to the new cluster. I decided on postgres because it had some fantastic operators and people always rave about how much they love postgres. I tried a few different operators but ended up using <a href="https://cloudnative-pg.io/">cloutnative-pg</a> because its in the CNCF, and supported postgres 17 which some of the others did not. It was pretty simple to setup and I found it to be a great operator.</p>
+<p>It had a mariadb database on my german server, and I wanted to migrate it to postgres when moving to the new cluster. I decided on postgres because it had some fantastic operators and people always rave about how much they love postgres. I tried a few different operators but ended up using <a href="https://cloudnative-pg.io/">cloudnative-pg</a> because its in the CNCF, and supported postgres 17 which some of the others did not. It was pretty simple to setup and I found it to be a great operator.</p>
 <p>Doing the migration I learned about another great tool called <a href="https://github.com/dimitri/pgloader">pgloader</a> This connects to the old mariadb database, and the new postgres database, and then transfers and transforms the data. I really enjoyed using it and was quite impressed it just worked.</p>
 <h2 id="the-rest">
   The rest

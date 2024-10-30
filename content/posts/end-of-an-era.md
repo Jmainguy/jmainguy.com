@@ -56,7 +56,7 @@ After making these changes I went from sub 1mbps to above 300mbps speeds on the 
 
 [etherpad.soh.re](https://etherpad.soh.re) is a site I use as a scratchpad / way to share christmas list with relatives easy. It can be used for much more, we used it at Redhat for collaboratively taking notes during meetings.
 
-It had a mariadb database on my german server, and I wanted to migrate it to postgres when moving to the new cluster. I decided on postgres because it had some fantastic operators and people always rave about how much they love postgres. I tried a few different operators but ended up using [cloutnative-pg](https://cloudnative-pg.io/) because its in the CNCF, and supported postgres 17 which some of the others did not. It was pretty simple to setup and I found it to be a great operator.
+It had a mariadb database on my german server, and I wanted to migrate it to postgres when moving to the new cluster. I decided on postgres because it had some fantastic operators and people always rave about how much they love postgres. I tried a few different operators but ended up using [cloudnative-pg](https://cloudnative-pg.io/) because its in the CNCF, and supported postgres 17 which some of the others did not. It was pretty simple to setup and I found it to be a great operator.
 
 Doing the migration I learned about another great tool called [pgloader](https://github.com/dimitri/pgloader) This connects to the old mariadb database, and the new postgres database, and then transfers and transforms the data. I really enjoyed using it and was quite impressed it just worked.
 
