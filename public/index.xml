@@ -6,8 +6,15 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Oct 2024 12:35:16 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2024 15:59:36 -0500</lastBuildDate>
     <atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Case for Ten Gig</title>
+      <link>https://jmainguy.com/posts/the-case-for-ten-gig/</link>
+      <pubDate>Sun, 10 Nov 2024 15:59:36 -0500</pubDate>
+      <guid>https://jmainguy.com/posts/the-case-for-ten-gig/</guid>
+      <description>My good friend Jeff Moore challenged me to compare my storage speeds with his homelab setup (knowing his would be perform better). So I obliged and learned a few things in the process, which I think others might find interesting&#xA;kubestr kubestr is a benchmarking tool for kubernetes storage. It works in a clever way by creating the PVC / mounting it inside a pod and running a stress test with nicely formatted results at the end.</description>
+    </item>
     <item>
       <title>End of an Era</title>
       <link>https://jmainguy.com/posts/end-of-an-era/</link>
