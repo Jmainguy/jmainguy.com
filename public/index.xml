@@ -6,8 +6,15 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Nov 2024 15:59:36 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2024 11:46:56 -0500</lastBuildDate>
     <atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubevirt</title>
+      <link>https://jmainguy.com/posts/kubevirt/</link>
+      <pubDate>Mon, 02 Dec 2024 11:46:56 -0500</pubDate>
+      <guid>https://jmainguy.com/posts/kubevirt/</guid>
+      <description>I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM&amp;rsquo;s.&#xA;Broadcom VMWare Around a year ago, Broadcom purchased VMWare. VMWare was the defacto way for enterprise customers to manage VM&amp;rsquo;s on premise before the purchase.</description>
+    </item>
     <item>
       <title>The Case for Ten Gig</title>
       <link>https://jmainguy.com/posts/the-case-for-ten-gig/</link>

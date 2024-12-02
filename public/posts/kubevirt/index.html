@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+
+    <meta name="author" content="Jonathan Mainguy">
+    <meta name="description" content="I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM&rsquo;s.
+Broadcom VMWare Around a year ago, Broadcom purchased VMWare. VMWare was the defacto way for enterprise customers to manage VM&rsquo;s on premise before the purchase.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kubevirt">
+  <meta name="twitter:description" content="I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM’s.
+Broadcom VMWare Around a year ago, Broadcom purchased VMWare. VMWare was the defacto way for enterprise customers to manage VM’s on premise before the purchase.">
+
+    <meta property="og:url" content="https://jmainguy.com/posts/kubevirt/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="Kubevirt">
+  <meta property="og:description" content="I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM’s.
+Broadcom VMWare Around a year ago, Broadcom purchased VMWare. VMWare was the defacto way for enterprise customers to manage VM’s on premise before the purchase.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-02T11:46:56-05:00">
+    <meta property="article:modified_time" content="2024-12-02T11:46:56-05:00">
+
+
+    <title>
+  Kubevirt · Jonathan Mainguy
+</title>
+
+    
+      <link rel="canonical" href="https://jmainguy.com/posts/kubevirt/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css" integrity="sha256-cIaG&#43;KuBdukdRPy&#43;SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+
+    <meta name="generator" content="Hugo 0.126.2">
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto"
+        onload=""
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Jonathan Mainguy
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jmainguy.com/posts/kubevirt/">
+              Kubevirt
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2024-12-02T11:46:56-05:00'>
+                December 2, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM&rsquo;s.</p>
+<h2 id="broadcom-vmware">
+  Broadcom VMWare
+  <a class="heading-link" href="#broadcom-vmware">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Around a year ago, <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware">Broadcom purchased VMWare</a>. VMWare was the defacto way for enterprise customers to manage VM&rsquo;s on premise before the purchase. Soon after the acquisition, <a href="https://arstechnica.com/information-technology/2024/10/a-year-after-broadcoms-vmware-buy-customers-eye-exit-strategies/">Broadcom changed the pricing model</a> which in my opinion will be the death of VMWare and creates a unique market opportunity to fill the void left.</p>
+<h2 id="openstack">
+  OpenStack
+  <a class="heading-link" href="#openstack">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Other options would be Openstack, which provides many of the features the cloud providers do. I personally do not see this catching on and believe it has a perception of being over complicated (I do not have enough experience to say if thats true or not, but it is what I hear people say.)</p>
+<h2 id="rhev">
+  RHEV
+  <a class="heading-link" href="#rhev">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Another option was Redhat Enterprise Virtualization (RHEV), this was the commercial version of <a href="https://www.ovirt.org/">oVirt</a> which is itself a wrapper ontop of libvirt (for powering the VM&rsquo;s, and other tools for other features). However, Redhat has decided to abandon RHEV in favor of <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift/virtualization">Red Hat OpenShift Virtualization</a> (which is a commercial version of <a href="https://kubevirt.io/">kubevirt</a>).</p>
+<p><img alt="RHEV is Dead" src="/images/rhev.png"></p>
+<h2 id="libvirt">
+  libvirt
+  <a class="heading-link" href="#libvirt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://libvirt.org/">libvirt</a> is a fantastic tool which I have used in combination with <a href="https://www.qemu.org/">qemu</a> in the past to manage VM&rsquo;s on my hetzner dedicated server. I used <a href="https://virt-manager.org/">virt-manager</a> as a way of getting graphical console access to the VM&rsquo;s, and installing Linux and Windows VM&rsquo;s. Behind the scenes it uses xml based documents for setting things like the ram, cpu, disk, network, and other settings. I was very happy with this tool when I needed to make VM&rsquo;s and would recommend this path for anyone who doesnt already have a kubernetes cluster.</p>
+<h2 id="kubevirt">
+  kubevirt
+  <a class="heading-link" href="#kubevirt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Red Hat believes <a href="https://www.redhat.com/en/blog/unleashing-the-power-of-kubevirt">kubevirt is the future for VM&rsquo;s</a>. <a href="https://cloud.google.com/kubernetes-engine/distributed-cloud/bare-metal/docs/vm-runtime/overview">Google believes in kubevirt as well</a></p>
+<p>kubevirt uses libvirt under the hood, but provides a kubernetes native way of interacting with it.</p>
+<p>So with that in mind, I decided this weekend to give a shot myself, and I have to say, I am very impressed.</p>
+<h2 id="my-experience-with-kubevirt">
+  My experience with kubevirt
+  <a class="heading-link" href="#my-experience-with-kubevirt">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p><a href="https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt">https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt</a>  Explains how to get started, and following their kubectl apply -f against the URL&rsquo;s provided really did work well. When I searched for the helm charts I found <a href="https://github.com/kubevirt/community/pull/224">This discussion</a> where the community is hard at work at providing them. I went ahead and <a href="https://github.com/Standouthost/helm-charts/tree/main/kubevirt">made my own</a> for now as I wait on upstream to adopt a strategy for helm packaging.</p>
+<p>So now that we have installed kubevirt + <a href="https://kubevirt.io/user-guide/storage/containerized_data_importer/">CDI</a> (for Persistent data), it is time to actually create a virtual machine.</p>
+<p>When I installed debian on my desktops, I downloaded a live iso, burned it onto a thumb drive, and then booted into the thumb drive and followed the graphical installer with a keyboard, selecting various choices like the hostname, partition layout, and passwords. I actually kind of enjoy doing this, however its very not feasible to do via a text console. In the past with libvirt I would use vnc to connect and use a graphical interface and follow similar steps, however for kubevirt I chose to use a <a href="https://cdimage.debian.org/images/cloud/">cloud image</a> with <a href="https://cloudinit.readthedocs.io/en/latest/reference/examples.html">cloud-init</a> which allows for automation to run on a new install which allows for quick unattended installations.</p>
+<p>I ended up with this cloud config, which</p>
+<ul>
+<li>Added peristent dhcp (because on kubevirt, the mac changes on destroy / create).</li>
+<li>Installed wireguard and generated a private / public key</li>
+<li>Added my public ssh key so I can ssh into the VM as root once its finished</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#93a1a1;font-style:italic">#cloud-config</span>
+</span></span><span style="display:flex;"><span><span style="color:#93a1a1;font-style:italic">#https://github.com/kubevirt/kubevirt/issues/1646</span>
+</span></span><span style="display:flex;"><span>write_files:
+</span></span><span style="display:flex;"><span>- encoding: b64
+</span></span><span style="display:flex;"><span>    content: <span style="color:#268bd2">bmV0d29yazoKICB2ZXJzaW9uOiAyCiAgZXRoZXJuZXRzOgogICAgaWQwOgogICAgICBkaGNwNDogdHJ1ZQogICAgICBtYXRjaDoKICAgICAgICBuYW1lOiBlbnAqCg</span>==
+</span></span><span style="display:flex;"><span>    owner: root:root
+</span></span><span style="display:flex;"><span>    path: /etc/netplan/99-net-fix.yaml
+</span></span><span style="display:flex;"><span>    permissions: <span style="color:#2aa198">&#39;0644&#39;</span>
+</span></span><span style="display:flex;"><span>packages:
+</span></span><span style="display:flex;"><span>- wireguard
+</span></span><span style="display:flex;"><span>runcmd:
+</span></span><span style="display:flex;"><span>- [ sh, -c, <span style="color:#2aa198">&#39;wg genkey | tee /etc/wireguard/$(hostname).private.key | wg pubkey &gt; /etc/wireguard/$(hostname).public.key&#39;</span> ]
+</span></span><span style="display:flex;"><span>users:
+</span></span><span style="display:flex;"><span>- name: root
+</span></span><span style="display:flex;"><span>    ssh_authorized_keys:
+</span></span><span style="display:flex;"><span>    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgNk9LK/BZk0Sga83brcZMebwgGz0hb+c6u8W8wEMp6uPOVZp2n8KntsB3HAGUPcqY2LXRaMZIzpIftgD1NRlVhxJDyO1rrZmedXA5zy0pGBdkAsnqGXI8ehde4wADEIATWDLHAcgU96TeUs4a4gO/cw7GaXvmubtru5YA0AB/YxiIMTKD+0lHqIUKNrSMIQU4SlzYD4+kdoeBsm57+pFoCUHOB4cZpB3vzHW3IVZOmfDGAQOzSwIM+NlOHFWoyr0RulQXELigSiRzQ0ZRh3BFEieWl/+1nGuxrggqB/x+3I+FpeMMT3RA0mA/an76CmU1ENw5DeF4DELNLf9Q1V9AzzrhLLfdZ89McW68UncsRqEi3sTHYMjljVLtKQtE2M21VEueDDIjUCe1cuPag7AI+YAlTGCysIrCojxzZGQd9a/nh4YxT+GIH0rTEP7un+VwMayschd+OaFxjD+1uTmrBCBg2zFlWxhr+G7juvJuF1FbtraaXY+qEj3BT9YchDE= jmainguy@jmainguy.soh.re
+</span></span></code></pre></div><p>I tell kubevirt the size of the disk I want for the VM, as well as the debian image to use via the DataVolume kind</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apiVersion: cdi.kubevirt.io/v1beta1
+</span></span><span style="display:flex;"><span>kind: DataVolume
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: debian-dv
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  source:
+</span></span><span style="display:flex;"><span>    http:
+</span></span><span style="display:flex;"><span>      url: <span style="color:#2aa198">&#34;https://cdimage.debian.org/images/cloud/bookworm/20241125-1942/debian-12-generic-amd64-20241125-1942.qcow2&#34;</span>
+</span></span><span style="display:flex;"><span>  pvc:
+</span></span><span style="display:flex;"><span>    accessModes:
+</span></span><span style="display:flex;"><span>      - ReadWriteOnce
+</span></span><span style="display:flex;"><span>    resources:
+</span></span><span style="display:flex;"><span>      requests:
+</span></span><span style="display:flex;"><span>        storage: 20Gi
+</span></span><span style="display:flex;"><span>    storageClassName: longhorn
+</span></span></code></pre></div><p>Finally, I create a VirtualMachine kind</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apiVersion: kubevirt.io/v1
+</span></span><span style="display:flex;"><span>kind: VirtualMachine
+</span></span><span style="display:flex;"><span>metadata:
+</span></span><span style="display:flex;"><span>  name: debian-vm
+</span></span><span style="display:flex;"><span>spec:
+</span></span><span style="display:flex;"><span>  runStrategy: Always
+</span></span><span style="display:flex;"><span>  template:
+</span></span><span style="display:flex;"><span>    metadata:
+</span></span><span style="display:flex;"><span>      labels:
+</span></span><span style="display:flex;"><span>        kubevirt.io/domain: debian-vm
+</span></span><span style="display:flex;"><span>    spec:
+</span></span><span style="display:flex;"><span>      domain:
+</span></span><span style="display:flex;"><span>        devices:
+</span></span><span style="display:flex;"><span>          interfaces:
+</span></span><span style="display:flex;"><span>            - name: default
+</span></span><span style="display:flex;"><span>              masquerade: {}
+</span></span><span style="display:flex;"><span>          disks:
+</span></span><span style="display:flex;"><span>            - name: disk0
+</span></span><span style="display:flex;"><span>              disk:
+</span></span><span style="display:flex;"><span>                bus: virtio
+</span></span><span style="display:flex;"><span>        resources:
+</span></span><span style="display:flex;"><span>          requests:
+</span></span><span style="display:flex;"><span>            cpu: <span style="color:#2aa198;font-weight:bold">1</span>
+</span></span><span style="display:flex;"><span>            memory: 2Gi
+</span></span><span style="display:flex;"><span>      networks:
+</span></span><span style="display:flex;"><span>        - name: default
+</span></span><span style="display:flex;"><span>          pod: {} <span style="color:#93a1a1;font-style:italic"># Stock pod network</span>
+</span></span><span style="display:flex;"><span>      volumes:
+</span></span><span style="display:flex;"><span>        - name: disk0
+</span></span><span style="display:flex;"><span>          dataVolume:
+</span></span><span style="display:flex;"><span>            name: debian-dv
+</span></span><span style="display:flex;"><span>        - name: cloudinitdisk
+</span></span><span style="display:flex;"><span>          cloudInitNoCloud:
+</span></span><span style="display:flex;"><span>            userData: |
+</span></span><span style="display:flex;"><span>              <span style="color:#93a1a1;font-style:italic">#cloud-config</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#93a1a1;font-style:italic">#https://github.com/kubevirt/kubevirt/issues/1646</span>
+</span></span><span style="display:flex;"><span>              write_files:
+</span></span><span style="display:flex;"><span>                - encoding: b64
+</span></span><span style="display:flex;"><span>                  content: <span style="color:#268bd2">bmV0d29yazoKICB2ZXJzaW9uOiAyCiAgZXRoZXJuZXRzOgogICAgaWQwOgogICAgICBkaGNwNDogdHJ1ZQogICAgICBtYXRjaDoKICAgICAgICBuYW1lOiBlbnAqCg</span>==
+</span></span><span style="display:flex;"><span>                  owner: root:root
+</span></span><span style="display:flex;"><span>                  path: /etc/netplan/99-net-fix.yaml
+</span></span><span style="display:flex;"><span>                  permissions: <span style="color:#2aa198">&#39;0644&#39;</span>
+</span></span><span style="display:flex;"><span>              packages:
+</span></span><span style="display:flex;"><span>                - wireguard
+</span></span><span style="display:flex;"><span>              runcmd:
+</span></span><span style="display:flex;"><span>                - [ sh, -c, <span style="color:#2aa198">&#39;wg genkey | tee /etc/wireguard/$(hostname).private.key | wg pubkey &gt; /etc/wireguard/$(hostname).public.key&#39;</span> ]
+</span></span><span style="display:flex;"><span>              users:
+</span></span><span style="display:flex;"><span>                - name: root
+</span></span><span style="display:flex;"><span>                  ssh_authorized_keys:
+</span></span><span style="display:flex;"><span>                    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDgNk9LK/BZk0Sga83brcZMebwgGz0hb+c6u8W8wEMp6uPOVZp2n8KntsB3HAGUPcqY2LXRaMZIzpIftgD1NRlVhxJDyO1rrZmedXA5zy0pGBdkAsnqGXI8ehde4wADEIATWDLHAcgU96TeUs4a4gO/cw7GaXvmubtru5YA0AB/YxiIMTKD+0lHqIUKNrSMIQU4SlzYD4+kdoeBsm57+pFoCUHOB4cZpB3vzHW3IVZOmfDGAQOzSwIM+NlOHFWoyr0RulQXELigSiRzQ0ZRh3BFEieWl/+1nGuxrggqB/x+3I+FpeMMT3RA0mA/an76CmU1ENw5DeF4DELNLf9Q1V9AzzrhLLfdZ89McW68UncsRqEi3sTHYMjljVLtKQtE2M21VEueDDIjUCe1cuPag7AI+YAlTGCysIrCojxzZGQd9a/nh4YxT+GIH0rTEP7un+VwMayschd+OaFxjD+1uTmrBCBg2zFlWxhr+G7juvJuF1FbtraaXY+qEj3BT9YchDE= jmainguy@jmainguy.soh.re
+</span></span></code></pre></div><p>After applying, you will see a pod get spun up, which downloads the qcow image, and provisions the PVC with it.</p>
+<p>After that finishes you will see the VM get spun up</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jmainguy@fedora:~/Github/jmainguy.com$ kubectl get vm
+</span></span><span style="display:flex;"><span>kNAME        AGE     STATUS    READY
+</span></span><span style="display:flex;"><span>debian-vm   4h47m   Running   True
+</span></span><span style="display:flex;"><span>jmainguy@fedora:~/Github/jmainguy.com$ kubectl get vmi
+</span></span><span style="display:flex;"><span>NAME        AGE     PHASE     IP          NODENAME      READY
+</span></span><span style="display:flex;"><span>debian-vm   4h47m   Running   10.42.3.9   black-intel   True
+</span></span></code></pre></div><p>I can then ssh into that ip as root</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jmainguy@fedora:~/Github/jmainguy.com$ ssh root@10.42.3.9
+</span></span><span style="display:flex;"><span>Linux debian-vm 6.1.0-28-amd64 <span style="color:#93a1a1;font-style:italic">#1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The programs included with the Debian GNU/Linux system are free software;
+</span></span><span style="display:flex;"><span>the exact distribution terms <span style="color:#859900">for</span> each program are described in the
+</span></span><span style="display:flex;"><span>individual files in /usr/share/doc/*/copyright.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+</span></span><span style="display:flex;"><span>permitted by applicable law.
+</span></span><span style="display:flex;"><span>Last login: Mon Dec  <span style="color:#2aa198;font-weight:bold">2</span> 09:11:18 <span style="color:#2aa198;font-weight:bold">2024</span> from 192.168.86.40
+</span></span><span style="display:flex;"><span>root@debian-vm:~# 
+</span></span></code></pre></div><p>I was able to create this VM in minutes using the code, and I can make another ten if I wanted to just as quickly (if I have the disks / resources ) to support it.</p>
+<h2 id="summary">
+  Summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>Cloud-init is cool</li>
+<li>libvirt is cool</li>
+<li>kubevirt is cool</li>
+</ul>
+<p>If you want to create VM&rsquo;s, and already have a kubernetes cluster, I highly recommend kubevirt. You only need two files, a VirtualMachine and a DataVolume.</p>
+<p>If you are looking for a commercial offering to replace VMware, I would recommend offerings which are powered by kubevirt.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Take it easy</p>
+      
+      
+        ©
+        
+          2010 -
+        
+        2024
+         Jonathan Mainguy 
+      
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+  
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
