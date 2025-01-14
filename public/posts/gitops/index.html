@@ -136,7 +136,7 @@ Declarative configurations: The desired state of your system (infrastructure or 
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              3-minute read
+              4-minute read
             </span>
           </div>
           
@@ -191,6 +191,27 @@ Declarative configurations: The desired state of your system (infrastructure or 
 </ol>
 <p>While this workflow was effective, it was labor-intensive, requiring highly skilled engineers. We called ourselves <strong>Release Lieutenants</strong>, a title that came with physical badges. The platform team designated a <strong>Captain</strong> who trained and supported us.</p>
 <p>Although this method fostered a strong team culture, it relied heavily on manual intervention and expertise. In hindsight, adopting GitOps could have saved time and resources by automating much of this process, allowing Red Hat to allocate more resources to application development.</p>
+<h2 id="gitops-for-infrastructure-and-applications">
+  GitOps for Infrastructure and Applications
+  <a class="heading-link" href="#gitops-for-infrastructure-and-applications">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>You can see how I automatically deploy <a href="https://helm.sh/">helm charts</a> via <a href="https://argo-cd.readthedocs.io/en/stable/">ArgoCD</a> by placing <a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications">ArgoCD Applications</a> in a Github repo that ArgoCD is already watching at <a href="https://github.com/Standouthost/clusters/tree/main/k3s.soh.re">https://github.com/Standouthost/clusters/tree/main/k3s.soh.re</a></p>
+<p><img alt="ArgoCD Directory" src="/images/argocd-dir.png"></p>
+<p>If we dig into one of these applications, like <a href="https://github.com/Standouthost/clusters/blob/main/k3s.soh.re/zot.yaml">zot</a> We can see that it is deploying a helm chart from a directory in a different github repo, it could just as easily have pointed to an OCI registry like <a href="https://zot.soh.re">zot.soh.re</a> (which is the infrastructure we are reviewing)</p>
+<p><img alt="Zot Application" src="/images/zot-application.png"></p>
+<p>If we dig into that helm chart <a href="https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml">https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml</a> We can see it is using a subchart with most the zot logic, at a specific version.</p>
+<p><img alt="Zot Chart" src="/images/zot-chart.png"></p>
+<p>The default values are set at <a href="https://github.com/Standouthost/helm-charts/blob/main/zot/values.yaml">values.yaml</a> (these can be overridden in the ArgoCD Application if we wish)</p>
+<p><img alt="Zot Values" src="/images/zot-values.png"></p>
+<p>In addition to the subchart, we also deploy some <a href="https://github.com/Standouthost/helm-charts/tree/main/zot/templates">implementation specific ingress for our cluster</a>. Since we are using Istio, I have setup a Gateway / VirtualService / and Certificate</p>
+<p><img alt="Zot Ingress" src="/images/zot-ingress.png"></p>
+<p>In the following screenshots, you can see how it appears inside the ArgoCD webui</p>
+<p><img alt="Zot UI" src="/images/zot-argo-ui.png"></p>
+<p><img alt="Zot More" src="/images/zot-ui-big.png"></p>
+<p>I can update the deployment by changing the version of the chart, or changing any of the values, or adding more files to the templates/ dir of the chart, and ArgoCD will automatically deploy and reconcile the differences.</p>
+<p>While it takes some amount of initial setup, future deployments are quite easy. I deploy my blogs helm chart in a much similar fashion.</p>
 <h2 id="my-experience-with-gitops">
   My experience with GitOps
   <a class="heading-link" href="#my-experience-with-gitops">
@@ -209,7 +230,20 @@ Declarative configurations: The desired state of your system (infrastructure or 
 </span></span><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m &#39;feat: new posts&#39;
 </span></span><span style="display:flex;"><span>git push
-</span></span></code></pre></div><p>I manage all my Kubernetes applications using GitOps because I value seamless, reliable deployments that can be easily rolled back if necessary. Declarative configurations lie at the core of this philosophy, ensuring systems are intuitive and understandable simply by reading the code.</p>
+</span></span></code></pre></div><p>ArgoCD</p>
+<p><img alt="Jmainguy Argocd" src="/images/jmainguy-argo.png"></p>
+<p><img alt="Jmainguy Argocd Expanded" src="/images/jmainguy-expanded.png"></p>
+<p>Webhook configuration in Github</p>
+<p><img alt="Webhooks" src="/images/webhook.png"></p>
+<p><img alt="Deliveries" src="/images/deliveries.png"></p>
+<p>I can troubleshoot / resend webhook deliveries straight from the Github UI.</p>
+<h2 id="tldr">
+  TLDR
+  <a class="heading-link" href="#tldr">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>I really love GitOps, it makes logical sense to me. Its easy to understand, dig into, and troubleshoot when it goes wrong. I value having Git be the source of truth for most everything I do, documentation, code, deployments, and this blog as a few of those things.</p>
 
       </div>
 

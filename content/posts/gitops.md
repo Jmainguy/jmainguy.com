@@ -35,6 +35,37 @@ While this workflow was effective, it was labor-intensive, requiring highly skil
 
 Although this method fostered a strong team culture, it relied heavily on manual intervention and expertise. In hindsight, adopting GitOps could have saved time and resources by automating much of this process, allowing Red Hat to allocate more resources to application development.
 
+## GitOps for Infrastructure and Applications
+
+You can see how I automatically deploy [helm charts](https://helm.sh/) via [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) by placing [ArgoCD Applications](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications) in a Github repo that ArgoCD is already watching at [https://github.com/Standouthost/clusters/tree/main/k3s.soh.re](https://github.com/Standouthost/clusters/tree/main/k3s.soh.re)
+
+![ArgoCD Directory](/images/argocd-dir.png)
+
+If we dig into one of these applications, like [zot](https://github.com/Standouthost/clusters/blob/main/k3s.soh.re/zot.yaml) We can see that it is deploying a helm chart from a directory in a different github repo, it could just as easily have pointed to an OCI registry like [zot.soh.re](https://zot.soh.re) (which is the infrastructure we are reviewing)
+
+![Zot Application](/images/zot-application.png)
+
+If we dig into that helm chart [https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml](https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml) We can see it is using a subchart with most the zot logic, at a specific version.
+
+![Zot Chart](/images/zot-chart.png)
+
+The default values are set at [values.yaml](https://github.com/Standouthost/helm-charts/blob/main/zot/values.yaml) (these can be overridden in the ArgoCD Application if we wish)
+
+![Zot Values](/images/zot-values.png)
+
+In addition to the subchart, we also deploy some [implementation specific ingress for our cluster](https://github.com/Standouthost/helm-charts/tree/main/zot/templates). Since we are using Istio, I have setup a Gateway / VirtualService / and Certificate
+
+![Zot Ingress](/images/zot-ingress.png)
+
+In the following screenshots, you can see how it appears inside the ArgoCD webui
+
+![Zot UI](/images/zot-argo-ui.png)
+
+![Zot More](/images/zot-ui-big.png)
+
+I can update the deployment by changing the version of the chart, or changing any of the values, or adding more files to the templates/ dir of the chart, and ArgoCD will automatically deploy and reconcile the differences.
+
+While it takes some amount of initial setup, future deployments are quite easy. I deploy my blogs helm chart in a much similar fashion.
 
 ## My experience with GitOps
 
@@ -55,4 +86,20 @@ git commit -m 'feat: new posts'
 git push
 ```
 
-I manage all my Kubernetes applications using GitOps because I value seamless, reliable deployments that can be easily rolled back if necessary. Declarative configurations lie at the core of this philosophy, ensuring systems are intuitive and understandable simply by reading the code.
+ArgoCD
+
+![Jmainguy Argocd](/images/jmainguy-argo.png)
+
+![Jmainguy Argocd Expanded](/images/jmainguy-expanded.png)
+
+Webhook configuration in Github
+
+![Webhooks](/images/webhook.png)
+
+![Deliveries](/images/deliveries.png)
+
+I can troubleshoot / resend webhook deliveries straight from the Github UI.
+
+## TLDR
+
+I really love GitOps, it makes logical sense to me. Its easy to understand, dig into, and troubleshoot when it goes wrong. I value having Git be the source of truth for most everything I do, documentation, code, deployments, and this blog as a few of those things.
