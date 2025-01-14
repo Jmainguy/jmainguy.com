@@ -37,7 +37,7 @@
       <description>A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.&#xA;I knew from past experience k3s was easy to setup and was able to scale and add more nodes easily as well, so I started there.&#xA;Some requirements for my new cluster were as follows</description>
     </item>
     <item>
-      <title>A Good Ci System</title>
+      <title>A Good CI System</title>
       <link>https://jmainguy.com/posts/a-good-ci-system/</link>
       <pubDate>Tue, 17 Sep 2024 11:46:51 -0400</pubDate>
       <guid>https://jmainguy.com/posts/a-good-ci-system/</guid>

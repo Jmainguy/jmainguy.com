@@ -1,5 +1,5 @@
 ---
-title: "A Good Ci System"
+title: "A Good CI System"
 date: 2024-09-17T11:46:51-04:00
 draft: false
 ---
