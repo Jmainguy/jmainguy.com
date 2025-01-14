@@ -1,7 +1,7 @@
 ---
 title: "GitOps: Transforming Deployment with Automation and Version Control"
 date: 2025-01-14T09:53:35-05:00
-draft: true
+draft: false
 ---
 
 # What is GitOps?

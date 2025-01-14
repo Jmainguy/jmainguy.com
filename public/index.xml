@@ -6,8 +6,15 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Dec 2024 11:46:56 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2025 09:53:35 -0500</lastBuildDate>
     <atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitOps: Transforming Deployment with Automation and Version Control</title>
+      <link>https://jmainguy.com/posts/gitops/</link>
+      <pubDate>Tue, 14 Jan 2025 09:53:35 -0500</pubDate>
+      <guid>https://jmainguy.com/posts/gitops/</guid>
+      <description>What is GitOps? GitOps is a way to manage infrastructure and application deployments using Git as the single source of truth. It focuses on:&#xA;Declarative configurations: The desired state of your system (infrastructure or applications) is defined in Git repositories. Automation: Changes to the Git repository trigger automated updates to the system. Reconciliation loops: A GitOps operator (e.g., ArgoCD) continuously ensures the system&amp;rsquo;s actual state matches the desired state in Git.</description>
+    </item>
     <item>
       <title>Kubevirt</title>
       <link>https://jmainguy.com/posts/kubevirt/</link>
