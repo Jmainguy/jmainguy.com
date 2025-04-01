@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jmainguy.com/posts/gitops/</loc>
-    <lastmod>2025-01-14T09:53:35-05:00</lastmod>
+    <loc>https://jmainguy.com/posts/ghpages/</loc>
+    <lastmod>2025-04-01T10:38:57-04:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/</loc>
-    <lastmod>2025-01-14T09:53:35-05:00</lastmod>
+    <lastmod>2025-04-01T10:38:57-04:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/</loc>
+    <lastmod>2025-04-01T10:38:57-04:00</lastmod>
+  </url><url>
+    <loc>https://jmainguy.com/posts/gitops/</loc>
     <lastmod>2025-01-14T09:53:35-05:00</lastmod>
   </url><url>
     <loc>https://jmainguy.com/posts/kubevirt/</loc>

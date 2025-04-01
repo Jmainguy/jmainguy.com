@@ -6,8 +6,15 @@
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Jan 2025 09:53:35 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 01 Apr 2025 10:38:57 -0400</lastBuildDate>
     <atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Pages</title>
+      <link>https://jmainguy.com/posts/ghpages/</link>
+      <pubDate>Tue, 01 Apr 2025 10:38:57 -0400</pubDate>
+      <guid>https://jmainguy.com/posts/ghpages/</guid>
+      <description>If you&amp;rsquo;re looking to deploy a website quickly and easily, GitHub offers a fantastic service called GitHub Pages.&#xA;GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.&#xA;Why Choose GitHub Pages? GitHub Pages is incredibly convenient because:&#xA;No Infrastructure Hassle: No need to build containers or manage clusters.</description>
+    </item>
     <item>
       <title>GitOps: Transforming Deployment with Automation and Version Control</title>
       <link>https://jmainguy.com/posts/gitops/</link>
