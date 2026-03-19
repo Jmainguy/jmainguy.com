@@ -62,7 +62,7 @@ OpenClaw’s cron store is JSON under `~/.openclaw/cron/jobs.json`. Each job nee
 
 ## Jira from the CLI (`acli`) — auth is not your shell env
 
-I use [acli](https://github.com/augmented-finance/acli) for Jira. Important detail: **`acli` does not authenticate via `JIRA_USERNAME` + `JIRA_API_TOKEN` in the environment** the way raw `curl` does. It stores credentials after you log in once.
+I use Atlassian’s [**acli**](https://developer.atlassian.com/cloud/acli/) (CLI for Jira Cloud) for Jira. Important detail: **`acli` does not authenticate via `JIRA_USERNAME` + `JIRA_API_TOKEN` in the environment** the way raw `curl` does. It stores credentials after you log in once.
 
 Non-interactive login with an Atlassian **API token** (site + **account email**):
 
