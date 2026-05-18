@@ -5,792 +5,799 @@
     <link>https://jmainguy.com/</link>
     <description>Recent content on Jonathan Mainguy</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 01 Apr 2025 10:38:57 -0400</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 May 2026 10:00:00 -0400</lastBuildDate>
     <atom:link href="https://jmainguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Middle-Click Paste Broke After Upgrading to Fedora 44</title>
+      <link>https://jmainguy.com/posts/middle-click-paste-fedora-44/</link>
+      <pubDate>Mon, 18 May 2026 10:00:00 -0400</pubDate>
+      <guid>https://jmainguy.com/posts/middle-click-paste-fedora-44/</guid>
+      <description>&lt;p&gt;I upgraded to Fedora 44 a few days ago and immediately noticed something was wrong in GNOME Terminal. Highlighting text no longer felt like it was copying anything, and middle-click paste had stopped working entirely. I have been using Linux on the desktop for over a decade and this workflow is muscle memory at this point: select text in one terminal, middle-click in another, done. No Ctrl+C, no Ctrl+V.&lt;/p&gt;&#xA;&lt;p&gt;It turns out nothing was broken in GNOME Terminal itself. GNOME changed the default.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Github Pages</title>
       <link>https://jmainguy.com/posts/ghpages/</link>
       <pubDate>Tue, 01 Apr 2025 10:38:57 -0400</pubDate>
       <guid>https://jmainguy.com/posts/ghpages/</guid>
-      <description>If you&amp;rsquo;re looking to deploy a website quickly and easily, GitHub offers a fantastic service called GitHub Pages.&#xA;GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.&#xA;Why Choose GitHub Pages? GitHub Pages is incredibly convenient because:&#xA;No Infrastructure Hassle: No need to build containers or manage clusters.</description>
+      <description>&lt;p&gt;If you&amp;rsquo;re looking to deploy a website quickly and easily, GitHub offers a fantastic service called &lt;strong&gt;GitHub Pages&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-choose-github-pages&#34;&gt;&#xA;  Why Choose GitHub Pages?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-choose-github-pages&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GitHub Pages is incredibly convenient because:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;No Infrastructure Hassle&lt;/strong&gt;: No need to build containers or manage clusters.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt;: Backed by a professional team (&lt;a href=&#34;https://www.githubstatus.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;status page&lt;/a&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub Integration&lt;/strong&gt;: Seamlessly integrates with the Git workflow you already know—no FTP, SCP, or cPanel required.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can even automate deployments using &lt;strong&gt;GitHub Actions&lt;/strong&gt;. One popular tool for this is &lt;a href=&#34;https://www.mkdocs.org/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MkDocs&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitOps: Transforming Deployment with Automation and Version Control</title>
       <link>https://jmainguy.com/posts/gitops/</link>
       <pubDate>Tue, 14 Jan 2025 09:53:35 -0500</pubDate>
       <guid>https://jmainguy.com/posts/gitops/</guid>
-      <description>What is GitOps? GitOps is a way to manage infrastructure and application deployments using Git as the single source of truth. It focuses on:&#xA;Declarative configurations: The desired state of your system (infrastructure or applications) is defined in Git repositories. Automation: Changes to the Git repository trigger automated updates to the system. Reconciliation loops: A GitOps operator (e.g., ArgoCD) continuously ensures the system&amp;rsquo;s actual state matches the desired state in Git.</description>
+      <description>&lt;h1 id=&#34;what-is-gitops&#34;&gt;&#xA;  What is GitOps?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-is-gitops&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;GitOps is a way to manage infrastructure and application deployments using Git as the single source of truth. It focuses on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Declarative configurations:&lt;/strong&gt; The desired state of your system (infrastructure or applications) is defined in Git repositories.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Automation:&lt;/strong&gt; Changes to the Git repository trigger automated updates to the system.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reconciliation loops:&lt;/strong&gt; A GitOps operator (e.g., ArgoCD) continuously ensures the system&amp;rsquo;s actual state matches the desired state in Git.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-features-of-gitops&#34;&gt;&#xA;  Key Features of GitOps&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#key-features-of-gitops&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Version-controlled changes:&lt;/strong&gt; Every change to the system is tracked in Git, providing auditability and rollback capabilities.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Automation:&lt;/strong&gt; Tools like ArgoCD automate applying changes from Git to the actual environment.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reconciliation:&lt;/strong&gt; Continuous monitoring ensures the system stays aligned with the desired state in Git.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Rollback:&lt;/strong&gt; Easily revert to a previous state by rolling back changes in Git.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;my-experience-before-gitops&#34;&gt;&#xA;  My experience before GitOps&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#my-experience-before-gitops&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;During my time at &lt;a href=&#34;https://www.redhat.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Red Hat&lt;/a&gt;, I was responsible for deploying application code to various environments. This process involved several manual steps:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kubevirt</title>
       <link>https://jmainguy.com/posts/kubevirt/</link>
       <pubDate>Mon, 02 Dec 2024 11:46:56 -0500</pubDate>
       <guid>https://jmainguy.com/posts/kubevirt/</guid>
-      <description>I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM&amp;rsquo;s.&#xA;Broadcom VMWare Around a year ago, Broadcom purchased VMWare. VMWare was the defacto way for enterprise customers to manage VM&amp;rsquo;s on premise before the purchase.</description>
+      <description>&lt;p&gt;I believe everything that can be done inside a VirtualMachine can be done just as well or better inside a pod on kubernetes. However, if you insist on using a VM, or have legacy code you do not want to spend time on migrating to Containers, there are several options on the market for making those VM&amp;rsquo;s.&lt;/p&gt;&#xA;&lt;h2 id=&#34;broadcom-vmware&#34;&gt;&#xA;  Broadcom VMWare&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#broadcom-vmware&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Around a year ago, &lt;a href=&#34;https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Broadcom purchased VMWare&lt;/a&gt;. VMWare was the defacto way for enterprise customers to manage VM&amp;rsquo;s on premise before the purchase. Soon after the acquisition, &lt;a href=&#34;https://arstechnica.com/information-technology/2024/10/a-year-after-broadcoms-vmware-buy-customers-eye-exit-strategies/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Broadcom changed the pricing model&lt;/a&gt; which in my opinion will be the death of VMWare and creates a unique market opportunity to fill the void left.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Case for Ten Gig</title>
       <link>https://jmainguy.com/posts/the-case-for-ten-gig/</link>
       <pubDate>Sun, 10 Nov 2024 15:59:36 -0500</pubDate>
       <guid>https://jmainguy.com/posts/the-case-for-ten-gig/</guid>
-      <description>My good friend Jeff Moore challenged me to compare my storage speeds with his homelab setup (knowing his would be perform better). So I obliged and learned a few things in the process, which I think others might find interesting&#xA;kubestr kubestr is a benchmarking tool for kubernetes storage. It works in a clever way by creating the PVC / mounting it inside a pod and running a stress test with nicely formatted results at the end.</description>
+      <description>&lt;p&gt;My good friend &lt;a href=&#34;https://www.linkedin.com/in/jeff-moore-k8s/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jeff Moore&lt;/a&gt; challenged me to compare my storage speeds with his homelab setup (knowing his would be perform better). So I obliged and learned a few things in the process, which I think others might find interesting&lt;/p&gt;&#xA;&lt;h2 id=&#34;kubestr&#34;&gt;&#xA;  &lt;a href=&#34;https://github.com/kastenhq/kubestr&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kubestr&lt;/a&gt;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#kubestr&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/kastenhq/kubestr&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kubestr&lt;/a&gt; is a benchmarking tool for kubernetes storage. It works in a clever way by creating the PVC / mounting it inside a pod and running a stress test with nicely formatted results at the end. I was impressed and would recommend it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>End of an Era</title>
       <link>https://jmainguy.com/posts/end-of-an-era/</link>
       <pubDate>Wed, 30 Oct 2024 12:35:16 -0400</pubDate>
       <guid>https://jmainguy.com/posts/end-of-an-era/</guid>
-      <description>For the past few weeks, I have been migrating all my hosted services over to my new kubernetes cluster running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my hetzner server any longer.</description>
+      <description>&lt;p&gt;For the past few weeks, I have been migrating all my hosted services over to my new &lt;a href=&#34;https://jmainguy.com/posts/multi-arch-hybrid-cloud/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kubernetes cluster&lt;/a&gt; running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my &lt;a href=&#34;https://www.hetzner.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hetzner&lt;/a&gt; server any longer. Which makes me sad.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Multi Arch Hybrid Cloud</title>
       <link>https://jmainguy.com/posts/multi-arch-hybrid-cloud/</link>
       <pubDate>Tue, 15 Oct 2024 12:41:54 -0400</pubDate>
       <guid>https://jmainguy.com/posts/multi-arch-hybrid-cloud/</guid>
-      <description>A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.&#xA;I knew from past experience k3s was easy to setup and was able to scale and add more nodes easily as well, so I started there.&#xA;Some requirements for my new cluster were as follows</description>
+      <description>&lt;p&gt;A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.&lt;/p&gt;&#xA;&lt;p&gt;I knew from past experience &lt;a href=&#34;https://k3s.io/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;k3s&lt;/a&gt; was easy to setup and was able to scale and add more nodes easily as well, so I started there.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://jmainguy.com/images/k3s.png&#34; alt=&#34;Easy&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Some requirements for my new cluster were as follows&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Good CI System</title>
       <link>https://jmainguy.com/posts/a-good-ci-system/</link>
       <pubDate>Tue, 17 Sep 2024 11:46:51 -0400</pubDate>
       <guid>https://jmainguy.com/posts/a-good-ci-system/</guid>
-      <description>What makes a good Continuous Integration system? I believe a good CI system should&#xA;Require minimal to no effort on the part of the Application Developers to maintain. handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests. be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing.</description>
+      <description>&lt;p&gt;What makes a good Continuous Integration system? I believe a good CI system should&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Require minimal to no effort on the part of the Application Developers to maintain.&lt;/li&gt;&#xA;&lt;li&gt;handle common tasks like linting, security scans, building artifacts, pushing artifacts to repositories, and running unit tests.&lt;/li&gt;&#xA;&lt;li&gt;be flexible enough to handle simple codebases which are fine with all the defaults, and complicated codebases which wish to run additional checks / tests of their choosing.&lt;/li&gt;&#xA;&lt;li&gt;enforce organizational compliance standards.&lt;/li&gt;&#xA;&lt;li&gt;support &lt;a href=&#34;https://en.wikipedia.org/wiki/Shift-left_testing&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shift Left&lt;/a&gt; mentality of test early and often.&lt;/li&gt;&#xA;&lt;li&gt;provide all information produced from testing / checks / scans inside the Pull Request / Merge Request.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I believe in the theoretical Application Developer who knows nothing, other than their specific language of choice. They have no desire to learn DevOps, SRE, System Administration, or Platform Engineering. They want to make great applications quickly, without red tape, and without being blocked by other teams.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Time at CVS</title>
       <link>https://jmainguy.com/posts/my-time-at-cvs/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://jmainguy.com/posts/my-time-at-cvs/</guid>
-      <description>I joined CVS Health around August back in 2021, I was coming out of a five year relationship with my previous company and looking forward to a new environment. I had interviewed with Derek Jackson, Sunggun Yu, and Jenny Dolan and they had gotten me very excited about CVS. In the interview with Sunggun, I had just ended a call with another company doing some l33t code moments before, at that time I was doing 30ish interviews a week at various rounds.</description>
+      <description>&lt;p&gt;I joined CVS Health around August back in 2021, I was coming out of a five year relationship with my previous company and looking forward to a new environment. I had interviewed with &lt;a href=&#34;https://www.linkedin.com/in/derekcjackson/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Derek Jackson&lt;/a&gt;, &lt;a href=&#34;https://www.linkedin.com/in/sunggun/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sunggun Yu&lt;/a&gt;, and &lt;a href=&#34;https://www.linkedin.com/in/jenniferdolan/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jenny Dolan&lt;/a&gt; and they had gotten me very excited about CVS. In the interview with Sunggun, I had just ended a call with another company doing some l33t code moments before, at that time I was doing 30ish interviews a week at various rounds. Sunggun started the l33t code challenge and it was the one I had just solved and still had up, I explained to him I had literally just done it and Sunggun laughed and said that was okay, go ahead and explain it then. Sunggun is everything I want to be in a leader, engineer, and friend. Over the course of the next 3 years he would become one of my best friends, and mentor.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Errors</title>
       <link>https://jmainguy.com/posts/errors/</link>
       <pubDate>Sun, 26 Nov 2023 10:45:20 -0500</pubDate>
       <guid>https://jmainguy.com/posts/errors/</guid>
-      <description>Over the Thanksgiving week, the atmosphere was delightful with Liz, Brad, and Maggie visiting from out of town along with their families. The children reveled in playing with their cousins. We capped off the week with a grand BBQ at my place on Saturday, inviting Abram and his family as well. Sunday, naturally, became a day of relaxation and recovery after the culinary escapades and late-night festivities.&#xA;With a touch of boredom on Sunday, I sought out a productive endeavor.</description>
+      <description>&lt;p&gt;Over the Thanksgiving week, the atmosphere was delightful with Liz, Brad, and Maggie visiting from out of town along with their families. The children reveled in playing with their cousins. We capped off the week with a grand BBQ at my place on Saturday, inviting Abram and his family as well. Sunday, naturally, became a day of relaxation and recovery after the culinary escapades and late-night festivities.&lt;/p&gt;&#xA;&lt;p&gt;With a touch of boredom on Sunday, I sought out a productive endeavor. I took a step toward vehicle maintenance by ordering oil filters for Leah&amp;rsquo;s truck, gearing up for an upcoming oil change. Technical tasks beckoned as well—I updated the authorized_keys for vm1 and vm2 on soh.re, facilitating secure shell access from my central server. Engaging Ansible, I meticulously updated all server packages. Subsequently, I delved into &lt;a href=&#34;https://soh.re&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;soh.re&lt;/a&gt;, aiming to replicate intermittent crashes by manually terminating some containers with docker kill and then navigating to the website.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Double Speed</title>
       <link>https://jmainguy.com/posts/double-speed/</link>
       <pubDate>Mon, 06 Nov 2023 07:55:01 -0500</pubDate>
       <guid>https://jmainguy.com/posts/double-speed/</guid>
-      <description>Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru bankruptcy proceedings which is what I believe has lead to their app becoming totally broken. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead.</description>
+      <description>&lt;p&gt;Family was sick this weekend so we took it easy. Leah and I have become big Carolina Hurricanes fans and got season tickets this year. However when they are on the road, the only way to watch them is on Bally. Bally is going thru &lt;a href=&#34;https://thehockeynews.com/nhl/detroit-red-wings/analysis/bally-bankruptcy-the-future-of-regional-sports-networks&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bankruptcy proceedings&lt;/a&gt; which is what I believe has lead to their &lt;a href=&#34;https://www.si.com/fannation/bringmethesports/timberwolves/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;app becoming totally broken&lt;/a&gt;. When we tried to watch games this week, both nights the app refused to work and we had to watch on some shady gray market websites instead. So, Saturday I spent the day on attempting to set up a whole house vpn, so that the Roku TV devices we use would become part of it, hide our location in atlanta, and attempt to trick espn+ into not blocking out Hurricane games for us.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Large Language Model: A Journey into AI and PC Upgrades</title>
       <link>https://jmainguy.com/posts/large-language-model/</link>
       <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://jmainguy.com/posts/large-language-model/</guid>
-      <description>I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a fascinating article about Google investing $2 billion into a company I had never even heard of.&#xA;Exploring LLMs with Hugging Face In the past, I&amp;rsquo;d dabbled with using Hugging Face for generating AI-driven images, back when it was the hottest trend a few months ago.</description>
+      <description>&lt;p&gt;I found myself feeling unfulfilled on a Saturday, watching some rather lackluster football games. It was then that I decided I wanted to dive into the world of Large Language Models (LLMs), all thanks to a &lt;a href=&#34;https://news.ycombinator.com/item?id=38048155&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fascinating article about Google investing $2 billion into a company I had never even heard of&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;exploring-llms-with-hugging-face&#34;&gt;&#xA;  Exploring LLMs with Hugging Face&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#exploring-llms-with-hugging-face&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;In the past, I&amp;rsquo;d dabbled with using &lt;a href=&#34;https://huggingface.co/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugging Face&lt;/a&gt; for generating AI-driven images, back when it was the hottest trend a few months ago. So, I naturally gravitated back to it. At the very top of their leader board was a model called &lt;a href=&#34;https://huggingface.co/ValiantLabs/ShiningValiant&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShiningValiant&lt;/a&gt;. However, it came with a significant requirement - downloading around 300GB of data. I thought, &amp;ldquo;Do I have enough disk space for this?&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enterprise Linux</title>
       <link>https://jmainguy.com/posts/enterprise-linux/</link>
       <pubDate>Mon, 24 Jul 2023 15:53:23 -0400</pubDate>
       <guid>https://jmainguy.com/posts/enterprise-linux/</guid>
-      <description>My first attempt at using Redhat Enterprise Linux (RHEL) was back in my silver spring appartment soon after getting married. I was working as an accountant at a small business, and started to get my feet wet by studying for the CompTIA A+ certification. I was big into torrenting at the time and wanted to practice on what I assumed a system administer would need. I downloaded a copy of Exchange Server and RHEL5.</description>
+      <description>&lt;p&gt;My first attempt at using Redhat Enterprise Linux (RHEL) was back in my silver spring appartment soon after getting married. I was working as an accountant at a small business, and started to get my feet wet by studying for the CompTIA A+ certification. I was big into torrenting at the time and wanted to practice on what I assumed a system administer would need. I downloaded a copy of Exchange Server and RHEL5. I knew of Redhat from &lt;a href=&#34;https://www.youtube.com/watch?v=Eluzi70O-P4&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Revolution OS&lt;/a&gt;. I know I never actually tried using those images I torrented, I ended up running game servers of vnc ontop of ubuntu and opening multiple shells. This worked for awhile.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mifare Ultralight Ev1 48</title>
       <link>https://jmainguy.com/posts/mifare-ultralight-ev1-48/</link>
       <pubDate>Thu, 06 Jul 2023 08:39:20 -0400</pubDate>
       <guid>https://jmainguy.com/posts/mifare-ultralight-ev1-48/</guid>
-      <description>We went on vacation to our condo in Myrtle Beach this week. The water was warm, and the fireworks went all night every day. The kids seemed to have a good time, my sister and parents also came with us which was a nice treat.&#xA;It appears one of our previous renters must have placed their outdoor rusty beach chair on our carpet and setup for a bit, so there is now a rust stain on the carpet.</description>
+      <description>&lt;p&gt;We went on vacation to our condo in Myrtle Beach this week. The water was warm, and the fireworks went all night every day. The kids seemed to have a good time, my sister and parents also came with us which was a nice treat.&lt;/p&gt;&#xA;&lt;p&gt;It appears one of our previous renters must have placed their outdoor rusty beach chair on our carpet and setup for a bit, so there is now a rust stain on the carpet. The toilet flapper was completley worn thru and no longer functioned. Half the light bulbs were burnt out and needing to be replaced. The mattress covers, extra pillows, bed skirts, and oven mitts all seem to have dissapeared. Someone left us a waffle maker though, so that is cool. None of this is really unexpected, the renters tend to treat the place rather roughly and the maid&amp;rsquo;s do not report any damage. Only time stuff gets fixed is when the next guest checks in and reports something. If you are a renter of an AirBnB or VRBO type rental in the future, do the owners a favor and report everything you notice broken so they can make it right for the next guests.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Babo Is Dead Long Live Babo</title>
       <link>https://jmainguy.com/posts/babo-is-dead-long-live-babo/</link>
       <pubDate>Thu, 07 Oct 2021 09:46:50 -0400</pubDate>
       <guid>https://jmainguy.com/posts/babo-is-dead-long-live-babo/</guid>
-      <description>It is the end of an era, today I have shut off the &amp;ldquo;master&amp;rdquo; server for baboviolent 2, that people could connect to and see other babo servers to play on. BV2 was a really fun top down shooting game where the characters were balls that rolled around. I enjoyed playing it as much as I enjoyed hosting it in the latter years. I have very fond memories of playing on =TM= with Size, Deathreay and the rest, as well as (tb) with Allen and the gang.</description>
+      <description>&lt;p&gt;It is the end of an era, today I have shut off the &amp;ldquo;master&amp;rdquo; server for &lt;a href=&#34;https://www.baboviolent.net/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;baboviolent 2&lt;/a&gt;, that people could connect to and see other babo servers to play on. BV2 was a really fun top down shooting game where the characters were balls that rolled around. I enjoyed playing it as much as I enjoyed hosting it in the latter years. I have very fond memories of playing on =TM= with Size, Deathreay and the rest, as well as (tb) with Allen and the gang. I was very immature and quite the prick when I played though, and I feel bad for the way I treated my teammates and opponents. I was consumed with winning, and I was a bad leader, in that I did not build up my fellow teammembers and help them become they best they could be. This is why, despite being a pretty good player, not many clans would want to recruit me. All this to say, I am sorry for the way I acted when I was actively playing, and I strive to do better going forward.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Covid Data as of 9-29-2021</title>
       <link>https://jmainguy.com/posts/covid-data-9-29-2021/</link>
       <pubDate>Wed, 29 Sep 2021 13:33:06 -0400</pubDate>
       <guid>https://jmainguy.com/posts/covid-data-9-29-2021/</guid>
-      <description>I recently created a stock price operator for Kubernetes, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same API I was using for the stock, also had some Covid-19 data in it as well.&#xA;The code was pretty quick to work out thanks to the great API docs and examples.&#xA;package main import ( &amp;#34;context&amp;#34; &amp;#34;fmt&amp;#34; finnhub &amp;#34;github.com/Finnhub-Stock-API/finnhub-go/v2&amp;#34; ) func main() { cfg := finnhub.</description>
+      <description>&lt;p&gt;I recently created a &lt;a href=&#34;https://github.com/Jmainguy/stockop&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stock price operator for Kubernetes&lt;/a&gt;, to gather the current price of stock for a list of tickers the user defines. Doing so, I learned the same &lt;a href=&#34;https://finnhub.io/docs/api/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;API&lt;/a&gt; I was using for the stock, also had some Covid-19 data in it as well.&lt;/p&gt;&#xA;&lt;p&gt;The code was pretty quick to work out thanks to the great API docs and examples.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#dc322f;font-weight:bold&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#dc322f;font-weight:bold&#34;&gt;import&lt;/span&gt; (&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#x9;&lt;span style=&#34;color:#268bd2&#34;&gt;finnhub&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;github.com/Finnhub-Stock-API/finnhub-go/v2&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#859900&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;cfg&lt;/span&gt; := &lt;span style=&#34;color:#268bd2&#34;&gt;finnhub&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;NewConfiguration&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;cfg&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;AddDefaultHeader&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;X-Finnhub-Token&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;c50beiaad3ic9bdl2tf0&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;finnhubClient&lt;/span&gt; := &lt;span style=&#34;color:#268bd2&#34;&gt;finnhub&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;NewAPIClient&lt;/span&gt;(&lt;span style=&#34;color:#268bd2&#34;&gt;cfg&lt;/span&gt;).&lt;span style=&#34;color:#268bd2&#34;&gt;DefaultApi&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#93a1a1;font-style:italic&#34;&gt;// Covid-19&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;covid19&lt;/span&gt;, &lt;span style=&#34;color:#268bd2&#34;&gt;_&lt;/span&gt;, &lt;span style=&#34;color:#268bd2&#34;&gt;_&lt;/span&gt; := &lt;span style=&#34;color:#268bd2&#34;&gt;finnhubClient&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Covid19&lt;/span&gt;(&lt;span style=&#34;color:#268bd2&#34;&gt;context&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Background&lt;/span&gt;()).&lt;span style=&#34;color:#268bd2&#34;&gt;Execute&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;State, TotalCases, TotalDeaths, MortalityRate, Updated&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#859900&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;_&lt;/span&gt;, &lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt; := &lt;span style=&#34;color:#859900&#34;&gt;range&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;covid19&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#268bd2&#34;&gt;percentageOFCaseToDeath&lt;/span&gt; := *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Death&lt;/span&gt; / *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Case&lt;/span&gt; * &lt;span style=&#34;color:#2aa198;font-weight:bold&#34;&gt;100&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#268bd2&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Printf&lt;/span&gt;(&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;%+v, %.0f, %.0f, %.2f, %+v\n&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;State&lt;/span&gt;, *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Case&lt;/span&gt;, *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Death&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#268bd2&#34;&gt;percentageOFCaseToDeath&lt;/span&gt;, *&lt;span style=&#34;color:#268bd2&#34;&gt;covidInfo&lt;/span&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;Updated&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                )&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using the code above, I could get the data into a csv base, which I could then manipulate easily with the &lt;code&gt;sort&lt;/code&gt; command.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ugly Drum Smoker</title>
       <link>https://jmainguy.com/posts/ugly-drum-smoker/</link>
       <pubDate>Wed, 06 Nov 2019 09:51:52 -0500</pubDate>
       <guid>https://jmainguy.com/posts/ugly-drum-smoker/</guid>
-      <description>My old horizontal barrel grill was falling apart, so I set out to replace it. After looking at Big Green Egg and Kamodo Joe reviews they seemed awesome, but the price was crazy and I didn&amp;rsquo;t want to be out 2k if I knocked it over on accident. (its porcelain, its gonna shatter if tipped over.)&#xA;I also enjoy DIY and spending $2,000 on a smoker seemed to be at odds with smoking.</description>
+      <description>&lt;p&gt;My old horizontal barrel grill was falling apart, so I set out to replace it. After looking at Big Green Egg and Kamodo Joe reviews they seemed awesome, but the price was crazy and I didn&amp;rsquo;t want to be out 2k if I knocked it over on accident. (its porcelain, its gonna shatter if tipped over.)&lt;/p&gt;&#xA;&lt;p&gt;I also enjoy DIY and spending $2,000 on a smoker seemed to be at odds with smoking. BBQ / Smoking was invented by poor people who couldn&amp;rsquo;t afford nice cuts of meat, so they smoked bad cuts until they were tender enough to eat. I got to be true to the tradition, so a $25 55 gallon drum converted into a smoker was the way to go.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to setup travis-ci with goreleaser for automated binary golang releases</title>
       <link>https://jmainguy.com/index.php/how-to-setup-travis-ci-with-goreleaser-for-automated-binary-golang-releases/</link>
       <pubDate>Mon, 28 Oct 2019 13:15:51 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/how-to-setup-travis-ci-with-goreleaser-for-automated-binary-golang-releases/</guid>
-      <description>I have been enjoying writing golang applications for a few years now, and I naively assumed other people who wanted to use them could easily build the apps with instructions I provided easy enough.&#xA;I discovered that the differences between operating systems is enough that compiling the applications can be burdensome for others. My buddy @slm (hes kind of a big deal) mentioned I should check out goreleaser and I am glad I did.</description>
+      <description>&lt;p&gt;I have been enjoying writing golang applications for a few years now, and I naively assumed other people who wanted to use them could easily build the apps with instructions I provided easy enough.&lt;/p&gt;&#xA;&lt;p&gt;I discovered that the differences between operating systems is enough that compiling the applications can be burdensome for others. My buddy &lt;a href=&#34;https://unix.stackexchange.com/users/7453/slm&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@slm&lt;/a&gt; (hes kind of a big deal) mentioned I should check out goreleaser and I am glad I did.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sweet pawn shop find</title>
       <link>https://jmainguy.com/index.php/sweet-pawn-shop-find/</link>
       <pubDate>Tue, 19 Dec 2017 19:41:11 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/sweet-pawn-shop-find/</guid>
-      <description>I have recently started hobbying with pawn shop guitars, found this LTD a few months ago for $100, noticed it had Seymour Duncans humbucking pickups installed. The guitar was going for $300 new, but I see it now on amazon for $245. My rule of thumb is used gear is worth about 50% of new price, so $100 is already a good deal, add on upgraded pickups and I jumped at the deal.</description>
+      <description>&lt;p&gt;I have recently started hobbying with pawn shop guitars, found this LTD a few months ago for $100, noticed it had Seymour Duncans humbucking pickups installed. The guitar was going for $300 new, but I see it now on amazon for $245. My rule of thumb is used gear is worth about 50% of new price, so $100 is already a good deal, add on upgraded pickups and I jumped at the deal. Like all pawn shop guitars it was pretty pretty dirty and gross, when I plugged in at home the pickups were going in and out, once I opened the electronics cavity I saw a disaster of a solder job. The person who added the Seymour Duncans did not follow the SD schematics, and they had soldered in a second output jack inside the cavity because…….wtf why would anyone do that? After resoldering all the wiring to follow the SD specs it works like a charm now. Cleaned and oiled the fretboard and added new DR black strings (DR colored strings are my favorite). The action is too low at the nut and it is buzzing, but I will look into adjusting that later. My mom was nice enough to take some glamour pics.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The flag, the national anthem, and what they mean to me.</title>
       <link>https://jmainguy.com/index.php/the-flag-the-national-anthem-and-what-they-mean-to-me/</link>
       <pubDate>Mon, 25 Sep 2017 15:07:52 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/the-flag-the-national-anthem-and-what-they-mean-to-me/</guid>
-      <description>My earliest memory of reverence for the flag, was seeing it flying on a huge pole in front of my Grandpa’s house. We would go see him once a year for thanksgiving and my cousins would come as well, was always a really good time. pulling up and seeing that flag meant we had arrived from the long 12 hour trip (a lifetime for a van full of kids and tiger electronic handheld games).</description>
+      <description>&lt;p&gt;My earliest memory of reverence for the flag, was seeing it flying on a huge pole in front of my Grandpa’s house. We would go see him once a year for thanksgiving and my cousins would come as well, was always a really good time. pulling up and seeing that flag meant we had arrived from the long 12 hour trip (a lifetime for a van full of kids and tiger electronic handheld games).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Old School Football review – 1991 #1 Florida State vs Tulane</title>
       <link>https://jmainguy.com/index.php/old-school-football-review-1991-1-florida-state-vs-tulane/</link>
       <pubDate>Tue, 11 Jul 2017 04:08:00 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/old-school-football-review-1991-1-florida-state-vs-tulane/</guid>
-      <description>FSU vs Tulane&#xA;Casey Weldon, and Amp Lee tear up the Tulane Defense all game, doing anything they want. 31 points before getting pulled at the end of the third.&#xA;Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver and into the hands of a defender, not the QB’s fault. Next drive Brad completes a TD pass to one of the tight ends. Marking 4 TE touchdowns in this game.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zR9sCuLxcco&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FSU vs Tulane&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Casey Weldon, and Amp Lee tear up the Tulane Defense all game, doing anything they want. 31 points before getting pulled at the end of the third.&lt;/p&gt;&#xA;&lt;p&gt;Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver and into the hands of a defender, not the QB’s fault. Next drive Brad completes a TD pass to one of the tight ends. Marking 4 TE touchdowns in this game. The announcers do not believe any TE’s caught touchdown passes last year&lt;/p&gt;</description>
     </item>
     <item>
       <title>I wrote a sms survey application</title>
       <link>https://jmainguy.com/index.php/i-wrote-a-sms-survey-application/</link>
       <pubDate>Mon, 10 Jul 2017 18:26:08 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-wrote-a-sms-survey-application/</guid>
-      <description>My pastor was looking for a sms survey service, requirements: A number to give out, a way to gather the responses, easy to use, cheap as possible. Googling turned up a few results with no clear pricing and salesmen, one I found was about $50 a month. Since I work at a telephone company, I decided just to make one using our API.&#xA;I am calling the application “Survey Hail”, as its a survey service, and a play of words on the pastors name.</description>
+      <description>&lt;p&gt;My pastor was looking for a sms survey service, requirements: A number to give out, a way to gather the responses, easy to use, cheap as possible. Googling turned up a few results with no clear pricing and salesmen, one I found was about $50 a month. Since I work at a telephone company, I decided just to make one using our API.&lt;/p&gt;&#xA;&lt;p&gt;I am calling the application “Survey Hail”, as its a survey service, and a play of words on the pastors name. As with all code I write, this will is open sourced. It works as follows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Old School Football review – 1991 Pigskin Classic #1 Florida State vs #19 BYU</title>
       <link>https://jmainguy.com/index.php/old-school-football-review-1991-pigskin-classic-1-florida-state-vs-19-byu/</link>
       <pubDate>Thu, 06 Jul 2017 23:40:46 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/old-school-football-review-1991-pigskin-classic-1-florida-state-vs-19-byu/</guid>
-      <description>I recently started watching old school football games, so I figured I would write a review while I am at it. I love the Noles, so I will be watching their games.&#xA;The year is 1991, FSU is preseason ranked #1 in the nation, and has for some reason, opted to open the year at a “neutral” site in Anaheim California, Disneyland, against the Heisman trophy winner, Ty Detmer lead #19 BYU Cougars.</description>
+      <description>&lt;p&gt;I recently started watching old school football games, so I figured I would write a review while I am at it. I love the Noles, so I will be watching their games.&lt;/p&gt;&#xA;&lt;p&gt;The year is 1991, FSU is preseason ranked #1 in the nation, and has for some reason, opted to open the year at a “neutral” site in Anaheim California, Disneyland, against the Heisman trophy winner, Ty Detmer lead #19 BYU Cougars. As if the nation needed multiple annual reminders, that Bobby Bowden and FSU will play anyone, anytime, anywhere. FSU is favored to win their and Bobby’s first national Championship.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I wrote a gotosleep daemon</title>
       <link>https://jmainguy.com/index.php/i-wrote-a-gotosleep-daemon/</link>
       <pubDate>Wed, 21 Jun 2017 19:00:30 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-wrote-a-gotosleep-daemon/</guid>
-      <description>I watch youtube / twitch at night to go to sleep to. I am too lazy to open a command line and say shutdown in 120 minutes or so. So instead I wrote a tool, which reads a config, and shuts down at the time specified every night.&#xA;https://github.com/Jmainguy/gotosleep&#xA;Currently only works on Linux as that’s what I use, and I doubt anybody else will use this.</description>
+      <description>&lt;p&gt;I watch youtube / twitch at night to go to sleep to. I am too lazy to open a command line and say shutdown in 120 minutes or so. So instead I wrote a tool, which reads a config, and shuts down at the time specified every night.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Jmainguy/gotosleep&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/Jmainguy/gotosleep&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Currently only works on Linux as that’s what I use, and I doubt anybody else will use this.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Scrambled egg and bacon on toasted potato bread sammitch</title>
       <link>https://jmainguy.com/index.php/scrambled-egg-and-bacon-on-toasted-potato-bread-sammitch/</link>
       <pubDate>Mon, 29 May 2017 00:06:40 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/scrambled-egg-and-bacon-on-toasted-potato-bread-sammitch/</guid>
-      <description>Stole most of the recipe from http://allrecipes.com/recipe/239871/toms-scrambled-egg-sandwich/. Fry 3 strips of bacon, leave grease in pan, set cooked bacon aside. put two pieces of bread in toaster. Mix 2 eggs, a little more than a splash of milk, handful of shredded cheddar cheese, salt, and old bay in a bowl until it all comes together. pour into frying pan ontop of the grease and leave it alone. Once its done cooking on one side try and and flip it, fail and settle some of it shredding, attempt to cook on other side.</description>
+      <description>&lt;p&gt;Stole most of the recipe from &lt;a href=&#34;http://allrecipes.com/recipe/239871/toms-scrambled-egg-sandwich/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://allrecipes.com/recipe/239871/toms-scrambled-egg-sandwich/&lt;/a&gt;. Fry 3 strips of bacon, leave grease in pan, set cooked bacon aside. put two pieces of bread in toaster. Mix 2 eggs, a little more than a splash of milk, handful of shredded cheddar cheese, salt, and old bay in a bowl until it all comes together. pour into frying pan ontop of the grease and leave it alone. Once its done cooking on one side try and and flip it, fail and settle some of it shredding, attempt to cook on other side. Apply mayo and mustard to one side of each piece of toast. Place bacon and egg of whatever consistency you managed in the end on toast. Place together to make sammitch. Cut diagonally. Pair with a glass of whole milk.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mothers day Wings</title>
       <link>https://jmainguy.com/index.php/mothers-day-wings/</link>
       <pubDate>Sun, 14 May 2017 23:34:51 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/mothers-day-wings/</guid>
-      <description>Did pancakes, bacon, cinnamon rolls, and mimosas’s for brunch, Leah cooked it all up, it was too delicious to take pictures of. Ended up doing grilled wings for dinner, shoulda cooked 4-5 more but they were great.</description>
+      <description>&lt;p&gt;Did pancakes, bacon, cinnamon rolls, and mimosas’s for brunch, Leah cooked it all up, it was too delicious to take pictures of. Ended up doing grilled wings for dinner, shoulda cooked 4-5 more but they were great.&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>I got DK64 working again</title>
       <link>https://jmainguy.com/index.php/i-got-dk64-working-again/</link>
       <pubDate>Fri, 12 May 2017 17:01:41 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-got-dk64-working-again/</guid>
-      <description>About 16 years ago a low life scum bag stole my Expansion Card for the N64. This was needed for DK64 to work, so since then I have not been able to play. I finally bit the bullet and purchased an expansion card on ebay (about $20 USD) and it booted right up. Now to play through it from scratch =)&#xA;Love that red color Japanese words. Sitting in its new home Booted up no problem.</description>
+      <description>&lt;p&gt;About 16 years ago a low life scum bag stole my Expansion Card for the N64. This was needed for DK64 to work, so since then I have not been able to play. I finally bit the bullet and purchased an expansion card on ebay (about $20 USD) and it booted right up. Now to play through it from scratch =)&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Love that red color&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Japanese words.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Sitting in its new home&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Booted up no problem.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Them 64 bit cutscenese doh?&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bacon Wrapped, Old Bay Seasoned, Ribeye Burgers, dressed with East Carolina Vinegar based BBQ sauce</title>
       <link>https://jmainguy.com/index.php/bacon-wrapped-old-bay-seasoned-ribeye-burgers-dressed-with-east-carolina-vinegar-based-bbq-sauce/</link>
       <pubDate>Thu, 11 May 2017 23:57:13 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/bacon-wrapped-old-bay-seasoned-ribeye-burgers-dressed-with-east-carolina-vinegar-based-bbq-sauce/</guid>
-      <description>Leah said it was burger night, so might as well do it right. Bought a ribeye steak, then sliced it up and cut off the excess fat and tissue (leave some of the fat, otherwise you get a dry burger). Formed patties, seasoned it with salt and old bay. Wrap it with bacon. Place on grill.&#xA;Once its nearly done, grill your buns and top burgers with cheese. Leave burgers in until the cheese is molten, and dripping into the fire.</description>
+      <description>&lt;p&gt;Leah said it was burger night, so might as well do it right. Bought a ribeye steak, then sliced it up and cut off the excess fat and tissue (leave some of the fat, otherwise you get a dry burger). Formed patties, seasoned it with salt and old bay. Wrap it with bacon. Place on grill.&lt;/p&gt;&#xA;&lt;p&gt;Once its nearly done, grill your buns and top burgers with cheese. Leave burgers in until the cheese is molten, and dripping into the fire. Place on bun, add as much sauce as you want (add more later, too much will soggy the bun, but mine was a little dry in the middle so I added more halfway through).&lt;/p&gt;</description>
     </item>
     <item>
       <title>I wrote https://soh.re from scratch go check it out</title>
       <link>https://jmainguy.com/index.php/i-wrote-httpssoh-re-from-scratch-go-check-it-out/</link>
       <pubDate>Mon, 01 May 2017 17:23:44 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-wrote-httpssoh-re-from-scratch-go-check-it-out/</guid>
-      <description>I have always wanted a interactive website that looks like a Linux shell. When @ChrisShort tweeted about GoTTY, I knew I had the essential piece I was missing.&#xA;I wanted each page reload to bring a fresh copy of the site (because people are mean and will wreck the shell they are in on purpose, I know I would). I wanted it to be secure (I do not want people ddosing others, or bringing down my infra), and I wanted to have a few fun things for them to do (like play crawl, or chat on IRC).</description>
+      <description>&lt;p&gt;I have always wanted a interactive website that looks like a Linux shell. When @ChrisShort tweeted about GoTTY, I knew I had the essential piece I was missing.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;I wanted each page reload to bring a fresh copy of the site (because people are mean and will wreck the shell they are in on purpose, I know I would). I wanted it to be secure (I do not want people ddosing others, or bringing down my infra), and I wanted to have a few fun things for them to do (like play crawl, or chat on IRC).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Got the PizzaKettle working on the third try</title>
       <link>https://jmainguy.com/index.php/got-the-pizzakettle-working-on-the-third-try/</link>
       <pubDate>Sat, 29 Apr 2017 23:13:34 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/got-the-pizzakettle-working-on-the-third-try/</guid>
-      <description>First two were pretty meh, but attempt number #3 came out tonight. Things I did different this time, using my own pizza pan instead of the included one, kept the pizza stone in the entire time so the stone itself was hot and ready when the pizza was placed. Lots of wood to keep the temp as high as I can get it (gauge only goes to 700, so above that).</description>
+      <description>&lt;p&gt;First two were pretty meh, but attempt number #3 came out tonight. Things I did different this time, using my own pizza pan instead of the included one, kept the pizza stone in the entire time so the stone itself was hot and ready when the pizza was placed. Lots of wood to keep the temp as high as I can get it (gauge only goes to 700, so above that).&lt;/p&gt;</description>
     </item>
     <item>
       <title>BBQ Day was a success</title>
       <link>https://jmainguy.com/index.php/bbq-day-was-a-success/</link>
       <pubDate>Sun, 23 Apr 2017 00:42:05 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/bbq-day-was-a-success/</guid>
-      <description>Did a BBQ day, our good friends Dustin and Liz came to help eat it all. Wings, Ribs, and slow cooked pulled pork. It was great.&#xA;Aux grill, to get coals hot enough to transfer to pig grill Fan to feed the fires the oxygen it craves. Oxygen entry point, careful its hot. 250 degrees, hard work trying to keep it consistent. mmmm delicious smoke Pork and Ribs ready to come off.</description>
+      <description>&lt;p&gt;Did a BBQ day, our good friends Dustin and Liz came to help eat it all. Wings, Ribs, and slow cooked pulled pork. It was great.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Aux grill, to get coals hot enough to transfer to pig grill&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Fan to feed the fires the oxygen it craves.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Oxygen entry point, careful its hot.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;250 degrees, hard work trying to keep it consistent.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;mmmm delicious smoke&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Pork and Ribs ready to come off.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Grilled wings, biggest hit of the night. Super easy, will be doing these alot going forward.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>A full morning</title>
       <link>https://jmainguy.com/index.php/a-full-morning/</link>
       <pubDate>Sat, 22 Apr 2017 15:26:44 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/a-full-morning/</guid>
-      <description>Went to the store for some drip pans, put the pork on the bbq, made flapjacks. Mmmm delicious flapjacks.&#xA;6 pounds, bone in. Cook for 6ish hours at 250, Flapjacks and Sausage on the griddle&#xA;Looking forward to tonight, gonna do some wings and ribs as well.&#xA;Ribs marinating East Carolina Sauce ready to go</description>
+      <description>&lt;p&gt;Went to the store for some drip pans, put the pork on the bbq, made flapjacks. Mmmm delicious flapjacks.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;6 pounds, bone in.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Cook for 6ish hours at 250,&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Flapjacks and Sausage on the griddle&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>I had lunch today and bought some cigar boxes</title>
       <link>https://jmainguy.com/index.php/i-had-lunch-today-and-bought-some-cigar-boxes/</link>
       <pubDate>Thu, 20 Apr 2017 17:46:29 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-had-lunch-today-and-bought-some-cigar-boxes/</guid>
-      <description>Barrett asked for pictures from Lunch, so here they are. He is a jerk and should come to lunch next time.&#xA;They make some great food here. I got the buffalo chicken wrap today. My table for today, all by my lonesome. At the smoke shop grabbing boxes, really nice inside. Sweet moose. Classic size box, the best for making guitars. Nice looking wood. Cool latch What I made my first guitar out of, good box.</description>
+      <description>&lt;p&gt;Barrett asked for pictures from Lunch, so here they are. He is a jerk and should come to lunch next time.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;They make some great food here. I got the buffalo chicken wrap today.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;My table for today, all by my lonesome.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;At the smoke shop grabbing boxes, really nice inside.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Sweet moose.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Classic size box, the best for making guitars.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Nice looking wood.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Cool latch&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;What I made my first guitar out of, good box.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;What a sweet tree&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My minecraft business is dead</title>
       <link>https://jmainguy.com/index.php/my-minecraft-business-is-dead/</link>
       <pubDate>Sun, 16 Apr 2017 23:51:00 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/my-minecraft-business-is-dead/</guid>
-      <description>I started a minecraft business to help pay for hosting my own minecraft server. It blew up and I ended up getting alot of customers really quick. I stopped marketing to get new clients about 2-3 years ago and when I checked today the last of my word of mouth people stopped paying about 3 months ago. So I am cancelling my whmcs license and redirecting the website to the open source code the business generated (which I am also doing a poor job of maintaining).</description>
+      <description>&lt;p&gt;I started a minecraft business to help pay for hosting my own minecraft server. It blew up and I ended up getting alot of customers really quick. I stopped marketing to get new clients about 2-3 years ago and when I checked today the last of my word of mouth people stopped paying about 3 months ago. So I am cancelling my whmcs license and redirecting the website to the open source code the business generated (which I am also doing a poor job of maintaining).&lt;/p&gt;</description>
     </item>
     <item>
       <title>I made a guitar hanger</title>
       <link>https://jmainguy.com/index.php/i-made-a-guitar-hanger/</link>
       <pubDate>Wed, 08 Mar 2017 03:24:20 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-made-a-guitar-hanger/</guid>
-      <description>I need more guitar hangers, and they cost $10 a pop from amazon, also I can only place them on studs, which limits where I can place them. The solution was a guitar hanger which ended up costing about the same ($23 for wood board, $10 for all hangers, $7 for stain). I think it looks great though.&#xA;So nice&#xA;5x hangers&#xA;http://www.homedepot.com/p/Everbilt-Heavy-Duty-Screw-In-Tool-Hanger-24255/205020421&#xA;1x oak board&#xA;Go to home depot lumber section and pick one out</description>
+      <description>&lt;p&gt;I need more guitar hangers, and they cost $10 a pop from amazon, also I can only place them on studs, which limits where I can place them. The solution was a guitar hanger which ended up costing about the same ($23 for wood board, $10 for all hangers, $7 for stain). I think it looks great though.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;So nice&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cooked some Barbacoa</title>
       <link>https://jmainguy.com/index.php/cooked-some-barbacoa/</link>
       <pubDate>Thu, 16 Feb 2017 01:14:57 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/cooked-some-barbacoa/</guid>
-      <description>Made some Barbacoa for burrito’s tonight, really turned out great. You sear some chuck roast, mix a bunch of other stuff in a blender, then pour over the beef in a slow cooker, cook up for 6 hours, shred, enjoy. Michael and Leah made some cilantro lime rice and black beans to go with it.&#xA;The delicious shredded barbacoa in the slow cooker. Cilantro lime rice. All ready to be rolled up.</description>
+      <description>&lt;p&gt;Made some Barbacoa for burrito’s tonight, really turned out great. You sear some chuck roast, mix a bunch of other stuff in a blender, then pour over the beef in a slow cooker, cook up for 6 hours, shred, enjoy. Michael and Leah made some cilantro lime rice and black beans to go with it.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;The delicious shredded barbacoa in the slow cooker.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Cilantro lime rice.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;All ready to be rolled up.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>I made some burgers</title>
       <link>https://jmainguy.com/index.php/i-made-some-burgers/</link>
       <pubDate>Sun, 05 Feb 2017 03:26:58 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-made-some-burgers/</guid>
-      <description>I decided to make some burgers for dinner. Went to the store and got boneless chuck eye steak, some chips, potato bread, and soda.&#xA;Got home and cut up the chuck into small enough chunks to form a patty.&#xA;Only used one of these and wrapped the rest. Made two patties easy. Nice and fatty.&#xA;Cooked the bacon first, so I could add it to the burger later, and hopefully get some grease in the pan for the burgers to cook in (turkey bacon let me down)</description>
+      <description>&lt;p&gt;I decided to make some burgers for dinner. Went to the store and got boneless chuck eye steak, some chips, potato bread, and soda.&lt;/p&gt;&#xA;&lt;p&gt;Got home and cut up the chuck into small enough chunks to form a patty.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Only used one of these and wrapped the rest. Made two patties easy.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Nice and fatty.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ho made pizza night</title>
       <link>https://jmainguy.com/index.php/ho-made-pizza-night/</link>
       <pubDate>Thu, 26 Jan 2017 00:24:21 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/ho-made-pizza-night/</guid>
-      <description>I enjoy pizza, so I decided to make some. Made the dough yesterday, let it sit overnight in the fridge, then topped and baked tonight. Delicious&#xA;Followed this Recipe for the dough. Could not find 00 flour so I used bread flour instead, will have to buy some 00 online.</description>
+      <description>&lt;p&gt;I enjoy pizza, so I decided to make some. Made the dough yesterday, let it sit overnight in the fridge, then topped and baked tonight. Delicious&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;Followed this &lt;a href=&#34;http://cooking.nytimes.com/recipes/1016230-robertas-pizza-dough&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Recipe&lt;/a&gt; for the dough. Could not find 00 flour so I used bread flour instead, will have to buy some 00 online.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I handmade a guitar</title>
       <link>https://jmainguy.com/index.php/i-handmade-a-guitar/</link>
       <pubDate>Mon, 05 Dec 2016 01:17:23 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-handmade-a-guitar/</guid>
-      <description>Finally wrapped up my big guitar project. Finished the guitar yesterday and learned how to play it correctly today (have to use a slide or it wont sound right). Pretty happy with how it turned out.&#xA;Metal rod for nut. Straight cut headstock. Wood burned fret markers made by hand. Metal rod again for the bridge. Will clean up these sound holes later this week. Piezo jack pickup.&#xA;I have no idea why my phone recorded this vertically, I placed it horizontally and all.</description>
+      <description>&lt;p&gt;Finally wrapped up my big guitar project. Finished the guitar yesterday and learned how to play it correctly today (have to use a slide or it wont sound right). Pretty happy with how it turned out.&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Metal rod for nut. Straight cut headstock.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Wood burned fret markers&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;made by hand.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Metal rod again for the bridge. Will clean up these sound holes later this week.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Piezo jack pickup.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>I made some Audio cables</title>
       <link>https://jmainguy.com/index.php/i-made-some-audio-cables/</link>
       <pubDate>Mon, 21 Nov 2016 02:48:45 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-made-some-audio-cables/</guid>
-      <description>I needed a 3.5mm to 3.5mm to connect my digital to audio connect (dac) to my headphone amp (which makes headphones sound better). So I spent alot of time last week and made one.&#xA;love that color. Wont get it confused with other peoples cords ever.&#xA;Then today I spent about 6 hours making another cord. This one was to connect my Electronic Drum kit to the mixer at church. I needed a 3.</description>
+      <description>&lt;p&gt;I needed a 3.5mm to 3.5mm to connect my digital to audio connect (dac) to my headphone amp (which makes headphones sound better). So I spent alot of time last week and made one.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;love that color. Wont get it confused with other peoples cords ever.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>I built a workbench</title>
       <link>https://jmainguy.com/index.php/i-built-a-workbench/</link>
       <pubDate>Sat, 19 Nov 2016 19:04:14 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/i-built-a-workbench/</guid>
-      <description>I needed a workbench to start on my new hobbies and projects. So I went ahead and built one. I needed a bench that could fold up as the Wife and I both park inside the garage and refuse to give that up. I followed the tutorial at http://www.remodelaholic.com/diy-portable-workbench-folding-table/. The shopping cart of the stuff I bought. https://etherpad.soh.re/p/workbench. I got the plywood cut at home depot and they did a great job.</description>
+      <description>&lt;p&gt;I needed a workbench to start on my new hobbies and projects. So I went ahead and built one. I needed a bench that could fold up as the Wife and I both park inside the garage and refuse to give that up. I followed the tutorial at &lt;a href=&#34;http://www.remodelaholic.com/diy-portable-workbench-folding-table/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.remodelaholic.com/diy-portable-workbench-folding-table/&lt;/a&gt;. The shopping cart of the stuff I bought. &lt;a href=&#34;https://etherpad.soh.re/p/workbench&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://etherpad.soh.re/p/workbench&lt;/a&gt;. I got the plywood cut at home depot and they did a great job. The legs and sides I cut with a hand saw and that sucked. I definitely need to get a powered saw for the next big cutting project. All in all I am super please with how it turned out. Here are some pics.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Openshift online is cool if you play by the rules</title>
       <link>https://jmainguy.com/index.php/openshift-online-is-cool-if-you-play-by-the-rules/</link>
       <pubDate>Sun, 16 Oct 2016 02:06:27 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/openshift-online-is-cool-if-you-play-by-the-rules/</guid>
-      <description>So my good buddy Andrew Butcher @akbutcher took pity on me and pointed me in the right direction. After rebuilding the docker container on the assumption that any random user could be running it, it worked like a charm. See the updated code at https://github.com/Jmainguy/docker_images/tree/master/etherpad and launch your own openshift-online version of etherpad.</description>
+      <description>&lt;p&gt;So my good buddy Andrew Butcher @akbutcher took pity on me and pointed me in the right direction. After rebuilding the docker container on the assumption that any random user could be running it, it worked like a charm. See the updated code at &lt;a href=&#34;https://github.com/Jmainguy/docker_images/tree/master/etherpad&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/Jmainguy/docker_images/tree/master/etherpad&lt;/a&gt; and launch your own openshift-online version of etherpad.&lt;/p&gt;</description>
     </item>
     <item>
       <title>You can’t push a docker image to Openshift and just run it</title>
       <link>https://jmainguy.com/index.php/you-cant-push-a-docker-image-to-openshift-and-just-run-it/</link>
       <pubDate>Sat, 15 Oct 2016 21:03:43 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/you-cant-push-a-docker-image-to-openshift-and-just-run-it/</guid>
-      <description>So I just finished wasting 3 hours of my life trying to get a docker image to run on Redhats PAAS openshift online, and I failed. In short, you can push a docker image to openshift, but it ignores most of the directives in the Dockerfile and rewrites them as it pleases. It then runs the image as any user it wants, and you cant change that, because you are not a open shift admin, on account of using their PAAS instead of running it yourself.</description>
+      <description>&lt;p&gt;So I just finished wasting 3 hours of my life trying to get a docker image to run on Redhats PAAS openshift online, and I failed. In short, you can push a docker image to openshift, but it ignores most of the directives in the Dockerfile and rewrites them as it pleases. It then runs the image as any user it wants, and you cant change that, because you are not a open shift admin, on account of using their PAAS instead of running it yourself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Seth’s Funeral – Saturday at 11am in Garner, NC</title>
       <link>https://jmainguy.com/index.php/seths-funeral-saturday-at-11am-in-garner-nc/</link>
       <pubDate>Thu, 28 Apr 2016 13:59:57 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/seths-funeral-saturday-at-11am-in-garner-nc/</guid>
-      <description>Funeral services will be held on Saturday April 30th at 11:00am at Triangle Baptist Church. The address is 9713 Old Stage Rd, Raleigh, NC 27603.&#xA;Following the service, a reception will be held at Lake Benson park located 921 Buffaloe Rd, Garner, NC 27529.</description>
+      <description>&lt;p&gt;Funeral services will be held on Saturday April 30th at 11:00am at Triangle Baptist Church. The address is 9713 Old Stage Rd, Raleigh, NC 27603.&lt;/p&gt;&#xA;&lt;p&gt;Following the service, a reception will be held at Lake Benson park located 921 Buffaloe Rd, Garner, NC 27529.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Seth Mainguy has passed</title>
       <link>https://jmainguy.com/index.php/seth-mainguy-has-passed/</link>
       <pubDate>Sun, 24 Apr 2016 00:58:44 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/seth-mainguy-has-passed/</guid>
-      <description>Today Seth passed away. 8/20/14 – 4/23/16</description>
+      <description>&lt;p&gt;Today Seth passed away. 8/20/14 – 4/23/16&lt;/p&gt;</description>
     </item>
     <item>
       <title>The original pokemon is pretty bad</title>
       <link>https://jmainguy.com/index.php/the-original-pokemon-is-pretty-bad/</link>
       <pubDate>Thu, 11 Feb 2016 20:10:29 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/the-original-pokemon-is-pretty-bad/</guid>
-      <description>Got nostalgic, installed retro-pi on my raspberry pi and been playing Pokemon Red on it. It is not as good as I remembered it. First, despite being for the Game Boy Color, its not in color. WTF? Second, you cannot bind a key to an item or move, like say I want select to be the bicycle, or select to be the cut move to cut down bushes, nope. Third, Pokebox’s get full?</description>
+      <description>&lt;p&gt;Got nostalgic, installed retro-pi on my raspberry pi and been playing Pokemon Red on it. It is not as good as I remembered it. First, despite being for the Game Boy Color, its not in color. WTF? Second, you cannot bind a key to an item or move, like say I want select to be the bicycle, or select to be the cut move to cut down bushes, nope. Third, Pokebox’s get full? why? Why do I have to login to a computer, tell it to switch to an open pokebox before I can catch more pokemon, zero automation for pokeboxes. In the newer games, a little pokeball appears next to a pokemon in combat if you already have them, not so much in the original. You just have to try and remember that you caught this one already.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My son has Leukemia</title>
       <link>https://jmainguy.com/index.php/my-son-has-leukemia/</link>
       <pubDate>Sat, 05 Dec 2015 20:03:17 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/my-son-has-leukemia/</guid>
-      <description>At Seth’s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia.&#xA;So far we have completed two 30 day rounds of inpatient hospital care, with another 2 more to go. This is typically 10 days of chemotherapy followed by 20 days of waiting for you immune system to recover, and then you get about a week to 10 days at home before you start the next round.</description>
+      <description>&lt;p&gt;At Seth’s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia.&lt;/p&gt;&#xA;&lt;p&gt;So far we have completed two 30 day rounds of inpatient hospital care, with another 2 more to go. This is typically 10 days of chemotherapy followed by 20 days of waiting for you immune system to recover, and then you get about a week to 10 days at home before you start the next round.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Install Cyanogenmod 12.1 on Galaxy S3</title>
       <link>https://jmainguy.com/index.php/install-cyanogenmod-12-1-on-galaxy-s3/</link>
       <pubDate>Mon, 17 Aug 2015 20:27:55 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/install-cyanogenmod-12-1-on-galaxy-s3/</guid>
-      <description>Phone broke over the weekend, now I get to use the wife’s old S3 to replace my S3, I hope it can do the job =). I insist on using cyanogenmod on my phones as its an awesome OS. This is how I installed it today from my Fedora 22 laptop.&#xA;Install needed tools on Laptop a. dnf install android-tools heimdall&#xA;Download gapps, cyanogenmod, and CWM a. http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.5-d2spr.img&#xA;b. https://download.cyanogenmod.org/get/jenkins/121988/cm-12.1-20150817-NIGHTLY-d2spr.zip</description>
+      <description>&lt;p&gt;Phone broke over the weekend, now I get to use the wife’s old S3 to replace my S3, I hope it can do the job =). I insist on using cyanogenmod on my phones as its an awesome OS. This is how I installed it today from my Fedora 22 laptop.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install needed tools on Laptop&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;a. dnf install android-tools heimdall&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Download gapps, cyanogenmod, and CWM&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;a. &lt;a href=&#34;http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.5-d2spr.img&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.5-d2spr.img&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;b. &lt;a href=&#34;https://download.cyanogenmod.org/get/jenkins/121988/cm-12.1-20150817-NIGHTLY-d2spr.zip&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://download.cyanogenmod.org/get/jenkins/121988/cm-12.1-20150817-NIGHTLY-d2spr.zip&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;c. &lt;a href=&#34;https://github.com/cgapps/vendor_google/blob/builds/arm/gapps-5.1-arm-2015-07-17-13-29.zip&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/cgapps/vendor_google/blob/builds/arm/gapps-5.1-arm-2015-07-17-13-29.zip&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Install CWM&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;a. Power off the Galaxy S III (Sprint) and connect the USB adapter to the computer but not to the Galaxy S III (Sprint), yet.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chasing the cheese truck #AmericanMeltdown</title>
       <link>https://jmainguy.com/index.php/chasing-the-cheese-truck-americanmeltdown/</link>
       <pubDate>Wed, 08 Jul 2015 20:25:34 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/chasing-the-cheese-truck-americanmeltdown/</guid>
-      <description>Today I was lucky enough to be able to chase the cheese truck. If you work at a cool place, they will have the cheese truck come to your place around lunch time. Redhat did that for us almost a year ago, and I got hooked on #AmericanMeltdown. Their Buffalo Blitz sandwich is phenomenal. It is basically a grilled cheese with buffalo chicken in the middle. I get the horseradish chips and the best soda in the world to go along with it, good times.</description>
+      <description>&lt;p&gt;Today I was lucky enough to be able to chase the cheese truck. If you work at a cool place, they will have the cheese truck come to your place around lunch time. Redhat did that for us almost a year ago, and I got hooked on &lt;a href=&#34;http://americanmeltdown.org/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#AmericanMeltdown&lt;/a&gt;. Their Buffalo Blitz sandwich is phenomenal. It is basically a grilled cheese with buffalo chicken in the middle. I get the horseradish chips and the best soda in the world to go along with it, good times. Today they were only about 15 minutes away so I booked it over there, and got to give a Jeep the double gun solute on the way there. Today was a good day.&lt;/p&gt;</description>
     </item>
     <item>
       <title>sinatrarb-virt-manager</title>
       <link>https://jmainguy.com/index.php/sinatrarb-virt-manager/</link>
       <pubDate>Fri, 03 Jul 2015 03:52:11 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/sinatrarb-virt-manager/</guid>
-      <description>A client asked me to write him a web app, which would let him stop/start/restart his VM’s he hosts via libvirt. This is the initial implementation to answer his request.&#xA;I next need to add logins for this to be useful at all, but its neat how easy sinatrarb makes creating a web app.&#xA;https://github.com/Jmainguy/sinatrarb-virt-manager is the code&#xA;http://phy01.standouthost.com:8080/ is the demo, go nuts.&#xA;I am basically just capturing the action requested from the browser, and passing it to bash.</description>
+      <description>&lt;p&gt;A client asked me to write him a web app, which would let him stop/start/restart his VM’s he hosts via libvirt. This is the initial implementation to answer his request.&lt;/p&gt;&#xA;&lt;p&gt;I next need to add logins for this to be useful at all, but its neat how easy sinatrarb makes creating a web app.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Jmainguy/sinatrarb-virt-manager&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/Jmainguy/sinatrarb-virt-manager&lt;/a&gt; is the code&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://phy01.standouthost.com:8080/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://phy01.standouthost.com:8080/&lt;/a&gt; is the demo, go nuts.&lt;/p&gt;&#xA;&lt;p&gt;I am basically just capturing the action requested from the browser, and passing it to bash.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Root your host in 2 easy steps with Docker</title>
       <link>https://jmainguy.com/index.php/root-your-host-in-2-easy-steps-with-docker/</link>
       <pubDate>Sat, 09 May 2015 03:37:49 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/root-your-host-in-2-easy-steps-with-docker/</guid>
-      <description>So lets assume jmainguy is a user on your system, and he asks to be added to the docker group so he can spin up docker containers and such, seems like a fairly reasonable request. You add him to the docker group.&#xA;jmainguy then complains that he cant share data among-st his containers via -v volume mounting, selinux is stopping him. He wanted to mount some gluster storage shared between the containers, a fairly reasonable request.</description>
+      <description>&lt;p&gt;So lets assume jmainguy is a user on your system, and he asks to be added to the docker group so he can spin up docker containers and such, seems like a fairly reasonable request. You add him to the docker group.&lt;/p&gt;&#xA;&lt;p&gt;jmainguy then complains that he cant share data among-st his containers via -v volume mounting, selinux is stopping him. He wanted to mount some gluster storage shared between the containers, a fairly reasonable request. For some reason you turn off selinux so he can volume mount. (dont turn off selinux).&lt;/p&gt;</description>
     </item>
     <item>
       <title>deleting files with sinatrarb</title>
       <link>https://jmainguy.com/index.php/deleting-files-with-sinatrarb/</link>
       <pubDate>Thu, 05 Mar 2015 14:23:04 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/deleting-files-with-sinatrarb/</guid>
-      <description>With sinatrarb you can create a quick web app in ruby very easily, their documentation is great.&#xA;http://www.sinatrarb.com/intro.html&#xA;One thing you can do, is send a file, like say a tar file.&#xA;send_file “certs/#{filename}/#{filename}.tar”, :filename =&amp;gt; “#{filename}.tar”&#xA;I was hosting this on openshift which has a hard drive limitation of 1gb, so I needed to cleanup after each send. Turns out, you cannot simply place FileUtils.rm_rf(‘directorypath/name’) after send_file to do the job.</description>
+      <description>&lt;p&gt;With sinatrarb you can create a quick web app in ruby very easily, their documentation is great.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.sinatrarb.com/intro.html&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.sinatrarb.com/intro.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;One thing you can do, is send a file, like say a tar file.&lt;/p&gt;&#xA;&lt;p&gt;send_file “certs/#{filename}/#{filename}.tar”, :filename =&amp;gt; “#{filename}.tar”&lt;/p&gt;&#xA;&lt;p&gt;I was hosting this on openshift which has a hard drive limitation of 1gb, so I needed to cleanup after each send. Turns out, you cannot simply place FileUtils.rm_rf(‘directorypath/name’) after send_file to do the job. The reason is, send_file does not know its complete, and so FileUtils cannot remove the files its currently sending. The answer everyone on the internet suggests is scheduling a cron job to delete the files regularly. Since I was on openshift, and did not really want to use cron for this, I instead placed a job at the begining of each POST, that removes all directories older than 60 minutes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fuck Lenovo and their T540P</title>
       <link>https://jmainguy.com/index.php/fuck-lenovo-and-their-t540p/</link>
       <pubDate>Thu, 23 Oct 2014 01:21:15 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/fuck-lenovo-and-their-t540p/</guid>
-      <description>Seriously, fuck them and every fucking engineer and designer they have on staff that gave this model a thumbs up.&#xA;Pros:&#xA;beast cpu, 8 cores of 2.7ghz i7&#xA;beast ram, 16 fucking gigs of ram&#xA;beast screen, its fucking crazy high def.&#xA;Whats not to love?&#xA;Cons:&#xA;The fucking keyboard is non standard, and has a fucking function button where the control button should be. So all the fucking muscle memmory you built up over the years wont work on this device.</description>
+      <description>&lt;p&gt;Seriously, fuck them and every fucking engineer and designer they have on staff that gave this model a thumbs up.&lt;/p&gt;&#xA;&lt;p&gt;Pros:&lt;/p&gt;&#xA;&lt;p&gt;beast cpu, 8 cores of 2.7ghz i7&lt;/p&gt;&#xA;&lt;p&gt;beast ram, 16 fucking gigs of ram&lt;/p&gt;&#xA;&lt;p&gt;beast screen, its fucking crazy high def.&lt;/p&gt;&#xA;&lt;p&gt;Whats not to love?&lt;/p&gt;&#xA;&lt;p&gt;Cons:&lt;/p&gt;&#xA;&lt;p&gt;The fucking keyboard is non standard, and has a fucking function button where the control button should be. So all the fucking muscle memmory you built up over the years wont work on this device. FUCK&lt;/p&gt;</description>
     </item>
     <item>
       <title>Delete email template duplicates from WHMCS</title>
       <link>https://jmainguy.com/index.php/delete-email-template-duplicates-from-whmcs/</link>
       <pubDate>Sun, 20 Oct 2013 03:16:26 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/delete-email-template-duplicates-from-whmcs/</guid>
-      <description>After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.&#xA;CREATE TABLE new_table AS&#xA;SELECT * FROM tblemailtemplates WHERE 1 GROUP BY name;&#xA;drop table tblemailtemplates;&#xA;RENAME TABLE new_table TO tblemailtemplates;</description>
+      <description>&lt;p&gt;After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.&lt;/p&gt;&#xA;&lt;p&gt;CREATE TABLE new_table AS&lt;/p&gt;&#xA;&lt;p&gt;SELECT * FROM tblemailtemplates WHERE 1 GROUP BY name;&lt;/p&gt;&#xA;&lt;p&gt;drop table tblemailtemplates;&lt;/p&gt;&#xA;&lt;p&gt;RENAME TABLE new_table TO tblemailtemplates;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lynchburg for the weekend</title>
       <link>https://jmainguy.com/index.php/lynchburg-for-the-weekend/</link>
       <pubDate>Fri, 16 Aug 2013 21:13:24 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/lynchburg-for-the-weekend/</guid>
-      <description>Headed to Lynchburg for the weekend. Hit me up if you want to hang out.</description>
+      <description>&lt;p&gt;Headed to Lynchburg for the weekend. Hit me up if you want to hang out.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Miami Dolphins #1</title>
       <link>https://jmainguy.com/index.php/miami-dolphins-1/</link>
       <pubDate>Sun, 04 Aug 2013 23:37:51 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/miami-dolphins-1/</guid>
-      <description>I am pysched for tonights game, the first step towards our dominance of the AFC East. However Let me say a few things about our team.&#xA;Ryan Tannehill is a mediocre wide receiver, his backup is a winner, not a Dan Marino but the best QB we have is Matt Moore, he should be starting.&#xA;Jeff Ireland is an idiot, who makes idiotic choices. We need him gone yesterday. Please please please, fire this man.</description>
+      <description>&lt;p&gt;I am pysched for tonights game, the first step towards our dominance of the AFC East. However Let me say a few things about our team.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ryan Tannehill is a mediocre wide receiver, his backup is a winner, not a Dan Marino but the best QB we have is Matt Moore, he should be starting.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Jeff Ireland is an idiot, who makes idiotic choices. We need him gone yesterday. Please please please, fire this man.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blake hotel survey</title>
       <link>https://jmainguy.com/index.php/blake-hotel-survey/</link>
       <pubDate>Wed, 12 Jun 2013 21:00:31 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/blake-hotel-survey/</guid>
-      <description>The Blake hotel in Charlotte is awful, but they asked me to fill out a survey to get a grip on my experience. Here it is, [ Warning curse words]&#xA;There is nowhere to idle car while checking in. Doorman disappeared when they saw us pull up.&#xA;Website site WiFi, once checked in you find out it is $9 a day. This is free at every hotel I have ever stayed at, or choose to stay at again in the future.</description>
+      <description>&lt;p&gt;The Blake hotel in Charlotte is awful, but they asked me to fill out a survey to get a grip on my experience. Here it is, [ Warning curse words]&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;There is nowhere to idle car while checking in. Doorman disappeared when they saw us pull up.&lt;/p&gt;&#xA;&lt;p&gt;Website site WiFi, once checked in you find out it is $9 a day. This is free at every hotel I have ever stayed at, or choose to stay at again in the future.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Moral Dilemma</title>
       <link>https://jmainguy.com/index.php/moral-dilemma/</link>
       <pubDate>Thu, 09 May 2013 17:18:09 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/moral-dilemma/</guid>
-      <description>My moral dilemma for the day made me realize I might be more nerdy then I thought I was. Do I play Dungeons and Dragons tonight, or go to the Triangle linux user group meeting.</description>
+      <description>&lt;p&gt;My moral dilemma for the day made me realize I might be more nerdy then I thought I was. Do I play Dungeons and Dragons tonight, or go to the Triangle linux user group meeting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Got him</title>
       <link>https://jmainguy.com/index.php/got-him/</link>
       <pubDate>Sat, 20 Apr 2013 00:46:32 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/got-him/</guid>
-      <description>We got the terrorist alive, go America.</description>
+      <description>&lt;p&gt;We got the terrorist alive, go America.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Working from home today</title>
       <link>https://jmainguy.com/index.php/working-from-home-today/</link>
       <pubDate>Tue, 26 Feb 2013 14:02:57 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/working-from-home-today/</guid>
-      <description>My Office in the bedroom&#xA;Hallway between Bedroom and Leah’s office&#xA;Leah’s unpacked office with temp desk until real one is procured.</description>
+      <description>&lt;p&gt;My Office in the bedroom&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2013/02/2013-02-26-08.52.37.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Hallway between Bedroom and Leah’s office&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2013/02/2013-02-26-08.52.46.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt; &lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2013/02/2013-02-26-08.53.02.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Leah’s unpacked office with temp desk until real one is procured.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2013/02/2013-02-26-08.53.16.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>All moved in</title>
       <link>https://jmainguy.com/index.php/all-moved-in/</link>
       <pubDate>Sun, 24 Feb 2013 02:15:36 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/all-moved-in/</guid>
-      <description>The move took about 3 hours today. Nile and Chris helping made a huge job easy. Definitely worn out now but enjoying the media room. The couch is comfy, fights are good to watch and the girls are getting me pizza. I am a happy man</description>
+      <description>&lt;p&gt;The move took about 3 hours today. Nile and Chris helping made a huge job easy. Definitely worn out now but enjoying the media room. The couch is comfy, fights are good to watch and the girls are getting me pizza. I am a happy man&lt;/p&gt;</description>
     </item>
     <item>
       <title>Old Glory</title>
       <link>https://jmainguy.com/index.php/old-glory/</link>
       <pubDate>Sun, 17 Feb 2013 16:40:37 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/old-glory/</guid>
-      <description>The new house came with a flag pole and flag, reminds me of Grandpa Creel</description>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;The new house came with a flag pole and flag, reminds me of Grandpa Creel&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>Officially Homeowners</title>
       <link>https://jmainguy.com/index.php/officially-homeowners/</link>
       <pubDate>Sat, 16 Feb 2013 00:24:01 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/officially-homeowners/</guid>
-      <description>Finally signed all the papers and got the Keys. Leah and I are now officially homeowners / Slaves to the bank.</description>
+      <description>&lt;p&gt;Finally signed all the papers and got the Keys. Leah and I are now officially homeowners / Slaves to the bank.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;</description>
     </item>
     <item>
       <title>The house has a Carport</title>
       <link>https://jmainguy.com/index.php/the-house-has-a-carport/</link>
       <pubDate>Wed, 12 Dec 2012 13:59:51 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/the-house-has-a-carport/</guid>
-      <description>Picture of the beast carport where I will be setting up a basketball hoop.</description>
+      <description>&lt;p&gt;Picture of the beast carport where I will be setting up a basketball hoop.&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Under Contract</title>
       <link>https://jmainguy.com/index.php/under-contract/</link>
       <pubDate>Thu, 06 Dec 2012 17:04:32 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/under-contract/</guid>
-      <description>The sellers have agreed to all terms and we have a signed contract. Now the mad rush to get inspection and appraisal, its a new house though, not expecting any issues. Very excited.</description>
+      <description>&lt;p&gt;The sellers have agreed to all terms and we have a signed contract. Now the mad rush to get inspection and appraisal, its a new house though, not expecting any issues. Very excited.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Countering Counter</title>
       <link>https://jmainguy.com/index.php/countering-counter/</link>
       <pubDate>Mon, 03 Dec 2012 16:16:37 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/countering-counter/</guid>
-      <description>Seller came back with a counter, we just finished submitting our counter to said counter. Negotiating is going good, excited.</description>
+      <description>&lt;p&gt;Seller came back with a counter, we just finished submitting our counter to said counter. Negotiating is going good, excited.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linked to Twitter</title>
       <link>https://jmainguy.com/index.php/linked-to-twitter/</link>
       <pubDate>Mon, 03 Dec 2012 03:45:07 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/linked-to-twitter/</guid>
-      <description>And now Jmainguy.com is linked to Twitter and Facebook.</description>
+      <description>&lt;p&gt;And now Jmainguy.com is linked to Twitter and Facebook.&lt;/p&gt;</description>
     </item>
     <item>
       <title>And back to the original plugin</title>
       <link>https://jmainguy.com/index.php/and-back-to-the-original-plugin/</link>
       <pubDate>Sun, 02 Dec 2012 23:28:02 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/and-back-to-the-original-plugin/</guid>
-      <description>So apparently Facebook just ignores and I have to use periods. This should look good if I am correct, means my posts have to look like sentences and stuff.</description>
+      <description>&lt;p&gt;So apparently Facebook just ignores &lt;!-- raw HTML omitted --&gt; and I have to use periods. This should look good if I am correct, means my posts have to look like sentences and stuff.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Installing Mono 3.0.1 on Centos Linux 6.3</title>
       <link>https://jmainguy.com/index.php/installing-mono-3-0-1-on-centos-linux-6-3/</link>
       <pubDate>Sun, 02 Dec 2012 22:53:08 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/installing-mono-3-0-1-on-centos-linux-6-3/</guid>
-      <description>So you want to run windows .exe’s on your shiny Linux server, time to catch mono.&#xA;To install mono first install your dependencies.&#xA;Congrats, you now have Mono installed and can run some Windows .exe’s such as Terraria or Minecraft Classic.</description>
+      <description>&lt;p&gt;So you want to run windows .exe’s on your shiny Linux server, time to catch &lt;a href=&#34;http://www.mono-project.com/Main_Page&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mono&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To install mono first install your dependencies.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;Congrats, you now have Mono installed and can run some Windows .exe’s such as Terraria or Minecraft Classic.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Buying a House</title>
       <link>https://jmainguy.com/index.php/buying-a-house/</link>
       <pubDate>Sun, 02 Dec 2012 18:10:47 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/buying-a-house/</guid>
-      <description>Our negotiations with the first house fell through, the owner was not living in reality and thought his house was worth tax value. However we really love the house we saw yesterday and placed a bid on that one, it has everything we are looking for and wont need any work to move in. Lord clearly did not want us to have the last house for a reason. Excited!!</description>
+      <description>&lt;p&gt;Our negotiations with the first house fell through, the owner was not living in reality and thought his house was worth tax value. &lt;/p&gt;&#xA;&lt;p&gt;However we really love the house we saw yesterday and placed  a bid on that one, it has everything we are looking for and wont need any work to move in. Lord clearly did not want us to have the last house for a reason. Excited!!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Testing Integration with Facebook</title>
       <link>https://jmainguy.com/index.php/testing-integration-with-facebook/</link>
       <pubDate>Thu, 29 Nov 2012 03:39:19 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/testing-integration-with-facebook/</guid>
-      <description>I rejoined facebook to boost the ol SEO. This is a test to see if integation with facebook is working.&#xA;So to get your website to post to Facebook, you have to create a dev account with Facebook. They require you to add a valid call phone or credit card, seems pretty anoying. After that you create a app (click a few buttons no coding needed) and get the api code.</description>
+      <description>&lt;p&gt;I rejoined facebook to boost the ol SEO. This is a test to see if integation with facebook is working.&lt;/p&gt;&#xA;&lt;p&gt;So to get your website to post to Facebook, you have to create a dev account with Facebook. They require you to add a valid call phone or credit card, seems pretty anoying.  After that you create a app (click a few buttons no coding needed) and get the api code. Install a plugin on your wordpress blog such as “Add link to Facebook” and configure it with your api details from Facebook. Done.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Misery</title>
       <link>https://jmainguy.com/index.php/misery/</link>
       <pubDate>Mon, 08 Oct 2012 15:56:27 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/misery/</guid>
-      <description>Click on image for larger size. Created using http://stripgenerator.com</description>
+      <description>&lt;p&gt;Click on image for larger size. Created using &lt;a href=&#34;http://stripgenerator.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://stripgenerator.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2012/10/full.png&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hit and Run</title>
       <link>https://jmainguy.com/index.php/hit-and-run/</link>
       <pubDate>Mon, 01 Oct 2012 13:15:39 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/hit-and-run/</guid>
-      <description>Friday night my baby sister went to my cousins a few miles away to babysit for the night. She comes home frantic around 11pm and explains some jerk side swiped her car on her way home. This guy gets out to check and make sure she is ok, then jumps in his car and leaves. If I ever find this guy you can imagine I will have a few choice words for the kind of scumbag that he is.</description>
+      <description>&lt;p&gt;Friday night my baby sister went to my cousins a few miles away to babysit for the night. She comes home frantic around 11pm and explains some jerk side swiped her car on her way home. This guy gets out to check and make sure she is ok, then jumps in his car and leaves. If I ever find this guy you can imagine I will have a few choice words for the kind of scumbag that he is. Thankfully my sister calmed down and she was not hurt in anyway. The car was already a little dinged up and the new damage is not terrible, just another eyesore.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TS3 Non Profit License</title>
       <link>https://jmainguy.com/index.php/ts3-non-profit-license/</link>
       <pubDate>Sat, 15 Sep 2012 04:38:35 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/ts3-non-profit-license/</guid>
-      <description>The community Teamspeak server has been full lately and we do not want anyone to miss out on the action. Tonight we applied for a Non profit license which will enable us to host up to 512 members over 10 private servers (So we will never be full again =). Cross your fingers.&#xA;[Update] Teamspeak has granted the license, we can host up to 512 slots now. We had some issues with the VPS provider in Kansas and have moved the server to California with BuyVM.</description>
+      <description>&lt;p&gt;The community Teamspeak server has been full lately and we do not want anyone to miss out on the action. Tonight we applied for a Non profit license which will enable us to host up to 512 members over 10 private servers (So we will never be full again =). Cross your fingers.&lt;/p&gt;&#xA;&lt;p&gt;[Update] Teamspeak has granted the license, we can host up to 512 slots now. We had some issues with the VPS provider in Kansas and have moved the server to California with BuyVM. The new hostname to connect to the server with is msflights.jmainguy.com to better reflect the current community.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Smallgrits Macbook</title>
       <link>https://jmainguy.com/index.php/smallgrits-macbook/</link>
       <pubDate>Wed, 12 Sep 2012 18:07:34 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/smallgrits-macbook/</guid>
-      <description>Maggie moved in with us a few weeks ago to attend NC State. Her 2 year old Macbook Pro stopped booting up a few days later. I was able to run a diagnostic on the pc and discovered one of the Ram cards was giving an error. After removing the offending ram the issue persisted. Maggie took the pc to the mac-store for the “Genius’s” to take a look. They convinced her it was a bad hard drive and could fix it for $200.</description>
+      <description>&lt;p&gt;Maggie moved in with us a few weeks ago to attend NC State. Her 2 year old Macbook Pro stopped booting up a few days later. I was able to run a diagnostic on the pc and discovered one of the Ram cards was giving an error. After removing the offending ram the issue persisted. Maggie took the pc to the mac-store for the “Genius’s” to take a look. They convinced her it was a bad hard drive and could fix it for $200.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Saturday, Time to do stuff I don’t enjoy</title>
       <link>https://jmainguy.com/index.php/saturday-time-to-do-stuff-i-dont-enjoy/</link>
       <pubDate>Sat, 08 Sep 2012 18:40:50 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/saturday-time-to-do-stuff-i-dont-enjoy/</guid>
-      <description>Started the day off by cleaning up the Jmainguy.com site, noticed the A records for mc.jmainguy.com wasn’t correct. After some research saw that I had two A records, removed the bogus records and it should resolve correctly in a few hours. Also noticed the nsd3 server wasnt running for ns3.vpsaddict.com so I restarted that. ran update-rc.d nsd3 defaults to make sure its being loaded up at boot.&#xA;Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netflix, watched some college football, so far no good games on.</description>
+      <description>&lt;p&gt;Started the day off by cleaning up the Jmainguy.com site, noticed the A records for mc.jmainguy.com wasn’t correct. After some research saw that I had two A records, removed the bogus records and it should resolve correctly in a few hours. Also noticed the nsd3 server wasnt running for ns3.vpsaddict.com so I restarted that. ran update-rc.d nsd3 defaults to make sure its being loaded up at boot.&lt;/p&gt;&#xA;&lt;p&gt;Browsed Reddit for a bit to pass the time, watched the rest of Wilfred on Netflix, watched some college football, so far no good games on.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jon’s Monday night</title>
       <link>https://jmainguy.com/index.php/jons-monday-night/</link>
       <pubDate>Tue, 07 Aug 2012 02:51:45 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/jons-monday-night/</guid>
-      <description>The Hall of Fame NFL game was this past weekend, and I missed it (Was helping a buddy move). So tonight I had to do 2 things before I could relax after a hard day.&#xA;Configure OpenVPN on my German node so I can browse the internet as your average German would.&#xA;Buy the Euro NFL Game Pass online streaming package so I can watch my Dolphins all year (Superbowl for sure this year).</description>
+      <description>&lt;p&gt;The Hall of Fame NFL game was this past weekend, and I missed it (Was helping a buddy move). So tonight I had to do 2 things before I could relax after a hard day.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Configure OpenVPN on my German node so I can browse the internet as your average German would.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Buy the Euro NFL Game Pass online streaming package so I can watch my Dolphins all year (Superbowl for sure this year).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jon cooks a meal</title>
       <link>https://jmainguy.com/index.php/jon-cooks-a-meal/</link>
       <pubDate>Sun, 22 Jul 2012 18:23:08 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/jon-cooks-a-meal/</guid>
-      <description>Today for lunch I decided I wanted Grilled Cheese and Tomato soup with Goldfish. There are a few issues with this decision.&#xA;Leah does not like melted cheese on bread, and refuses to make it for me.&#xA;We dont have tomoto soup or goldfish&#xA;I either buy or have Leah make my food.&#xA;However despite these obstacles I had my dream meal today. I went to the store and purchased the materials, and them made the meal myself.</description>
+      <description>&lt;p&gt;Today for lunch I decided I wanted Grilled Cheese and Tomato soup with Goldfish. There are a few issues with this decision.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Leah does not like melted cheese on bread, and refuses to make it for me.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;We dont have tomoto soup or goldfish&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;I either buy or have Leah make my food.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;However despite these obstacles I had my dream meal today. I went to the store and purchased the materials, and them made the meal myself. I am both proud, and satisfied.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setlist 2.0</title>
       <link>https://jmainguy.com/index.php/setlist-2-0/</link>
       <pubDate>Sun, 15 Jul 2012 00:47:09 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/setlist-2-0/</guid>
-      <description>Now with HTML5 instead of googles audio player which they appear to have taken offline.&#xA;https://jmainguy.com/setlist</description>
+      <description>&lt;p&gt;Now with HTML5 instead of googles audio player which they appear to have taken offline.&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://jmainguy.com/setlist&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://jmainguy.com/setlist&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Success at work yesterday</title>
       <link>https://jmainguy.com/index.php/success-at-work-yesterday/</link>
       <pubDate>Tue, 03 Jul 2012 14:18:53 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/success-at-work-yesterday/</guid>
-      <description>The web team asked me to help out on two projects yesterday, it was a ton of fun. The first project was to a 301 redirect working for the Iowa Hawkshop, they needed this to preserve their SEO ranking.&#xA;I was able to figure out we could use the Apache mod_rewrite to handle these requests.&#xA;The second task was to get rotating images on a timer with alt text via javascript.</description>
+      <description>&lt;p&gt;The web team asked me to help out on two projects yesterday, it was a ton of fun. The first project was to a 301 redirect working for the Iowa Hawkshop, they needed this to preserve their SEO ranking.&lt;/p&gt;&#xA;&lt;p&gt;I was able to figure out we could use the Apache mod_rewrite to handle these requests.&lt;/p&gt;&#xA;&lt;p&gt;The second task was to get rotating images on a timer with alt text via javascript. I found a good article on the script we needed &lt;!-- raw HTML omitted --&gt;Here&lt;!-- raw HTML omitted --&gt; After inserting it into our code we discovered the alt text was not working. I was able to discover Firefox and Chrome do not play nice with the alt text code and had to change it to title instead of alt, after that it shows up correctly in all browsers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Church Picnic</title>
       <link>https://jmainguy.com/index.php/church-picnic/</link>
       <pubDate>Mon, 25 Jun 2012 17:46:14 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/church-picnic/</guid>
-      <description>Church had a picnic last night, ended up heading out there around 6pm. We setup the lawn chairs we bought for the last picnic and settled in for a good time. There was a local band playing on the acoustic guitar and congo, cute kids and puppies running around, and good ol fashion corn hole. I ended up getting a few in the hole but our team lost pretty bad. Ate 2 chili dogs and some potato salad, topped off with a few chips a hoy cookies.</description>
+      <description>&lt;p&gt;Church had a picnic last night, ended up heading out there around 6pm. We setup the lawn chairs we bought for the last picnic and settled in for a good time. There was a local band playing on the acoustic guitar and congo, cute kids and puppies running around, and good ol fashion corn hole. I ended up getting a few in the hole but our team lost pretty bad. Ate 2 chili dogs and some potato salad, topped off with a few chips a hoy cookies. It was a fun time, its nice to do something instead of in the house all the time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>WURM!!!</title>
       <link>https://jmainguy.com/index.php/wurm/</link>
       <pubDate>Wed, 20 Jun 2012 18:51:00 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/wurm/</guid>
-      <description>Started playing Wurm again the other day, I enjoy it quite a bit and hopefully don’t get burned out again.&#xA;Day 1. Spent the day replanting my crops, mining rocks from the mine, turning said rocks into bricks, using said bricks to repair house and fences. After that I went adventuring and found a Champion Dog, a Champion Cave Bug, a Slow Deer, a Raging Deer, a Sly Dog, a Hardened Dog, and 3-4 Scared Unicorns, which I tamed and brought back home.</description>
+      <description>&lt;p&gt;Started playing &lt;!-- raw HTML omitted --&gt;Wurm&lt;!-- raw HTML omitted --&gt; again the other day, I enjoy it quite a bit and hopefully don’t get burned out again.&lt;/p&gt;&#xA;&lt;p&gt;Day 1. Spent the day replanting my crops, mining rocks from the mine, turning said rocks into bricks, using said bricks to repair house and fences. After that I went adventuring and found a Champion Dog, a Champion Cave Bug, a Slow Deer, a Raging Deer, a Sly Dog, a Hardened Dog, and 3-4 Scared Unicorns, which I tamed and brought back home. The crops are planted, filled with fun animals, and the house is in good shape.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Todays Lunch</title>
       <link>https://jmainguy.com/index.php/todays-lunch/</link>
       <pubDate>Tue, 12 Jun 2012 17:50:45 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/todays-lunch/</guid>
-      <description>Went to a Italian place for lunch today, got the Sausage and Peppers panini, it was delicious, after the meal we all noticed the ceiling fan directly above our table.&#xA;Dust bunny anyone?</description>
+      <description>&lt;p&gt;Went to a Italian place for lunch today, got the Sausage and Peppers panini, it was delicious, after the meal we all noticed the ceiling fan directly above our table.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2012/06/2012-06-12-13.12.45.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;Dust bunny anyone?&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Away on Business</title>
       <link>https://jmainguy.com/index.php/away-on-business/</link>
       <pubDate>Tue, 12 Jun 2012 15:28:29 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/away-on-business/</guid>
-      <description>Sorry for not updating this at all since before January, life has been going well, I am now drumming for my local church, and this week Sequoia sent me on a install trip to Savannah Georgia. Savannah is very fun and I took a few pictures.&#xA;Local game shop had this rare item in the window, the Nintendo Power Glove.&#xA;&amp;ldquo;Behold the Power&amp;rdquo;&#xA;My Hotel room&#xA;View from Hotel window.</description>
+      <description>&lt;p&gt;Sorry for not updating this at all since before January, life has been going well, I am now drumming for my local church, and this week Sequoia sent me on a install trip to Savannah Georgia. Savannah is very fun and I took a few pictures.&lt;/p&gt;&#xA;&lt;p&gt;Local game shop had this rare item in the window, the Nintendo Power Glove.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://jmainguy.com/wp-content/uploads/2012/06/2012-06-11-10.00.38.jpg&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&amp;ldquo;Behold the Power&amp;rdquo;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Goals for Jan</title>
       <link>https://jmainguy.com/index.php/goals-for-jan/</link>
       <pubDate>Thu, 12 Jan 2012 13:42:05 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/goals-for-jan/</guid>
-      <description>(1:40:16 PM) Adrian Thomas: Your targets this month are 9 resolutions daily&#xA;(1:40:39 PM) Adrian Thomas: AVG days open for Jan 15. days or less&#xA;(1:41:08 PM) Adrian Thomas: And submit 4 KB articles to Vanessa. E-mail her and copy me on them</description>
+      <description>&lt;p&gt;(1:40:16 PM) Adrian Thomas: Your targets this month are 9 resolutions daily&lt;/p&gt;&#xA;&lt;p&gt;(1:40:39 PM) Adrian Thomas: AVG days open for Jan 15. days or less&lt;/p&gt;&#xA;&lt;p&gt;(1:41:08 PM) Adrian Thomas: And submit 4 KB articles to Vanessa. E-mail her and copy me on them&lt;/p&gt;</description>
     </item>
     <item>
       <title>Christmas List</title>
       <link>https://jmainguy.com/index.php/christmas-list/</link>
       <pubDate>Thu, 08 Dec 2011 02:30:20 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/christmas-list/</guid>
-      <description>touchstone I wouldnt pay more then $40 for this &amp;lt;a href=http://www.walmart.com/ip/HP-TouchPad-Touchstone-Charging-Dock-Stand/16641540?ci_sku=16641540&amp;amp;ci_src=14110944&amp;amp;sourceid=1500000000000003142050&amp;gt;Touchstone Link at Walmart&#xA;newegg.com giftcards Newegg.com&#xA;RHCSA/RHCE Red Hat Linux Certification Study Guide (Exams EX200 &amp;amp; EX300), 6th Edition (Certification Press) by Michael Jang Paperback Amazon Link</description>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;touchstone I wouldnt pay more then $40 for this&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&amp;lt;a href=http://www.walmart.com/ip/HP-TouchPad-Touchstone-Charging-Dock-Stand/16641540?ci_sku=16641540&amp;amp;ci_src=14110944&amp;amp;sourceid=1500000000000003142050&amp;gt;Touchstone Link at Walmart&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;newegg.com giftcards&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Newegg.com&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;RHCSA/RHCE Red Hat Linux Certification Study Guide (Exams EX200 &amp;amp; EX300), 6th Edition (Certification Press) by Michael Jang Paperback&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Amazon Link&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Where did you sleep last night</title>
       <link>https://jmainguy.com/index.php/where-did-you-sleep-last-night/</link>
       <pubDate>Tue, 04 Oct 2011 06:44:16 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/where-did-you-sleep-last-night/</guid>
-      <description>Fascinated with this song right now.&#xA;Black girl, black girl, don’t lie to me, tell me where did you sleep last night. In the pines, in the pines, where the sun dont ever shine, I would shiver the whole night through.</description>
+      <description>&lt;p&gt;Fascinated with this song right now.&lt;/p&gt;&#xA;&lt;p&gt;Black girl, black girl, don’t lie to me, tell me where did you sleep last night. In the pines, in the pines, where the sun dont ever shine, I would shiver the whole night through.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setlist</title>
       <link>https://jmainguy.com/index.php/preparing-for-the-show/</link>
       <pubDate>Fri, 22 Jul 2011 00:38:03 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/preparing-for-the-show/</guid>
-      <description>Stuff I am currently practicing Setlist</description>
+      <description>&lt;p&gt;Stuff I am currently practicing &lt;!-- raw HTML omitted --&gt;Setlist&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NC Drivers License Written Test</title>
       <link>https://jmainguy.com/index.php/nc-drivers-license-written-test/</link>
       <pubDate>Fri, 15 Jul 2011 05:47:02 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/nc-drivers-license-written-test/</guid>
-      <description>In densely packed snow you should…use chains or snow tires.&#xA;If you must drive during heavy snow or fog, use your… low-beam headlights.&#xA;Alcohol-related highway deaths account for… 38% of all traffic fatalities.&#xA;If you accumulate 7 or more points on your traffic record you may… attend a Driver Improvement Clinic to deduct three points from your driving record.&#xA;The traffic conviction that adds the highest number of points (5) to your driving record is… passing a stopped school bus that is loading or unloading children.</description>
+      <description>&lt;p&gt;In densely packed snow you should…use chains or snow tires.&lt;/p&gt;&#xA;&lt;p&gt;If you must drive during heavy snow or fog, use your… low-beam headlights.&lt;/p&gt;&#xA;&lt;p&gt;Alcohol-related highway deaths account for… 38% of all traffic fatalities.&lt;/p&gt;&#xA;&lt;p&gt;If you accumulate 7 or more points on your traffic record you may… attend a Driver Improvement Clinic to deduct three points from your driving record.&lt;/p&gt;&#xA;&lt;p&gt;The traffic conviction that adds the highest number of points (5) to your driving record is… passing a stopped school bus that is loading or unloading children.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Facebook</title>
       <link>https://jmainguy.com/index.php/facebook/</link>
       <pubDate>Thu, 14 Jul 2011 14:09:01 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/facebook/</guid>
-      <description>Removed all my friends, I do not intend on using Facebook anymore, it was fun for college but seems pretty pointless now, if people care about me they know me in real life and wont need Facebook to contact me. If you want to know my latest status I will start posting it here.</description>
+      <description>&lt;p&gt;Removed all my friends, I do not intend on using Facebook anymore, it was fun for college but seems pretty pointless now, if people care about me they know me in real life and wont need Facebook to contact me. If you want to know my latest status I will start posting it here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Job, New Town, I love it</title>
       <link>https://jmainguy.com/index.php/new-job-new-town-i-love-it/</link>
       <pubDate>Tue, 17 May 2011 16:48:18 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/new-job-new-town-i-love-it/</guid>
-      <description>Two months since last post, alot has been going on. Within a week of moving to Garner I received a job at a company that acted as middle men for AT&amp;amp;T Cellular tower installations, it was really quite neat but the job was basically data entry and run by people (very very nice people who I enjoyed working with) who had never done data entry so they had no idea what to expect us to do.</description>
+      <description>&lt;p&gt;Two months since last post, alot has been going on. Within a week of moving to Garner I received a job at a company that acted as middle men for AT&amp;amp;T Cellular tower installations, it was really quite neat but the job was basically data entry and run by people (very very nice people who I enjoyed working with) who had never done data entry so they had no idea what to expect us to do. I would have most likely stuck it out for much longer but my first week their another company called me up to see if I was still interested in a technical support role which is what I really want to do for the rest of my life.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello North Carolina</title>
       <link>https://jmainguy.com/index.php/hello-north-carolina/</link>
       <pubDate>Sun, 06 Mar 2011 14:05:09 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/hello-north-carolina/</guid>
-      <description>It has been a week since we moved to Garner and it has been a great week, the weather is awesome, the apartment is awesome, all the shops within 5 minutes of us is awesome, and it has been great to hang out with my cousins and their family. I also landed a contract job that I will start on Tuesday. So far everything has been going great and it looks like the move was a good idea.</description>
+      <description>&lt;p&gt;It has been a week since we moved to Garner and it has been a great week, the weather is awesome, the apartment is awesome, all the shops within 5 minutes of us is awesome, and it has been great to hang out with my cousins and their family. I also landed a contract job that I will start on Tuesday. So far everything has been going great and it looks like the move was a good idea.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Goodbye Maryland</title>
       <link>https://jmainguy.com/index.php/goodbye-maryland/</link>
       <pubDate>Thu, 24 Feb 2011 20:48:20 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/goodbye-maryland/</guid>
-      <description>Tomorrow will be my last day as an Employed individual, and Saturday will be my last day as a Maryland resident. I am North Carolina bound, the wife and I will be moving to Garner NC to save up some money, we hope to buy a house within the next two years. I will also pursue my dream of a full time career in the Information Technology field. I also might start a VPS reseller business, but I am not sure atm.</description>
+      <description>&lt;p&gt;Tomorrow will be my last day as an Employed individual, and Saturday will be my last day as a Maryland resident. I am North Carolina bound, the wife and I will be moving to Garner NC to save up some money, we hope to buy a house within the next two years.  I will also pursue my dream of a full time career in the Information Technology field. I also might start a VPS reseller business, but I am not sure atm.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vacation</title>
       <link>https://jmainguy.com/index.php/vacation/</link>
       <pubDate>Sun, 06 Feb 2011 14:49:22 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/vacation/</guid>
-      <description>Ft Lauderdale is awesome, we are having a blast. So far we haven’t done much other then visit family but thats what we like to do. It really is a pleasure to be able to relax and not worry about anything.</description>
+      <description>&lt;p&gt;Ft Lauderdale is awesome, we are having a blast. So far we haven’t done much other then visit family but thats what we like to do. It really is a pleasure to be able to relax and not worry about anything.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Change of Scenery</title>
       <link>https://jmainguy.com/index.php/change-of-scenery/</link>
       <pubDate>Wed, 02 Feb 2011 19:05:24 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/change-of-scenery/</guid>
-      <description>Going to Ft. Lauderdale for a 5 day weekend starting tomorrow night, really looking forward to seeing all my family down there, and then starting in March I will be seeing alot more of that side of the family as well, stay tuned.</description>
+      <description>&lt;p&gt;Going to Ft. Lauderdale for a 5 day weekend starting tomorrow night, really looking forward to seeing all my family down there, and then starting in March I will be seeing alot more of that side of the family as well, stay tuned.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CompTIA A&#43; Certified</title>
       <link>https://jmainguy.com/index.php/comptia-a-certified/</link>
       <pubDate>Mon, 20 Dec 2010 18:26:40 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/comptia-a-certified/</guid>
-      <description>After studying on my own for a few months and utilizing the Mike Meyers A+ book, I took and passed both A+ tests this weekend. This was a huge relief as the A+ rules are changing again in about 2 weeks. Needless to say I am very happy right now =)</description>
+      <description>&lt;p&gt;After studying on my own for a few months and utilizing the Mike Meyers A+ book, I took and passed both A+ tests this weekend. This was a huge relief as the A+ rules are changing again in about 2 weeks. Needless to say I am very happy right now =)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Another new VPS</title>
       <link>https://jmainguy.com/index.php/another-new-vps/</link>
       <pubDate>Thu, 18 Nov 2010 23:25:33 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/another-new-vps/</guid>
-      <description>the minecraft servers with hazenet didnt turn out the way I liked them, so I have moved them to 123systems which is located in Texas along, the babo servers will stay with hazenet also in texas. mmmm texas</description>
+      <description>&lt;p&gt;the minecraft servers with hazenet didnt turn out the way I liked them, so I have moved them to 123systems which is located in Texas along, the babo servers will stay with hazenet also in texas. mmmm texas&lt;/p&gt;</description>
     </item>
     <item>
       <title>Babo Donors</title>
       <link>https://jmainguy.com/index.php/babo-donors/</link>
       <pubDate>Sat, 23 Oct 2010 06:25:02 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/babo-donors/</guid>
-      <description>In a span of 3 days after asking for donations, the babo players donated $110.00 or in other words, enough to rent a Virtual private server for 12 months. The server is awesome and way better then when hosted on my crappy home comcast connection. Babo Players Rule</description>
+      <description>&lt;p&gt;In a span of 3 days after asking for donations, the babo players donated $110.00 or in other words, enough to rent a Virtual private server for 12 months. The server is awesome and way better then when hosted on my crappy home comcast connection. Babo Players Rule&lt;/p&gt;</description>
     </item>
     <item>
       <title>Minecraft Players Rule</title>
       <link>https://jmainguy.com/index.php/minecraft-players-rule/</link>
       <pubDate>Fri, 08 Oct 2010 14:33:46 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/minecraft-players-rule/</guid>
-      <description>So I have been spending alot of time on the Minecraft server lately, got a google maps image of the server to update every night, Implemented a currency system into the server. And two more people have generoussly donated to buying a new physical server. I think I will save the donations up for a 6 core computer I know I can build for $500.00 however by the time I get to that mark I am sure it will be even more beast then that.</description>
+      <description>&lt;p&gt;So I have been spending alot of time on the Minecraft server lately, got a google maps image of the server to update every night, Implemented a currency system into the server. And two more people have generoussly donated to buying a new physical server. I think I will save the donations up for a 6 core computer I know I can build for $500.00 however by the time I get to that mark I am sure it will be even more beast then that. Thank you so much Matt Palmer and Joshua Venning for donating this week.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Whole week no blog?</title>
       <link>https://jmainguy.com/index.php/whole-week-no-blog/</link>
       <pubDate>Mon, 27 Sep 2010 17:35:05 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/whole-week-no-blog/</guid>
-      <description>Sorry about that, Worked on server admin stuff all week, went over my bandwith cap by about 50gb, comcast will prolly send me a letter saying so. Working on automating server restart and backups, also working on php secure login page for the website and then hosting guest accounts for minecraft. Also playing NCAA 11 on my ps3 a little more, figured out a play that works and I run it non stop, still much harder game then NCAA 09.</description>
+      <description>&lt;p&gt;Sorry about that, Worked on server admin stuff all week, went over my bandwith cap by about 50gb, comcast will prolly send me a letter saying so. Working on automating server restart and backups, also working on php secure login page for the website and then hosting guest accounts for minecraft. Also playing NCAA 11 on my ps3 a little more, figured out a play that works and I run it non stop, still much harder game then NCAA 09. I have lost 3 times already and that is with me playing the game like 5 times and then deciding I cant beat that team and accepting the loss. thats about it&lt;/p&gt;</description>
     </item>
     <item>
       <title>Somebody has a case of the mondays</title>
       <link>https://jmainguy.com/index.php/somebody-has-a-case-of-the-mondays/</link>
       <pubDate>Mon, 20 Sep 2010 14:41:55 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/somebody-has-a-case-of-the-mondays/</guid>
-      <description>Weekend went pretty well, saw the folks, went to a party, and Notch broke Minecraft again, however he has it working today so my server regulars should be happy. I also installed Sockso on the server so I can stream my music to any browser / operating system I want. Listening to my home collection at work is pretty fun. if any Mainguys would like to listen to my collection let me know and I will make you an account.</description>
+      <description>&lt;p&gt;Weekend went pretty well, saw the folks, went to a party, and Notch broke Minecraft again, however he has it working today so my server regulars should be happy. I also installed Sockso on the server so I can stream my music to any browser / operating system I want. Listening to my home collection at work is pretty fun. if any Mainguys would like to listen to my collection let me know and I will make you an account.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Registered Sex Offender</title>
       <link>https://jmainguy.com/index.php/registered-sex-offender/</link>
       <pubDate>Fri, 17 Sep 2010 16:10:47 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/registered-sex-offender/</guid>
-      <description>As usual watching Netflix and I was cruising the Indie section as sometimes they have a good gem in there, I came across RSO and decided to give it a shot. This movie is a Mockumentary and starts off interviewing the main character who is a sex offender. He is almost like-able in the beginning interview and seems like a normalish person, however throughout the rest of the movie you could care less about him and your waiting for the point of the movie where he will make a change for the better.</description>
+      <description>&lt;p&gt;As usual watching Netflix and I was cruising the Indie section as sometimes they have a good gem in there, I came across RSO and decided to give it a shot. This movie is a Mockumentary and starts off interviewing the main character who is a sex offender. He is almost like-able in the beginning interview and seems like a normalish person, however throughout the rest of the movie you could care less about him and your waiting for the point of the movie where he will make a change for the better. [ SPOILER ALERT ]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remote Support</title>
       <link>https://jmainguy.com/index.php/remote-support/</link>
       <pubDate>Wed, 15 Sep 2010 14:42:28 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/remote-support/</guid>
-      <description>I have installed a new remote support app on the website, all users have to do is download the program and run it. when the service is over the program deletes itself. pretty cool.</description>
+      <description>&lt;p&gt;I have installed a new remote support app on the website, all users have to do is download the program and run it. when the service is over the program deletes itself. pretty cool.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Minecraft Donation</title>
       <link>https://jmainguy.com/index.php/minecraft-donation/</link>
       <pubDate>Sun, 12 Sep 2010 16:43:41 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/minecraft-donation/</guid>
-      <description>About two days ago I asked the people who frequent my servers if they could donate a small amount so I could buy a Minecraft account and not have to borrow from Titans. To my surprise within one hour I had three donations that totaled exactly what I needed, Thank you very much to the people who donated. C Jaworski-Leeuwis, Niki ch, and Cynthia Stickle.</description>
+      <description>&lt;p&gt;About two days ago I asked the people who frequent my servers if they could donate a small amount so I could buy a Minecraft account and not have to borrow from Titans. To my surprise within one hour I had three donations that totaled exactly what I needed, Thank you very much to the people who donated. C Jaworski-Leeuwis, Niki ch, and Cynthia Stickle.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Griefers</title>
       <link>https://jmainguy.com/index.php/griefers/</link>
       <pubDate>Tue, 07 Sep 2010 04:11:21 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/griefers/</guid>
-      <description>Wiped the minecraft server tonight, just way to much griefing to fix, easier to start over. Also Boise State upset VA Tech in football, awesome game. Labor day weekend went pretty well, dad was a little irked but overall a good time.</description>
+      <description>&lt;p&gt;Wiped the minecraft server tonight, just way to much griefing to fix, easier to start over. Also Boise State upset VA Tech in football, awesome game. Labor day weekend went pretty well, dad was a little irked but overall a good time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Forum was easy</title>
       <link>https://jmainguy.com/index.php/forum-was-easy/</link>
       <pubDate>Sun, 05 Sep 2010 20:27:08 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/forum-was-easy/</guid>
-      <description>Ok so the forum was actually ridiculously easy to set up after all, downloaded the software, followed the installation guide, then placed the folders inside the index Apache looks at. it loaded right up and I could finish the install from the Easton computer. pretty cool stuff, now if only the Email server would be that easy.</description>
+      <description>&lt;p&gt;Ok so the forum was actually ridiculously easy to set up after all, downloaded the software, followed the installation guide, then placed the folders inside the index Apache looks at. it loaded right up and I could finish the install from the Easton computer. pretty cool stuff, now if only the Email server would be that easy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Labor Day weekend</title>
       <link>https://jmainguy.com/index.php/labor-day-weekend/</link>
       <pubDate>Sat, 04 Sep 2010 17:04:01 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/labor-day-weekend/</guid>
-      <description>At the folks house on the eastern shore for the weekend, I am in the middle of my needed maintence on their home computer as the kids have loaded it up full of bad programs and such, defragging it as it looks like a solid red bar. Also today I will attempt to install a forum for the website as the people who play my minecraft server have requested one. as usual it isnt as easy as it should be.</description>
+      <description>&lt;p&gt;At the folks house on the eastern shore for the weekend, I am in the middle of my needed maintence on their home computer as the kids have loaded it up full of bad programs and such, defragging it as it looks like a solid red bar. Also today I will attempt to install a forum for the website as the people who play my minecraft server have requested one. as usual it isnt as easy as it should be.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Minecraft</title>
       <link>https://jmainguy.com/index.php/minecraft/</link>
       <pubDate>Thu, 02 Sep 2010 02:04:49 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/minecraft/</guid>
-      <description>Starting hosting a Minecraft server and playing on Titans account, its alot of fun and very addicting, I wasted alot of time on it today and the day before. I really enjoy building thins in the game, and directing the flow of water or lava. as usual if you want to play connect to my server by typing this in command console. “ping jmainguy.com” then use the ip you get from that.</description>
+      <description>&lt;p&gt;Starting hosting a Minecraft server and playing on Titans account, its alot of fun and very addicting, I wasted alot of time on it today and the day before. I really enjoy building thins in the game, and directing the flow of water or lava. as usual if you want to play connect to my server by typing this in command console. “ping jmainguy.com” then use the ip you get from that.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bad mood</title>
       <link>https://jmainguy.com/index.php/bad-mood/</link>
       <pubDate>Tue, 31 Aug 2010 17:00:24 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/bad-mood/</guid>
-      <description>Its just on of those days, where you dont want to wake up, everything is fucked, everybody sucks. You dont really know why, but you want to justify, ripping someones head off. I am Eeyore</description>
+      <description>&lt;p&gt;Its just on of those days, where you dont want to wake up, everything is fucked, everybody sucks. You dont really know why, but you want to justify, ripping someones head off. I am Eeyore&lt;/p&gt;</description>
     </item>
     <item>
       <title>Babo Weekend</title>
       <link>https://jmainguy.com/index.php/babo-weekend/</link>
       <pubDate>Mon, 30 Aug 2010 14:46:40 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/babo-weekend/</guid>
-      <description>Friday night a little after 6 the rndlabs.ca servers for baboviolent 2 went down, and they haven’t come back up yet. this is the longest period of time that they have been done in the last three years. Over its history the servers where first provided by the creators dZb and Daivuk, then when they didnt want to pay for servers for a free game Vamp stepped up and paid for about a year, then Deathray took over when Vamp got sick of doing it, and now?</description>
+      <description>&lt;p&gt;Friday night a little after 6 the rndlabs.ca servers for baboviolent 2 went down, and they haven’t come back up yet. this is the longest period of time that they have been done in the last three years. Over its history the servers where first provided by the creators dZb and Daivuk, then when they didnt want to pay for servers for a free game Vamp stepped up and paid for about a year, then Deathray took over when Vamp got sick of doing it, and now? Has Deathray really stopped suppliying servers (he hasnt been part of the community for months now) or is the server company just having hicups? Personally I actually hope the servers are gone for good because then I can host my own servers like I am doing now and people will play them, Deathray grew tired of moderating his servers and cheating and racism grew rampant, I personally love babo and despise lame Administrators so when I am hosting I can appoint good admins and demote them if they do not act responsibly. I enjoy hosting the servers and hope to do so for a long time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fed Up</title>
       <link>https://jmainguy.com/index.php/fed-up/</link>
       <pubDate>Thu, 26 Aug 2010 16:35:05 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/fed-up/</guid>
-      <description>In the last 30 days I have spent $1,433.19 on stuff other then rent, 24 percent on grocerys, 19 perent on games and movies, 16 percent on gasoline, 12 percent on fast food, and 22 percent on phone bill (we got new phones). hopefully next month we will do better, I think I will try and set a budget and see how we do. The current budget being if we have cash, spend it.</description>
+      <description>&lt;p&gt;In the last 30 days I have spent $1,433.19 on stuff other then rent, 24 percent on grocerys, 19 perent on games and movies, 16 percent on gasoline, 12 percent on fast food, and 22 percent on phone bill (we got new phones). hopefully next month we will do better, I think I will try and set a budget and see how we do. The current budget being if we have cash, spend it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website Headaches</title>
       <link>https://jmainguy.com/index.php/website-headaches/</link>
       <pubDate>Tue, 24 Aug 2010 13:21:06 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/website-headaches/</guid>
-      <description>Well I am proud that I have gotten this far, I have completed a Home page, a page dedicated to babo, and now this blog. However I still have a ways to go, I need to get the email server up and running which is proving to be a major headache, I also need to adjust this blog to resemble the rest of the website, as of right now it looks entirely different and impossible to get back to the main page of the website.</description>
+      <description>&lt;p&gt;Well I am proud that I have gotten this far, I have completed a Home page, a page dedicated to babo, and now this blog. However I still have a ways to go, I need to get the email server up and running which is proving to be a major headache, I also need to adjust this blog to resemble the rest of the website, as of right now it looks entirely different and impossible to get back to the main page of the website. The contact page will be easy enough to complete once the email server is running, I will take down the review tab and change it to an email tab. The friends tab should be easy to make, a picture of said friend with a link to their blog.  A lot of work but its all free so thats good =)&lt;/p&gt;</description>
     </item>
     <item>
       <title>obert-</title>
       <link>https://jmainguy.com/index.php/obert/</link>
       <pubDate>Mon, 23 Aug 2010 23:34:19 +0000</pubDate>
       <guid>https://jmainguy.com/index.php/obert/</guid>
-      <description>This website was built with the help of many individuals who took the time to explain to me my errors and how to fix them, one of them “obert-” from the #wordpress channel on the freenode server; took time to help me setup this blog page and I want to personally thank him for his efforts. Thank you obert</description>
+      <description>&lt;p&gt;This website was built with the help of many individuals who took the time to explain to me my errors and how to fix them, one of them “obert-” from the #wordpress channel on the freenode server; took time to help me setup this blog page and I want to personally thank him for his efforts. Thank you obert&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

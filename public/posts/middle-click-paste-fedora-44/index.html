@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Middle-Click Paste Broke After Upgrading to Fedora 44 · Jonathan Mainguy
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Jonathan Mainguy">
+<meta name="description" content="I upgraded to Fedora 44 a few days ago and immediately noticed something was wrong in GNOME Terminal. Highlighting text no longer felt like it was copying anything, and middle-click paste had stopped working entirely. I have been using Linux on the desktop for over a decade and this workflow is muscle memory at this point: select text in one terminal, middle-click in another, done. No Ctrl&#43;C, no Ctrl&#43;V.
+It turns out nothing was broken in GNOME Terminal itself. GNOME changed the default.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Middle-Click Paste Broke After Upgrading to Fedora 44">
+  <meta name="twitter:description" content="I upgraded to Fedora 44 a few days ago and immediately noticed something was wrong in GNOME Terminal. Highlighting text no longer felt like it was copying anything, and middle-click paste had stopped working entirely. I have been using Linux on the desktop for over a decade and this workflow is muscle memory at this point: select text in one terminal, middle-click in another, done. No Ctrl&#43;C, no Ctrl&#43;V.
+It turns out nothing was broken in GNOME Terminal itself. GNOME changed the default.">
+
+<meta property="og:url" content="https://jmainguy.com/posts/middle-click-paste-fedora-44/">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  <meta property="og:title" content="Middle-Click Paste Broke After Upgrading to Fedora 44">
+  <meta property="og:description" content="I upgraded to Fedora 44 a few days ago and immediately noticed something was wrong in GNOME Terminal. Highlighting text no longer felt like it was copying anything, and middle-click paste had stopped working entirely. I have been using Linux on the desktop for over a decade and this workflow is muscle memory at this point: select text in one terminal, middle-click in another, done. No Ctrl&#43;C, no Ctrl&#43;V.
+It turns out nothing was broken in GNOME Terminal itself. GNOME changed the default.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-18T10:00:00-04:00">
+    <meta property="article:modified_time" content="2026-05-18T10:00:00-04:00">
+
+
+
+
+<link rel="canonical" href="https://jmainguy.com/posts/middle-click-paste-fedora-44/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://jmainguy.com/">
+      Jonathan Mainguy
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://jmainguy.com/posts/middle-click-paste-fedora-44/">
+              Middle-Click Paste Broke After Upgrading to Fedora 44
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-05-18T10:00:00-04:00">
+                May 18, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <p>I upgraded to Fedora 44 a few days ago and immediately noticed something was wrong in GNOME Terminal. Highlighting text no longer felt like it was copying anything, and middle-click paste had stopped working entirely. I have been using Linux on the desktop for over a decade and this workflow is muscle memory at this point: select text in one terminal, middle-click in another, done. No Ctrl+C, no Ctrl+V.</p>
+<p>It turns out nothing was broken in GNOME Terminal itself. GNOME changed the default.</p>
+<h2 id="two-clipboards-on-linux">
+  Two clipboards on Linux
+  <a class="heading-link" href="#two-clipboards-on-linux">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>On X11 (and still on Wayland, when enabled), Linux traditionally has two separate clipboards:</p>
+<ul>
+<li><strong>CLIPBOARD</strong> — what you get with explicit Copy/Paste (Ctrl+C / Ctrl+V). This behaves like Windows and macOS.</li>
+<li><strong>PRIMARY</strong> — updated when you <em>select</em> text. You paste it with the middle mouse button, without ever pressing Copy.</li>
+</ul>
+<p>The Freedesktop clipboard specification describes PRIMARY as something expert users use; regular users can ignore it. That framing matters, because GNOME&rsquo;s recent change is essentially &ldquo;we agree, so we turned it off for everyone by default.&rdquo;</p>
+<ul>
+<li><a href="https://www.freedesktop.org/wiki/Specifications/ClipboardsWiki/"  class="external-link" target="_blank" rel="noopener">Freedesktop: Clipboards wiki</a></li>
+</ul>
+<h2 id="what-fedora-44--gnome-50-changed">
+  What Fedora 44 / GNOME 50 changed
+  <a class="heading-link" href="#what-fedora-44--gnome-50-changed">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The setting lives in GSettings as <code>org.gnome.desktop.interface gtk-enable-primary-paste</code>. When it is <code>true</code>, GTK applications honor primary selection for middle-click paste. When it is <code>false</code>, middle-click does nothing useful in those apps.</p>
+<p>The default flipped from <code>true</code> to <code>false</code> in <a href="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/merge_requests/119"  class="external-link" target="_blank" rel="noopener">gsettings-desktop-schemas merge request !119</a>, opened by Jordan Petridis in January 2026. His merge request description calls primary paste an &ldquo;X11ism&rdquo; tied to the old Gtk/EnablePrimaryPaste XSetting (<a href="https://bugzilla.gnome.org/show_bug.cgi?id=775844"  class="external-link" target="_blank" rel="noopener">GNOME bug 775844</a>), and argues that accidental middle-clicks dumping clipboard contents without warning is bad UX. The MR closes with &ldquo;Goodbye X11.&rdquo;</p>
+<p>The schema key itself is defined here (note <code>&lt;default&gt;false&lt;/default&gt;</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#268bd2;font-weight:bold">&lt;key</span> <span style="color:#268bd2">name=</span><span style="color:#2aa198">&#34;gtk-enable-primary-paste&#34;</span> <span style="color:#268bd2">type=</span><span style="color:#2aa198">&#34;b&#34;</span><span style="color:#268bd2;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2;font-weight:bold">&lt;default&gt;</span>false<span style="color:#268bd2;font-weight:bold">&lt;/default&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2;font-weight:bold">&lt;summary&gt;</span>Enable the primary paste selection<span style="color:#268bd2;font-weight:bold">&lt;/summary&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2;font-weight:bold">&lt;description&gt;</span>
+</span></span><span style="display:flex;"><span>    If true, gtk+ uses the primary paste selection, usually triggered by a middle mouse button click.
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2;font-weight:bold">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2;font-weight:bold">&lt;/key&gt;</span>
+</span></span></code></pre></div><p>Source: <a href="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/blob/main/schemas/org.gnome.desktop.interface.gschema.xml"  class="external-link" target="_blank" rel="noopener"><code>org.gnome.desktop.interface.gschema.xml</code></a> in the <a href="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas"  class="external-link" target="_blank" rel="noopener">gsettings-desktop-schemas</a> repository.</p>
+<p>Fedora 44 ships GNOME 50, which picks up that new default. So after upgrade, existing users who never touched the setting suddenly lose middle-click paste — and the &ldquo;select to copy&rdquo; workflow <em>feels</em> broken because the only paste path they used for it is gone.</p>
+<h2 id="how-i-fixed-it">
+  How I fixed it
+  <a class="heading-link" href="#how-i-fixed-it">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Re-enable primary paste for your user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsettings <span style="color:#cb4b16">set</span> org.gnome.desktop.interface gtk-enable-primary-paste <span style="color:#cb4b16">true</span>
+</span></span></code></pre></div><p>Verify:</p>
+<div class="highlight"><pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsettings get org.gnome.desktop.interface gtk-enable-primary-paste
+</span></span></code></pre></div><p>Open a <strong>new</strong> GNOME Terminal tab or window after changing the setting; already-running windows may not pick it up immediately.</p>
+<p>You can also toggle this in <strong>GNOME Tweaks</strong> if you prefer a GUI (the option is exposed there on recent GNOME versions).</p>
+<h2 id="this-is-not-a-wayland-regression-exactly">
+  This is not a Wayland regression (exactly)
+  <a class="heading-link" href="#this-is-not-a-wayland-regression-exactly">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I am running a Wayland session (<code>echo $XDG_SESSION_TYPE</code> → <code>wayland</code>). Wayland has supported primary selection for years; GNOME documented the initiative <a href="https://wiki.gnome.org/Initiatives/Wayland/PrimarySelection"  class="external-link" target="_blank" rel="noopener">here</a>. The Fedora Project <a href="https://fedoraproject.org/wiki/Wayland_features"  class="external-link" target="_blank" rel="noopener">Wayland features wiki</a> still lists primary selection under historical blockers for older releases.</p>
+<p>What changed in Fedora 44 is policy and defaults, not missing Wayland plumbing.</p>
+<h2 id="the-discussion-is-worth-reading">
+  The discussion is worth reading
+  <a class="heading-link" href="#the-discussion-is-worth-reading">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>People have strong feelings about this, on both sides.</p>
+<p><strong>For disabling it by default:</strong> accidental middle-click paste can leak sensitive text (passwords, tokens) into the wrong window, especially during screen sharing. The Freedesktop wiki&rsquo;s &ldquo;easter egg for experts&rdquo; language is cited in coverage such as <a href="https://itsfoss.com/news/gnome-firefox-middle-click-paste-removal/"  class="external-link" target="_blank" rel="noopener">It&rsquo;s FOSS: middle-click paste likely disabled in future GNOME</a>. Jordan Petridis also posted about the coordinated GNOME/Firefox effort on <a href="https://mastodon.social/@alatiera/115832011216789958"  class="external-link" target="_blank" rel="noopener">Mastodon</a>.</p>
+<p><strong>Against disabling it by default:</strong> long-time Linux users rely on primary selection constantly. Several LWN readers noted that Fedora 44 shipped without prominent release-note mention, leaving users to discover the breakage on their own — see the <a href="https://lwn.net/Articles/1070435/"  class="external-link" target="_blank" rel="noopener">middle-click paste thread</a> under <a href="https://lwn.net/Articles/1070198/"  class="external-link" target="_blank" rel="noopener">Fedora Linux 44 has been released</a>. Ubuntu users hit the same surprise (<a href="https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html"  class="external-link" target="_blank" rel="noopener">Bug 2145179 discussion</a>).</p>
+<p>Mozilla opened a parallel change for Firefox: <a href="https://phabricator.services.mozilla.com/D277804"  class="external-link" target="_blank" rel="noopener">Phabricator D277804</a>.</p>
+<h2 id="quick-reference">
+  Quick reference
+  <a class="heading-link" href="#quick-reference">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>What you want</th>
+          <th>What to use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Explicit copy/paste</td>
+          <td>Ctrl+C / Ctrl+V (CLIPBOARD)</td>
+      </tr>
+      <tr>
+          <td>Select text, paste with middle button</td>
+          <td>PRIMARY (requires <code>gtk-enable-primary-paste true</code>)</td>
+      </tr>
+      <tr>
+          <td>Re-enable on GNOME</td>
+          <td><code>gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="links">
+  Links
+  <a class="heading-link" href="#links">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><a href="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/merge_requests/119"  class="external-link" target="_blank" rel="noopener">GNOME MR !119 — Disable primary-paste by default</a></li>
+<li><a href="https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/blob/main/schemas/org.gnome.desktop.interface.gschema.xml"  class="external-link" target="_blank" rel="noopener">gsettings-desktop-schemas: <code>org.gnome.desktop.interface.gschema.xml</code></a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=775844"  class="external-link" target="_blank" rel="noopener">GNOME bug 775844 — Gtk/EnablePrimaryPaste gsetting</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Specifications/ClipboardsWiki/"  class="external-link" target="_blank" rel="noopener">Freedesktop: Clipboards wiki</a></li>
+<li><a href="https://wiki.gnome.org/Initiatives/Wayland/PrimarySelection"  class="external-link" target="_blank" rel="noopener">GNOME Wayland primary selection initiative</a></li>
+<li><a href="https://fedoraproject.org/wiki/Wayland_features"  class="external-link" target="_blank" rel="noopener">Fedora Project: Wayland features</a></li>
+<li><a href="https://lwn.net/Articles/1070198/"  class="external-link" target="_blank" rel="noopener">LWN: Fedora Linux 44 released</a></li>
+<li><a href="https://lwn.net/Articles/1070435/"  class="external-link" target="_blank" rel="noopener">LWN: Middle-click paste discussion</a></li>
+<li><a href="https://itsfoss.com/news/gnome-firefox-middle-click-paste-removal/"  class="external-link" target="_blank" rel="noopener">It&rsquo;s FOSS on the GNOME/Firefox proposals</a></li>
+<li><a href="https://phabricator.services.mozilla.com/D277804"  class="external-link" target="_blank" rel="noopener">Mozilla Phabricator D277804 (Firefox)</a></li>
+<li><a href="https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html"  class="external-link" target="_blank" rel="noopener">Ubuntu desktop-bugs: middle click paste (Bug 2145179)</a></li>
+</ul>
+<p>If you upgraded to Fedora 44 and your terminal &ldquo;stopped copying&rdquo; when you highlight text, try the <code>gsettings</code> line above before you spend an hour debugging VTE or wl-clipboard. Ask me how I know.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2010 -
+    
+    2026
+     Jonathan Mainguy 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
