@@ -71,7 +71,7 @@ People have strong feelings about this, on both sides.
 
 **For disabling it by default:** accidental middle-click paste can leak sensitive text (passwords, tokens) into the wrong window, especially during screen sharing. The Freedesktop wiki's "easter egg for experts" language is cited in coverage such as [It's FOSS: middle-click paste likely disabled in future GNOME](https://itsfoss.com/news/gnome-firefox-middle-click-paste-removal/). Jordan Petridis also posted about the coordinated GNOME/Firefox effort on [Mastodon](https://mastodon.social/@alatiera/115832011216789958).
 
-**Against disabling it by default:** long-time Linux users rely on primary selection constantly. Several LWN readers noted that Fedora 44 shipped without prominent release-note mention, leaving users to discover the breakage on their own — see the [middle-click paste thread](https://lwn.net/Articles/1070435/) under [Fedora Linux 44 has been released](https://lwn.net/Articles/1070198/). Ubuntu users hit the same surprise ([Bug 2145179 discussion](https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html)).
+**Against disabling it by default:** long-time Linux users rely on primary selection constantly. We liked this setting because it made a tiny, repeated workflow feel instant, which is exactly the kind of habit change [xkcd 1172: Workflow](https://xkcd.com/1172/) jokes about. Several LWN readers noted that Fedora 44 shipped without prominent release-note mention, leaving users to discover the breakage on their own — see the [middle-click paste thread](https://lwn.net/Articles/1070435/) under [Fedora Linux 44 has been released](https://lwn.net/Articles/1070198/). Ubuntu users hit the same surprise ([Bug 2145179 discussion](https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html)).
 
 Mozilla opened a parallel change for Firefox: [Phabricator D277804](https://phabricator.services.mozilla.com/D277804).
 
@@ -97,4 +97,4 @@ Mozilla opened a parallel change for Firefox: [Phabricator D277804](https://phab
 - [Mozilla Phabricator D277804 (Firefox)](https://phabricator.services.mozilla.com/D277804)
 - [Ubuntu desktop-bugs: middle click paste (Bug 2145179)](https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html)
 
-If you upgraded to Fedora 44 and your terminal "stopped copying" when you highlight text, try the `gsettings` line above before you spend an hour debugging VTE or wl-clipboard. Ask me how I know.
+If you upgraded to Fedora 44 and your terminal "stopped copying" when you highlight text, try the `gsettings` line above before you spend an hour debugging VTE or wl-clipboard.

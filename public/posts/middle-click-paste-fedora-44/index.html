@@ -235,7 +235,7 @@ It turns out nothing was broken in GNOME Terminal itself. GNOME changed the defa
 </h2>
 <p>People have strong feelings about this, on both sides.</p>
 <p><strong>For disabling it by default:</strong> accidental middle-click paste can leak sensitive text (passwords, tokens) into the wrong window, especially during screen sharing. The Freedesktop wiki&rsquo;s &ldquo;easter egg for experts&rdquo; language is cited in coverage such as <a href="https://itsfoss.com/news/gnome-firefox-middle-click-paste-removal/"  class="external-link" target="_blank" rel="noopener">It&rsquo;s FOSS: middle-click paste likely disabled in future GNOME</a>. Jordan Petridis also posted about the coordinated GNOME/Firefox effort on <a href="https://mastodon.social/@alatiera/115832011216789958"  class="external-link" target="_blank" rel="noopener">Mastodon</a>.</p>
-<p><strong>Against disabling it by default:</strong> long-time Linux users rely on primary selection constantly. Several LWN readers noted that Fedora 44 shipped without prominent release-note mention, leaving users to discover the breakage on their own — see the <a href="https://lwn.net/Articles/1070435/"  class="external-link" target="_blank" rel="noopener">middle-click paste thread</a> under <a href="https://lwn.net/Articles/1070198/"  class="external-link" target="_blank" rel="noopener">Fedora Linux 44 has been released</a>. Ubuntu users hit the same surprise (<a href="https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html"  class="external-link" target="_blank" rel="noopener">Bug 2145179 discussion</a>).</p>
+<p><strong>Against disabling it by default:</strong> long-time Linux users rely on primary selection constantly. We liked this setting because it made a tiny, repeated workflow feel instant, which is exactly the kind of habit change <a href="https://xkcd.com/1172/"  class="external-link" target="_blank" rel="noopener">xkcd 1172: Workflow</a> jokes about. Several LWN readers noted that Fedora 44 shipped without prominent release-note mention, leaving users to discover the breakage on their own — see the <a href="https://lwn.net/Articles/1070435/"  class="external-link" target="_blank" rel="noopener">middle-click paste thread</a> under <a href="https://lwn.net/Articles/1070198/"  class="external-link" target="_blank" rel="noopener">Fedora Linux 44 has been released</a>. Ubuntu users hit the same surprise (<a href="https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html"  class="external-link" target="_blank" rel="noopener">Bug 2145179 discussion</a>).</p>
 <p>Mozilla opened a parallel change for Firefox: <a href="https://phabricator.services.mozilla.com/D277804"  class="external-link" target="_blank" rel="noopener">Phabricator D277804</a>.</p>
 <h2 id="quick-reference">
   Quick reference
@@ -286,7 +286,7 @@ It turns out nothing was broken in GNOME Terminal itself. GNOME changed the defa
 <li><a href="https://phabricator.services.mozilla.com/D277804"  class="external-link" target="_blank" rel="noopener">Mozilla Phabricator D277804 (Firefox)</a></li>
 <li><a href="https://www.mail-archive.com/desktop-bugs@lists.ubuntu.com/msg830632.html"  class="external-link" target="_blank" rel="noopener">Ubuntu desktop-bugs: middle click paste (Bug 2145179)</a></li>
 </ul>
-<p>If you upgraded to Fedora 44 and your terminal &ldquo;stopped copying&rdquo; when you highlight text, try the <code>gsettings</code> line above before you spend an hour debugging VTE or wl-clipboard. Ask me how I know.</p>
+<p>If you upgraded to Fedora 44 and your terminal &ldquo;stopped copying&rdquo; when you highlight text, try the <code>gsettings</code> line above before you spend an hour debugging VTE or wl-clipboard.</p>
 
       </div>
 
@@ -318,9 +318,7 @@ It turns out nothing was broken in GNOME Terminal itself. GNOME changed the defa
     
     2026
      Jonathan Mainguy 
-    ·
     
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
