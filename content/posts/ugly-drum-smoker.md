@@ -23,4 +23,34 @@ Attached wheels and a kick stand made from threaded rod and a block of wood. Pai
 
 Have to say I love it. It holds temps really well, and is quite fun to cook in. I got a [ThermoWorks Dot](https://www.thermoworks.com/DOT) For keeping an eye on the temp of the meat without having to take the lid off, highly recommend.
 
-Pictures of [Smoker](https://imgur.com/a/16rb01n) and [Prime Rib](https://imgur.com/a/I2E86VN) I made on it.
+## Smoker build
+
+<figure><img src="https://immich.soh.re/api/assets/754819d1-db1c-42bf-a9a0-7588e8fda82e/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="The barrel before work began"><figcaption>Barrel before we did anything to it.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/0aa6afe7-bf6f-4836-8d8b-d6b04d13a2f6/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Fire burning out the inside of the barrel"><figcaption>Burn out whatever was in this barrel before.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/5bea3a09-955a-466e-a011-1ca8fa77d0ba/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Another barrel burn"><figcaption>Burning stuff is fun.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/ccf5bcb5-7e1a-4a97-a5e5-0299a1bf095c/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="My dad bending the smoker handle to fit"><figcaption>My dad bending the handle to fit.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/c625abf9-55b7-44fb-b342-1e9a749805bd/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Stainless steel fire basket with drilled holes and legs"><figcaption>Firebasket, bought a stainless steel bucket from agri supply, drilled holes in it, added legs.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/a27b544a-692a-4aae-bfcc-65eea6e4cc9d/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Smoker wheels and wooden kick stand"><figcaption>You can see wheels and little kick stand we made out of wood for stability.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/9d7d3096-77ce-41a4-915b-c3fc4083eb0e/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Finished black drum smoker painted with a North Carolina map"><figcaption>Finished smoker with North Carolina map.</figcaption></figure>
+
+## Smoked prime rib
+
+<figure><img src="https://immich.soh.re/api/assets/39acf913-05ba-4bd3-ac80-acb72bf7efef/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Prime rib from Costco before cooking"><figcaption>Got this at Costco, the place to go for nice cuts of meat.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/a4a1502c-3246-40d0-945f-f618c2f2233f/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Smoked prime rib at 125 degrees in the middle"><figcaption>Prime rib, 125 in the middle.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/feeb3d61-6829-4c6f-9a4d-a7f362f6e6cc/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Cooked prime rib with juices resting on top"><figcaption>Pool of juice on top, I shoulda tied this with butcher twine to hold shape.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/eec66c9a-dee0-4b06-99c7-373b68fefa10/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Finished smoked prime rib"><figcaption>Mmmmmmm.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/fb148f0b-22f6-47c4-9404-24d5838bd2ad/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Smoked prime rib sliced open"><figcaption>Sliced open, I'm not good at slicing.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/fb730ccf-bbdb-466d-b28a-b750366cc056/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Slices of smoked prime rib"><figcaption>Yup.</figcaption></figure>
+
+<figure><img src="https://immich.soh.re/api/assets/c584a259-35d2-4635-ab52-aa93d532ac9e/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak" alt="Smoked prime rib served with potatoes and horseradish sauce"><figcaption>Taters and horseradish sauce.</figcaption></figure>

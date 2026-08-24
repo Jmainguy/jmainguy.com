@@ -1,0 +1,57 @@
+{{define "base"}}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.MetaTitle}}</title>
+  <meta name="description" content="{{.Description}}">
+  <meta name="author" content="Jonathan Mainguy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#EDF4F8">
+  <meta property="og:title" content="{{.MetaTitle}}">
+  <meta property="og:description" content="{{.Description}}">
+  <meta property="og:type" content="{{if .Post}}article{{else}}website{{end}}">
+  <meta property="og:url" content="https://jmainguy.com{{.Canonical}}">
+  <meta property="og:site_name" content="Jonathan Mainguy">
+  {{if .Project}}<meta property="og:image" content="https://jmainguy.com{{.Project.Image}}">{{end}}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{.MetaTitle}}">
+  <meta name="twitter:description" content="{{.Description}}">
+  <link rel="canonical" href="https://jmainguy.com{{.Canonical}}">
+  <link rel="alternate" type="application/rss+xml" title="Jonathan Mainguy" href="https://jmainguy.com/feed.xml">
+  <link rel="icon" href="/images/favicon-mark.png?v=6" type="image/png" sizes="1024x1024">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script>(()=>{const r=document.documentElement,t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))r.classList.add('dark')})()</script>
+  {{if .Post}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{.Post.Title}},"description":{{.Description}},"datePublished":"{{.Post.ISODate}}","dateModified":"{{.Post.ISODate}}","mainEntityOfPage":"https://jmainguy.com{{.Canonical}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"},"publisher":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else if .Project}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":{{.Project.Name}},"description":{{.Project.Summary}},"url":{{.Project.URL}},"image":"https://jmainguy.com{{.Project.Image}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else}}<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://jmainguy.com/#jonathan-mainguy","name":"Jonathan Mainguy","url":"https://jmainguy.com/","homeLocation":{"@type":"Place","name":"Garner, North Carolina"},"sameAs":["https://github.com/jmainguy","https://www.linkedin.com/in/jonathan-mainguy-76174a54/"]},{"@type":"WebSite","@id":"https://jmainguy.com/#website","url":"https://jmainguy.com/","name":"Jonathan Mainguy","inLanguage":"en-US","author":{"@id":"https://jmainguy.com/#jonathan-mainguy"}}]}</script>{{end}}
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark"><span class="wordmark-logo" aria-hidden="true"><img class="wordmark-logo-light" src="/images/brand-mark.png" alt=""><img class="wordmark-logo-dark" src="/images/brand-mark-dark.png" alt=""></span><span class="hidden sm:inline">JONATHAN MAINGUY</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/logbook/">Logbook</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <button data-theme-toggle class="theme-toggle" aria-label="Switch to dark theme"><span class="text-lg leading-none" data-theme-icon aria-hidden="true">◐</span><span class="hidden lg:inline" data-theme-label>Theme</span></button>
+    </nav>
+  </header>
+  <main>{{template "content" .}}</main>
+  <footer class="site-footer">
+    <div class="footer-board">
+      <div class="footer-copy" id="contact"><p><a href="mailto:jon@jmainguy.com">Jonathan Mainguy</a> / Garner, North Carolina</p></div>
+      <nav class="footer-socials" aria-label="Jonathan Mainguy on social platforms">
+        <a href="https://github.com/jmainguy" aria-label="Jonathan Mainguy on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jonathan-mainguy-76174a54/" aria-label="Jonathan Mainguy on LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.86-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.41v1.57h.05c.47-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.42a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.03H3.54V8.99H7.1v11.46Z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+      </nav>
+      <a class="host-mark no-underline" href="https://standouthost.com"><span>Hosted by</span><strong>stand<span>out</span>host</strong></a>
+    </div>
+  </footer>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>{{end}}

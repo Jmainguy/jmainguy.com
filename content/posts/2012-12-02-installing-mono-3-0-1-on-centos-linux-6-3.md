@@ -14,28 +14,18 @@ categories:
 
 ---
 So you want to run windows .exe&#8217;s on your shiny Linux server, time to catch [mono][1].
-  
+
 To install mono first install your dependencies.
 
-<pre lang="shell" prompt="$">yum install bison gettext glib2 freetype fontconfig libpng libpng-devel libX11 libX11-devel glib2-devel libgdi* libexif glibc-devel urw-fonts java unzip gcc gcc-c++ automake autoconf libtool make bzip2 wget</pre>
-
-<pre lang="shell" prompt="$">cd /usr/local/src 
-</pre>
-
-<pre lang="shell" prompt="$">wget http://download.mono-project.com/sources/mono/mono-3.0.1.tar.bz2
-</pre>
-
-<pre lang="shell" prompt="$">tar jxf mono-3.0.1.tar.bz2
-</pre>
-
-<pre lang="shell" prompt="$">cd mono-3.0.1
-</pre>
-
-<pre lang="shell" prompt="$">./configure --prefix=/opt/mono
-</pre>
-
-<pre lang="shell" prompt="$">make && make install
-</pre>
+```bash
+yum install bison gettext glib2 freetype fontconfig libpng libpng-devel libX11 libX11-devel glib2-devel libgdi* libexif glibc-devel urw-fonts java unzip gcc gcc-c++ automake autoconf libtool make bzip2 wget
+cd /usr/local/src
+wget http://download.mono-project.com/sources/mono/mono-3.0.1.tar.bz2
+tar jxf mono-3.0.1.tar.bz2
+cd mono-3.0.1
+./configure --prefix=/opt/mono
+make && make install
+```
 
 Congrats, you now have Mono installed and can run some Windows .exe&#8217;s such as Terraria or Minecraft Classic.
 

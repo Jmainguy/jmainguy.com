@@ -1,0 +1,32 @@
+{{define "content"}}
+<section class="intro-shell">
+  <div class="intro-band"><p>I’m Jonathan Mainguy. My life is centered on Jesus Christ, my family, open source software, and helping people become stronger leaders.</p><a href="/about/">More about me →</a></div>
+</section>
+
+<section class="shell mt-8 sm:mt-12">
+  <div class="section-head"><span class="section-code">RECENT WRITING</span><h2 class="section-title">Latest logs</h2><a href="/logbook/" class="section-link">FULL LOGBOOK →</a></div>
+  <div class="writing-ledger">{{range .Posts}}<a href="/logbook/{{.Slug}}/" class="post-card" data-post-card data-search="{{.Search}}">
+    <span class="post-card-index">LOG</span><time datetime="{{.ISODate}}">{{.ShortDate}}</time>
+    <div><h3>{{.Title}}</h3><p>{{.Excerpt}}</p></div><span class="post-card-arrow">→</span>
+  </a>{{end}}</div>
+</section>
+
+<section class="shell mt-8 sm:mt-12">
+  <div class="section-head"><span class="section-code">FAITH / FAMILY / WORK</span><h2 class="section-title">What matters to me</h2><a href="/about/" class="section-link">READ MORE →</a></div>
+  <div class="bearings-grid">
+    <a class="bearing bearing--primary bearing--faith" href="/about/#faith"><span class="bearing-label">FAITH</span><h3>Jesus Christ</h3><div class="bearing-footer"><p>I believe Jesus is the Son of God, fully human and fully God, and that salvation is His free gift to us.</p><span class="bearing-link">READ ABOUT MY FAITH →</span></div></a>
+    <a class="bearing bearing--primary bearing--family" href="/family/"><span class="bearing-label">FAMILY</span><h3>Leah and our children</h3><div class="bearing-footer"><p>Our four children are Seth, Cora Beth, Deacon Ray, and Ezekiel.</p><span class="bearing-link">OUR FAMILY TREE →</span></div></a>
+    <article class="bearing"><span class="bearing-label">OPEN SOURCE</span><h3>Software freedom</h3><p>RMS, GNU, Linux, Kubernetes, and Go shaped how I think about software, ownership, and shared work.</p></article>
+    <a class="bearing" href="/about/#leadership"><span class="bearing-label">LEADERSHIP</span><h3>Servant leadership</h3><p>Jesus is the example I follow. Leadership begins with serving others in humility and love.</p><span class="bearing-link">BIBLICAL LEADERSHIP →</span></a>
+  </div>
+</section>
+
+<section class="shell mt-8 sm:mt-12">
+  <div class="section-head"><span class="section-code">PROJECTS / ACTIVE</span><h2 class="section-title">Selected projects</h2><a href="/projects/" class="section-link">FULL INDEX →</a></div>
+  <div class="project-console">
+    <a class="console-project" href="/projects/shoreline/"><img src="/images/projects/shoreline.webp" alt="Moonlit procedural beach scene from Shoreline" loading="lazy"><div class="console-project-copy"><span class="project-number">GENERATIVE ART</span><h3>Shoreline</h3></div><span class="console-project-arrow">→</span></a>
+    <a class="console-project" href="/projects/baboviolent/"><img src="/images/projects/baboviolent.webp" alt="BaboViolent multiplayer arena" loading="lazy"><div class="console-project-copy"><span class="project-number">GAME / COMMUNITY</span><h3>Babo Violent</h3></div><span class="console-project-arrow">→</span></a>
+    <a class="console-project" href="/projects/soh-re/"><img src="/images/projects/soh.gif" alt="soh.re web terminal in action" loading="lazy"><div class="console-project-copy"><span class="project-number">WEB TERMINAL</span><h3>soh.re</h3></div><span class="console-project-arrow">→</span></a>
+  </div>
+</section>
+{{end}}

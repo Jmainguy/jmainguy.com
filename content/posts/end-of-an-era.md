@@ -4,11 +4,11 @@ date: 2024-10-30T12:35:16-04:00
 draft: false
 ---
 
-For the past few weeks, I have been migrating all my hosted services over to my new [kubernetes cluster](https://jmainguy.com/posts/multi-arch-hybrid-cloud/) running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my [hetzner](https://www.hetzner.com/) server any longer. Which makes me sad.
+For the past few weeks, I have been migrating all my hosted services over to my new [kubernetes cluster](https://jmainguy.com/logbook/multi-arch-hybrid-cloud/) running mainly in my house. It was a good amount of work requiring me to write CI/CD pipelines, helm charts, dockerfiles, goreleaser configs, and learn about OCI annotations, and the limits of iscsi on my local network. When I finished all the work, and the services were all running on k8s, I realized I had no use case to keep around my [hetzner](https://www.hetzner.com/) server any longer. Which makes me sad.
 
 This is a testament to how great a provider Hetzner is. Their servers are fairly priced, offer plenty of bandwidth, great support team, and a really fun and intuitive web interface for managing them. I have been using Hetzner for over a decade, back when I got started with minecraft hosting, and they have never let me down. While I do not need my hetzner server in my new setup, I would love to need to use hetzner again in the future when I can justify a large dedicated server again.
 
-![End of an era](/images/cancel-hetzner.png)
+![End of an era](https://immich.soh.re/api/assets/10309b80-1f6f-4ef3-b1da-a0c2ff10695a/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 So which services were interesting to move?
 
@@ -33,11 +33,11 @@ I had to use DestinationRules, and serviceEntries for routing traffic to externa
 
 The database for wordpress needs Persistent storage. Which I had setup previously using longhorn. During the migration I saw I was getting sub 1mbps speeds writing to the storage, which I decided was unacceptable. Digging into the issue, I saw writing directly to the disks using my favorite [dd test](https://lowendtalk.com/discussion/42/test-the-disk-i-o-of-your-vps) I was getting 450mbps speeds on the **black-intel**, but 40mbps speeds on the **lenovo laptop** and **white-amd nodes**. I went ahead and purchased a new drive for each to match what I had in the black-intel. I then reinstalled debian / k3s on the new drives and took out the old spinning slow drives.
 
-![Drives](/images/drives.png)
+![Drives](https://immich.soh.re/api/assets/e363058f-65d6-4ca1-a9f3-0c3897fcaaf8/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 I also saw that I was trying to use iscsi over wireguard to germany which was 130ms away. A very smart storage engineer at RedHat once explained to me one of his cardinal rules that has always stuck with me, don't send storage across a firewall. So I went into my longhorn UI and disabled the german host from being a storage provider.
 
-![Disabled](/images/disabled.png)
+![Disabled](https://immich.soh.re/api/assets/22dfd895-adfe-4e17-99b8-e0c88ed6f812/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 I then also determined to never host anything on the german node that requires persistent storage, which for now was done via cordoning that node so it only handles control plane duties for now. In the future I will use taints / annotations to keep PVC's / amd64 requirements away from it.
 
@@ -45,11 +45,11 @@ After making these changes I went from sub 1mbps to above 300mbps speeds on the 
 
 **Before**
 
-![Slow Transfer](/images/slow-transfer.png)
+![Slow Transfer](https://immich.soh.re/api/assets/4a84758d-b793-4f05-ba2a-03f52935df38/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 **After**
 
-![Fast Transfer](/images/fast-transfer.png)
+![Fast Transfer](https://immich.soh.re/api/assets/7ff1962d-d8cb-4d02-8712-f04516c586e3/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 
 ## etherpad.soh.re
@@ -66,7 +66,7 @@ The rest of websites were pretty straightforward static html websites. I was abl
 
 Full list of websites and their certificates being provided by LetsEncrypt via cert-manager
 
-![All sites](/images/all-hosts.png)
+![All sites](https://immich.soh.re/api/assets/77e59333-507f-4fe0-9454-bebae4b5090e/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 
 Shout out to my friend [Sam](https://stackoverflow.com/users/33204/slm) for encouraging me to write more of these blog posts, it means a ton to me.

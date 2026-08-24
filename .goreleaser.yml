@@ -1,0 +1,77 @@
+version: 2
+project_name: jmainguy.com
+
+dist: goreleaser-dist
+
+before:
+  hooks:
+    - npm ci
+    - npm run build
+    - go mod tidy
+
+builds:
+  - id: jmainguy.com
+    main: .
+    binary: jmainguy.com
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+
+kos:
+  - id: jmainguy.com
+    main: .
+    base_image: cgr.dev/chainguard/static:latest
+    repositories:
+      - zot.soh.re/jmainguy/jmainguy.com
+    platforms:
+      - linux/amd64
+      - linux/arm64
+    tags:
+      - latest
+      - '{{ .Tag }}'
+    creation_time: '{{ .CommitTimestamp }}'
+    ko_data_creation_time: '{{ .CommitTimestamp }}'
+    sbom: none
+    bare: true
+    preserve_import_paths: false
+    base_import_paths: true
+    labels:
+      org.opencontainers.image.authors: Jonathan Seth Mainguy <jon@soh.re>
+      org.opencontainers.image.created: '{{ .Date }}'
+      org.opencontainers.image.description: Personal website and logbook for Jonathan Mainguy
+      org.opencontainers.image.licenses: GPL-2.0-or-later
+      org.opencontainers.image.revision: '{{ .FullCommit }}'
+      org.opencontainers.image.source: https://github.com/jmainguy/jmainguy.com
+      org.opencontainers.image.title: jmainguy.com
+      org.opencontainers.image.url: https://jmainguy.com
+      org.opencontainers.image.vendor: Jonathan Mainguy
+      org.opencontainers.image.version: '{{ .Version }}'
+    annotations:
+      org.opencontainers.image.authors: Jonathan Seth Mainguy <jon@soh.re>
+      org.opencontainers.image.created: '{{ .Date }}'
+      org.opencontainers.image.description: Personal website and logbook for Jonathan Mainguy
+      org.opencontainers.image.licenses: GPL-2.0-or-later
+      org.opencontainers.image.revision: '{{ .FullCommit }}'
+      org.opencontainers.image.source: https://github.com/jmainguy/jmainguy.com
+      org.opencontainers.image.title: jmainguy.com
+      org.opencontainers.image.url: https://jmainguy.com
+      org.opencontainers.image.vendor: Jonathan Mainguy
+      org.opencontainers.image.version: '{{ .Version }}'

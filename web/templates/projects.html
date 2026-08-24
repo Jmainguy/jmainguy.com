@@ -1,0 +1,13 @@
+{{define "content"}}
+<section class="page-mast">
+  <p class="eyebrow">Projects / Built and maintained</p>
+  <h1 class="page-title">Projects I am<br><span class="text-moss dark:text-acid">proud of.</span></h1>
+  <p class="page-deck">Websites, games, and tools I designed and built, and continue to host and maintain for everyone to use.</p>
+  <p class="page-contact">Feedback or requests? I would love to hear from you. <a href="#contact">Get in touch using the contact information in the footer.</a></p>
+</section>
+<section class="shell mt-16">
+  <div class="projects-showcase">
+    {{range .Projects}}<a class="showcase-card" href="/projects/{{.Slug}}/"><div class="showcase-copy"><h2>{{.Name}}</h2><p>{{.Summary}}</p><span class="visit-link">READ ABOUT THE PROJECT →</span></div><div class="showcase-media"><img src="{{.Image}}" alt="{{.ImageAlt}}"></div></a>{{end}}
+  </div>
+</section>
+{{end}}

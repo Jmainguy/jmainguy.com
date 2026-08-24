@@ -6,9 +6,9 @@ draft: false
 
 A new friend of mine wanted to pair program on an interesting challenge, something that was relevant to DevOps and would require a Kubernetes cluster. So in order to prepare for our working session I went ahead and built a cluster.
 
-I knew from past experience [k3s](https://k3s.io/) was easy to setup and was able to scale and add more nodes easily as well, so I started there. 
+I knew from past experience [k3s](https://k3s.io/) was easy to setup and was able to scale and add more nodes easily as well, so I started there.
 
-![Easy](/images/k3s.png)
+![Easy](https://immich.soh.re/api/assets/e98233bd-d62f-42e9-940f-1938050a3c94/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 Some requirements for my new cluster were as follows
 
@@ -69,10 +69,10 @@ zot		    IN	A	    144.76.41.204
 
 144.76.41.204 being the IP of my Hetzner dedicated server / haproxy host / current docker solutions for websites. It has incredible uptime, and I am quite happy with it. So it being my single point of failure was acceptable.
 
-My house is using Google Fiber, and I have'nt been able to get into the router / network management of it because my wife signed up for it and I don't feel like asking her for her google login. So exposing a port on my home network is impossible with these constraints. That in mind, I wanted to connect my home servers to my Hetzner server on a virtual local area network (VLAN), and I went with a Hub-and-spoke model using wireguard to achieve this. 
+My house is using Google Fiber, and I have'nt been able to get into the router / network management of it because my wife signed up for it and I don't feel like asking her for her google login. So exposing a port on my home network is impossible with these constraints. That in mind, I wanted to connect my home servers to my Hetzner server on a virtual local area network (VLAN), and I went with a Hub-and-spoke model using wireguard to achieve this.
 
 ## Wireguard
-On phy01.standouthoust.com, the hub on hetzner server. 
+On phy01.standouthoust.com, the hub on hetzner server.
 
 ```bash
 [root@phy01 ~]# dnf install wireguard-tools
@@ -104,13 +104,13 @@ PersistentKeepalive = 25
 [root@phy01 ~]# systemctl enable --now wg-quick@wg0
 ```
 
-And then on my debian based servers, see [why I am using debian for servers now](https://jmainguy.com/posts/enterprise-linux/). I do 
+And then on my debian based servers, see [why I am using debian for servers now](https://jmainguy.com/logbook/enterprise-linux/). I do
 
 ```bash
 root@black-intel:/etc/wireguard#  apt install wireguard
 root@black-intel:/etc/wireguard#  wg genkey | tee /etc/wireguard/$HOSTNAME.private.key | wg pubkey > /etc/wireguard/$HOSTNAME.public.key
 
-root@black-intel:/etc/wireguard# cat phy01.conf 
+root@black-intel:/etc/wireguard# cat phy01.conf
 [Interface]
 PrivateKey = AGAINNOTMYREALKEY
 Address = 10.0.0.7/24
@@ -135,7 +135,7 @@ We got networking solved right? Well, not quite. We got wireguard vlan working r
 Shoutout to [HG from AWX](https://groups.google.com/g/awx-project/c/H8LIrjHhd-c) for coming up with a good nftables ruleset I utilized.
 
 ```bash
-root@black-intel:/etc/wireguard# cat /etc/nftables.conf 
+root@black-intel:/etc/wireguard# cat /etc/nftables.conf
 #!/usr/sbin/nft -f
 
 flush ruleset
@@ -155,7 +155,7 @@ table inet jmainguy {
 
 	# ips allowed for k3s internally
 	set allowed_cluster_ips {
-		type ipv4_addr 
+		type ipv4_addr
         flags interval
 		elements = { 10.0.0.1/24, 127.0.0.1/8, 10.42.0.0/16, 10.43.0.0/16 }
 	}
@@ -203,7 +203,7 @@ table inet jmainguy {
 }
 ```
 
-I went through alot of variations and finally got it working with the one above, I believe I can go back and optimize this ruleset some more, but it works and I am happy for now. 
+I went through alot of variations and finally got it working with the one above, I believe I can go back and optimize this ruleset some more, but it works and I am happy for now.
 
 ## k3s
 
@@ -291,9 +291,9 @@ lenovo-laptop   Ready    <none>                 4d22h   v1.31.1+k3s1   10.0.0.6 
 white-amd       Ready    <none>                 4d6h    v1.31.1+k3s1   10.0.0.2      10.0.0.2      Debian GNU/Linux 12 (bookworm)   6.1.0-25-amd64      containerd://1.7.21-k3s2
 ```
 
-![Towers](/images/IMG20241013084544.jpg)
+![Towers](https://immich.soh.re/api/assets/26d5d72e-3efc-4c36-8883-9a266bb9d7b6/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
-![Spahghetti](/images/IMG20241013084552.jpg)
+![Spahghetti](https://immich.soh.re/api/assets/8929915c-4537-4891-a345-09feee603cff/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 When wanting to upgrade k3s version in the future, we can wget the binary from a github release https://github.com/k3s-io/k3s/releases and place in `/usr/local/bin/`
 
@@ -333,4 +333,3 @@ Some tech debt if I find the time to work on it.
 * move haproxy for k8s to the arm server
 * move wireguard hub to the arm server
 * setup haproxy in tcp loadbalancing mode and cert-manager on the k8s cluster
-  

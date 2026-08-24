@@ -39,7 +39,7 @@ To configure a custom domain:
 1. Go to **GitHub Repo Settings** → **Pages** → Fill in the "Custom Domain" box.
 2. Follow [GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) to set up a `CNAME` DNS record pointing to `<user>.github.io` (personal account) or `<organization>.github.io` (organization).
 
-![Custom Domain Example](/images/customDomains.png)
+![Custom Domain Example](https://immich.soh.re/api/assets/bae31696-6268-4faf-95a5-6e0bfb839d93/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 ---
 
@@ -49,12 +49,12 @@ To configure a custom domain:
 
 Using a `CNAME` without proper verification exposes you to potential domain takeover attacks. Scammers can exploit unverified domains to host malicious content.
 
-![Custom Domain Takeover Example](/images/takeover.png)
+![Custom Domain Takeover Example](https://immich.soh.re/api/assets/ae1693b2-e784-4ffe-a564-4c83ae8415ee/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 ### How to Secure Your Domain
 
 To prevent this:
-1. Add a **TXT DNS record** for domain verification. 
+1. Add a **TXT DNS record** for domain verification.
 2. Go to **User/Organization Settings** → **Pages** → **Add a Domain** and follow the instructions in [GitHub's Domain Verification guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages).
 
 ---
@@ -67,7 +67,7 @@ If your domain is hijacked (e.g., your site starts selling scams), it’s likely
 
 This is what happened to me atleast, and my website looked like this all of a sudden.
 
-![Hijacked Website Example](/images/hijacked.png)
+![Hijacked Website Example](https://immich.soh.re/api/assets/23ee5a92-3b21-4095-b09f-55e1dde860b4/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 
 To fix this:

@@ -26,7 +26,7 @@ cryptsetup resize luks-03bdbe6b-c97c-4541-959e-cf83ea6f7f31
 btrfs filesystem resize max /
 ```
 
-After installing llm and experimenting with various models, my PC suddenly froze because it was running low on RAM. 
+After installing llm and experimenting with various models, my PC suddenly froze because it was running low on RAM.
 
 I like to take a break when running into issues, as it helps resolve most problems when you come back with a fresh mindset. I started playing some guitar and before I knew it my kids had surrounded me with their instruments. Cora Beth was on the Keys, while Deacon was rocking out with his Ukelele he got for his birthday recently. We ran through a good set list.
 
@@ -38,7 +38,7 @@ I like to take a break when running into issues, as it helps resolve most proble
 * Brain Stew
 * Die, Die My Darling
 * Last Caress
-  
+
 
 ## The RAM Revelation
 
@@ -62,7 +62,7 @@ By the way, did you know that even when Amazon or other retailers do not collect
 
 While eagerly awaiting the arrival of my new RAM, I continued to experiment with LLMs for the next couple of days. I attempted to use ROCm/PyTorch with my Radeon card (gfx803), but I soon learned that my card was considered too old and no longer supported. Trying to build the necessary software myself proved challenging and even if I succeeded, it would have been a temporary hack.
 
-I enjoyed playing with [text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main) and was able to get it working on cpu, but the speeds were horrendous. 
+I enjoyed playing with [text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main) and was able to get it working on cpu, but the speeds were horrendous.
 
 [chat-ui](https://github.com/huggingface/chat-ui) looks interesting and I might play with that if I ever get good speeds with these models.
 

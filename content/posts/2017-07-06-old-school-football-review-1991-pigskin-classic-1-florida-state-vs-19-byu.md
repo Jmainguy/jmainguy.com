@@ -27,12 +27,8 @@ A sign of things to come, a freshman 3rd string defensive back Derick Brooks mak
 
 You forget how hard, and late players were allowed to hit back in the day. A good second or two after the whistle people are still getting hit in the head, then hopping up and running back to the huddle.
 
-Amp Lee gets hurt at the end of the game, its a blowout so he isn&#8217;t come back this game. Bennett scores another touchdown on the ground, one of 3 that night that I remember. Casey certainly commands the offense well. 
+Amp Lee gets hurt at the end of the game, its a blowout so he isn&#8217;t come back this game. Bennett scores another touchdown on the ground, one of 3 that night that I remember. Casey certainly commands the offense well.
 
 By the end of the game all the Disneyland characters are doing the Seminole Chop. It gets chippy and they start tossing players (Mormons are allowed to fight?).
 
 The Noles win 44-28, lots of running, still a fun game to watch.
-
-[Youtube Link][1]
-
- [1]: https://www.youtube.com/watch?v=8rOhGZRImEY

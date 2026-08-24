@@ -21,36 +21,44 @@ You have now given jmainguy root to the box.
 
 I did not feel like becoming root on my laptop, so I updated it via the following as my jmainguy user in the docker group.
 
+```bash
 docker run -v /:/home -ti fedora /bin/bash
-  
+```
+
 #This mounted / from the host, to /home on the container, and then dropped jmainguy into the container running bash (as root on the container).
-  
-as root, I ran chroot /home #This makes shell act like / starts at /home basically.
-  
-then because I hate /bin/sh, I ran /bin/bash
-  
+
+As root, I ran:
+
+```bash
+chroot /home
+```
+
+This makes the shell act like `/` starts at `/home`.
+
+Then because I hate `/bin/sh`, I ran:
+
+```bash
+/bin/bash
+```
+
 Hooray, I am full root on my laptop and can do as I please. Thankfully I just wanted to upgrade it
 
-dnf upgrade.
+```bash
+dnf upgrade
+```
 
 And as root on the container looking at dnf history, it shows this.
 
+```text
 [root@Jmainguy-Fedora jmainguy]# dnf history
-  
 Last metadata expiration check performed 2:03:46 ago on Fri May 8 20:56:52 2015.
-  
-ID | Login user | Date a | Action | Altere
-  
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
-      
-27 | System <unset> | 2015-05-08 22:59 | Update | 83
-      
-26 | Jonathan &#8230; <jmainguy> | 2015-05-05 16:10 | Update | 6
-      
-25 | Jonathan &#8230; <jmainguy> | 2015-05-04 08:48 | E, I, U | 131 EE
+
+ID | Login user          | Date             | Action  | Altered
+27 | System <unset>      | 2015-05-08 22:59 | Update  | 83
+26 | Jonathan <jmainguy> | 2015-05-05 16:10 | Update  | 6
+25 | Jonathan <jmainguy> | 2015-05-04 08:48 | E, I, U | 131 EE
+```
 
 As you can see, ID2 27, the user was &#8220;System <unset>&#8221; and updated 83 packages.
 
 tldr; Do not turn off selinux
-
-Credit <http://reventlov.com/advisories/using-the-docker-command-to-root-the-host> for inspiring me to try this. I was unable to duplicate his trick of copying /bin/sh to the host and using that to become root, but it relied on volume mounting as this does, so pretty much the same thing.

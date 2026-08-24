@@ -19,22 +19,23 @@ I have always wanted a interactive website that looks like a Linux shell. When @
   <p lang="en" dir="ltr">
     GoTTY – Share Your Linux Terminal (TTY) as a Web Application &#8211; <a href="https://t.co/qU3r49NLvk">https://t.co/qU3r49NLvk</a>
   </p>
-  
+
   <p>
-    &mdash; ChriSSHort ??? (@ChrisShort) <a href="https://twitter.com/ChrisShort/status/856520707609591808">April 24, 2017</a>
+    &mdash; ChriSSHort ??? (@ChrisShort) April 24, 2017
   </p>
 </blockquote>
-
 
 
 I wanted each page reload to bring a fresh copy of the site (because people are mean and will wreck the shell they are in on purpose, I know I would). I wanted it to be secure (I do not want people ddosing others, or bringing down my infra), and I wanted to have a few fun things for them to do (like play crawl, or chat on IRC).
 
 Building the site as a container within Docker, and then adding gotty -w /bin/bash was pretty easy. To get it to load a new container on every page load was hard.
 
-To accomplish that, I built soh-router, which intercepts ws:// websocket calls, checks sqlite3 for an available container, removes that entry from sqlite3, forwards the connection to the new container, and then spawns a new container for the next visitor. It also runs a Reaper periodically to check sqlite3 for containers which are dead now. The code for that can be found at <a href="https://github.com/Jmainguy/soh.re/tree/master/router" target="_blank">Router Code</a>.
+To accomplish that, I built [soh-router](https://github.com/Jmainguy/soh-router), which intercepts ws:// websocket calls, checks sqlite3 for an available container, removes that entry from sqlite3, forwards the connection to the new container, and then spawns a new container for the next visitor. It also runs a Reaper periodically to check sqlite3 for containers which are dead now. The code for that can be found at Router Code.
 
 I used Haproxy to forward all http requests to a Gotty container which does all the handshakes then tells you to upgrade to websocket (at which point the router intercepts the connection), Iptables to limit outbound connectivity, and Docker to limit jail the user and limit fork bombs.
 
 Was a fun project, I still need to add the rpm, and systemd service file to call this complete, but it is complete enough to share now.
 
 Visit <a href="https://soh.re" target="_blank">https://soh.re</a> and have some fun =).
+
+> **Editor's note, August 24, 2026:** soh.re now runs on Kubernetes. Istio handles ingress and routes regular HTTP traffic to the site's static upgrade service while sending WebSocket connections to [isolation-proxy](https://github.com/Jmainguy/isolation-proxy), a Go-based Kubernetes operator I wrote for per-connection isolation. The operator keeps a warm pool of ready pods, assigns a fresh pod to each connection, blocks outbound internet access with a NetworkPolicy, and deletes the pod when the connection closes. The [soh.re repository](https://github.com/Jmainguy/soh.re) contains the terminal environment and container image, while the [soh.re Helm chart](https://github.com/jmainguy/helm-charts/tree/main/sohre) contains the Kubernetes and Istio deployment configuration. [Read about the current soh.re project →](/projects/soh-re/)

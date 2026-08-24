@@ -1,0 +1,17 @@
+{{define "content"}}
+<article>
+  <header class="project-detail-hero">
+    <div class="project-detail-heading"><a class="eyebrow no-underline hover:underline" href="/projects/">← All projects</a><span class="project-number">{{.Project.Category}}</span><h1>{{.Project.Name}}</h1><p>{{.Project.Summary}}</p></div>
+    <div class="project-detail-image"><img src="{{.Project.Image}}" alt="{{.Project.ImageAlt}}"></div>
+  </header>
+  <div class="project-detail-body">
+    <section class="project-story"><p class="eyebrow">The project</p>{{range .Project.Story}}<p>{{.}}</p>{{end}}</section>
+    <aside class="project-facts">
+      <section><h2>What it does</h2><ul>{{range .Project.Highlights}}<li>{{.}}</li>{{end}}</ul></section>
+      <section><h2>Built with</h2><ul>{{range .Project.Stack}}<li>{{.}}</li>{{end}}</ul></section>
+      {{with .Project.Repositories}}<section><h2>Source code</h2><ul>{{range .}}<li><a href="{{.URL}}">{{.Name}} ↗</a></li>{{end}}</ul></section>{{end}}
+    </aside>
+  </div>
+  <a class="group project-visit" href="{{.Project.URL}}" target="_blank" rel="noopener noreferrer"><span class="project-visit-copy"><span>Open the live project</span><strong>{{.Project.Domain}}</strong></span><span class="project-visit-arrow" aria-hidden="true">↗</span></a>
+</article>
+{{end}}

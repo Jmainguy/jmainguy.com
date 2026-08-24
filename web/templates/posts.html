@@ -1,0 +1,11 @@
+{{define "content"}}<section class="page-mast">
+  <p class="eyebrow">Writing / 2010 to present</p>
+  <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_24rem] lg:items-end"><h1 class="page-title">Logbook.</h1><label class="mb-2 w-full"><span class="mb-2 block font-mono text-[.62rem] font-black uppercase tracking-[.13em]">Search all 113 log entries</span><input data-post-search type="search" placeholder="TITLE / TOPIC / YEAR" class="w-full border-2 border-ink bg-transparent px-4 py-4 font-mono text-sm font-bold outline-none placeholder:text-ink/40 focus:bg-acid focus:text-ink dark:border-white dark:placeholder:text-white/40"></label></div>
+  <div class="writing-ledger mt-14">
+  {{range .PostGroups}}<section class="logbook-year" data-year-group><h2 class="logbook-year-heading">{{.Year}}</h2>
+  {{range .Posts}}<a href="/logbook/{{.Slug}}/" class="post-card" data-post-card data-search="{{.Search}}">
+    <span class="post-card-index">LOG</span><time datetime="{{.ISODate}}">{{.ShortDate}}</time>
+    <div><h2>{{.Title}}</h2><p>{{.Excerpt}}</p></div><span class="post-card-arrow">→</span>
+  </a>{{end}}</section>{{end}}
+  <p data-search-empty class="hidden p-10 font-mono text-sm font-bold">NO ENTRIES MATCH THAT QUERY.</p></div>
+</section>{{end}}

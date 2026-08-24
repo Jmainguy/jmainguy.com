@@ -16,7 +16,7 @@ categories:
 After upgrading WHMCS this weekend I noticed I had duplicate email templates. I used the following sql to delete them.
 
 CREATE TABLE new_table AS
-  
+
 SELECT * FROM tblemailtemplates WHERE 1 GROUP BY name;
 
 drop table tblemailtemplates;

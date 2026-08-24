@@ -1,0 +1,17 @@
+{
+  "name": "jmainguy.com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i web/styles.css -o web/dist/styles.css --minify",
+    "build:js": "esbuild web/app.ts --bundle --minify --outfile=web/dist/app.js",
+    "dev": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "esbuild": "^0.25.9",
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2"
+  }
+}

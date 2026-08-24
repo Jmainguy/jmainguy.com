@@ -26,3 +26,5 @@ I am pysched for tonights game, the first step towards our dominance of the AFC 
 5. The new logo is awful, really preferred the old one.
 
 Despite all this, Dolphins will win the AFC East this year. Jets are in dis-aray, Bills are the Bills, and Brady lost all his receivers. Go Phins.
+
+> **Editor's note, August 24, 2026:** The concerns I raised here proved accurate, and the Dolphins still have not accomplished much since. The prediction that they would win the AFC East that year did not. Calling people idiots was wrong. Personal attacks are not acceptable, and I apologize. Dion Jordan did not remain with Miami for long. He later played for Seattle, Oakland, and San Francisco, finishing his NFL career with 63 games and 13.5 sacks. [View Dion Jordan's career statistics →](https://www.pro-football-reference.com/players/J/JordDi00.htm)

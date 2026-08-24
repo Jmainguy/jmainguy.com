@@ -31,37 +31,37 @@ During my time at [Red Hat](https://www.redhat.com/), I was responsible for depl
     - Performed the upgrade on those servers.
     - Paused to verify the upgrade before proceeding with the remaining servers.
 
-While this workflow was effective, it was labor-intensive, requiring highly skilled engineers. We called ourselves **Release Lieutenants**, a title that came with physical badges. The platform team designated a **Captain** who trained and supported us. 
+While this workflow was effective, it was labor-intensive, requiring highly skilled engineers. We called ourselves **Release Lieutenants**, a title that came with physical badges. The platform team designated a **Captain** who trained and supported us.
 
 Although this method fostered a strong team culture, it relied heavily on manual intervention and expertise. In hindsight, adopting GitOps could have saved time and resources by automating much of this process, allowing Red Hat to allocate more resources to application development.
 
 ## GitOps for Infrastructure and Applications
 
-You can see how I automatically deploy [helm charts](https://helm.sh/) via [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) by placing [ArgoCD Applications](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications) in a Github repo that ArgoCD is already watching at [https://github.com/Standouthost/clusters/tree/main/k3s.soh.re](https://github.com/Standouthost/clusters/tree/main/k3s.soh.re)
+You can see how I automatically deploy [helm charts](https://helm.sh/) via [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) by placing [ArgoCD Applications](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications) in a Github repo that ArgoCD is already watching.
 
-![ArgoCD Directory](/images/argocd-dir.png)
+![ArgoCD Directory](https://immich.soh.re/api/assets/af442c30-b7c5-4f9e-953b-395eeb56f43a/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
-If we dig into one of these applications, like [zot](https://github.com/Standouthost/clusters/blob/main/k3s.soh.re/zot.yaml) We can see that it is deploying a helm chart from a directory in a different github repo, it could just as easily have pointed to an OCI registry like [zot.soh.re](https://zot.soh.re) (which is the infrastructure we are reviewing)
+If we dig into one of these applications, like zot We can see that it is deploying a helm chart from a directory in a different github repo, it could just as easily have pointed to an OCI registry like [zot.soh.re](https://zot.soh.re) (which is the infrastructure we are reviewing)
 
-![Zot Application](/images/zot-application.png)
+![Zot Application](https://immich.soh.re/api/assets/df810f0a-dbcc-494a-95c8-318aff7d22b8/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 If we dig into that helm chart [https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml](https://github.com/Standouthost/helm-charts/blob/main/zot/Chart.yaml) We can see it is using a subchart with most the zot logic, at a specific version.
 
-![Zot Chart](/images/zot-chart.png)
+![Zot Chart](https://immich.soh.re/api/assets/72c989b3-bf7a-41cd-86f9-0ef0254cebdc/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 The default values are set at [values.yaml](https://github.com/Standouthost/helm-charts/blob/main/zot/values.yaml) (these can be overridden in the ArgoCD Application if we wish)
 
-![Zot Values](/images/zot-values.png)
+![Zot Values](https://immich.soh.re/api/assets/2b07dd6b-0359-4da8-8ac5-7c97b184dd2e/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 In addition to the subchart, we also deploy some [implementation specific ingress for our cluster](https://github.com/Standouthost/helm-charts/tree/main/zot/templates). Since we are using Istio, I have setup a Gateway / VirtualService / and Certificate
 
-![Zot Ingress](/images/zot-ingress.png)
+![Zot Ingress](https://immich.soh.re/api/assets/556033c5-ccad-4d42-a873-c5a865c43571/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 In the following screenshots, you can see how it appears inside the ArgoCD webui
 
-![Zot UI](/images/zot-argo-ui.png)
+![Zot UI](https://immich.soh.re/api/assets/d2b56da2-ef2d-4315-81ee-2c2880455201/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
-![Zot More](/images/zot-ui-big.png)
+![Zot More](https://immich.soh.re/api/assets/238b0e67-e2ce-4d87-b271-8b4fee65a0a8/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 I can update the deployment by changing the version of the chart, or changing any of the values, or adding more files to the templates/ dir of the chart, and ArgoCD will automatically deploy and reconcile the differences.
 
@@ -73,7 +73,7 @@ Today, my blog serves as a practical example of GitOps in action, demonstrating 
 
 1. After previewing a change locally, I merge and push the code to [GitHub](https://github.com/jmainguy/jmainguy.com).
 2. A GitHub Webhook triggers an update process on my server, which performs a fresh `git pull`.
-3. The [Kubernetes YAML](https://github.com/Standouthost/clusters/blob/main/k3s.soh.re/jmainguy.com.yaml) configuration for the website is synchronized with [ArgoCD](https://argo-cd.readthedocs.io/) and deployed to the cluster.
+3. The Kubernetes YAML configuration for the website is synchronized with [ArgoCD](https://argo-cd.readthedocs.io/) and deployed to the cluster.
 
 Even the [Golang code](https://github.com/Jmainguy/autoweb/blob/main/main.go) that automates the git pull process is managed with Git. It’s version-controlled, built into a container, and stored in an artifact registry, ready to deploy.
 
@@ -88,15 +88,15 @@ git push
 
 ArgoCD
 
-![Jmainguy Argocd](/images/jmainguy-argo.png)
+![Jmainguy Argocd](https://immich.soh.re/api/assets/e35e560c-c320-40ea-a662-9c8ada1d0faf/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
-![Jmainguy Argocd Expanded](/images/jmainguy-expanded.png)
+![Jmainguy Argocd Expanded](https://immich.soh.re/api/assets/93a801b2-10a7-45b6-b655-4c468d7939e4/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 Webhook configuration in Github
 
-![Webhooks](/images/webhook.png)
+![Webhooks](https://immich.soh.re/api/assets/787724c4-1c86-446d-a30b-0afcb203ef08/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
-![Deliveries](/images/deliveries.png)
+![Deliveries](https://immich.soh.re/api/assets/914bda63-cbd9-4ee4-92b3-46be7861dd1b/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 I can troubleshoot / resend webhook deliveries straight from the Github UI.
 

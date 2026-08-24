@@ -14,3 +14,5 @@ categories:
 
 ---
 And now Jmainguy.com is linked to Twitter and Facebook.
+
+> **Editor's note, August 24, 2026:** I no longer link this website to Twitter or Facebook. I never really understood Twitter.

@@ -13,7 +13,7 @@ categories:
   - General
 
 ---
-At Seth&#8217;s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia. 
+At Seth&#8217;s one year checkup we found a blood anomaly, after talking to a specialist in Chapel Hill, it turned out to be AML Leukemia.
 
 So far we have completed two 30 day rounds of inpatient hospital care, with another 2 more to go. This is typically 10 days of chemotherapy followed by 20 days of waiting for you immune system to recover, and then you get about a week to 10 days at home before you start the next round.
 
@@ -28,3 +28,5 @@ The chances to find a match are around one in a million, but we have millions of
 It is free to sign up, and the test is not physically painful. They send you a kit with cotton swabs, you swab your cheeks for 30 seconds, and send it back in. Please consider signing up for <a href="https://bethematch.org/" target="_blank">bethematch.org</a> to be somebody&#8217;s hero, and help save a life.
 
 They are looking ideally for 18-44 year old people, with 61 being the cutoff limit. They also want you to be within a fairly generous <a href="https://bethematch.org/support-the-cause/donate-bone-marrow/possible-match/weight-guidelines-when-you-match-a-patient/" target="_blank">weight limit</a>
+
+> **Editor's note, August 24, 2026:** Be The Match is now NMDP, and the need for donors remains. Please [visit NMDP and join the donor registry](https://www.nmdp.org/get-involved/join-the-registry). A free cheek swab could identify you as the match who saves someone's life. The person waiting for that match could be a child.

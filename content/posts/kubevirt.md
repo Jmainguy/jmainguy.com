@@ -15,7 +15,7 @@ Other options would be Openstack, which provides many of the features the cloud 
 ## RHEV
 Another option was Redhat Enterprise Virtualization (RHEV), this was the commercial version of [oVirt](https://www.ovirt.org/) which is itself a wrapper ontop of libvirt (for powering the VM's, and other tools for other features). However, Redhat has decided to abandon RHEV in favor of [Red Hat OpenShift Virtualization](https://www.redhat.com/en/technologies/cloud-computing/openshift/virtualization) (which is a commercial version of [kubevirt](https://kubevirt.io/)).
 
-![RHEV is Dead](/images/rhev.png)
+![RHEV is Dead](https://immich.soh.re/api/assets/8aa1490a-47a3-46d5-91f3-23d1ee122f57/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
 
 ## libvirt
 
@@ -31,13 +31,13 @@ So with that in mind, I decided this weekend to give a shot myself, and I have t
 
 ## My experience with kubevirt
 
-[https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt](https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt)  Explains how to get started, and following their kubectl apply -f against the URL's provided really did work well. When I searched for the helm charts I found [This discussion](https://github.com/kubevirt/community/pull/224) where the community is hard at work at providing them. I went ahead and [made my own](https://github.com/Standouthost/helm-charts/tree/main/kubevirt) for now as I wait on upstream to adopt a strategy for helm packaging. 
+[https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt](https://github.com/kubevirt/kubevirt?tab=readme-ov-file#to-start-using-kubevirt)  Explains how to get started, and following their kubectl apply -f against the URL's provided really did work well. When I searched for the helm charts I found [This discussion](https://github.com/kubevirt/community/pull/224) where the community is hard at work at providing them. I went ahead and made my own for now as I wait on upstream to adopt a strategy for helm packaging.
 
 So now that we have installed kubevirt + [CDI](https://kubevirt.io/user-guide/storage/containerized_data_importer/) (for Persistent data), it is time to actually create a virtual machine.
 
 When I installed debian on my desktops, I downloaded a live iso, burned it onto a thumb drive, and then booted into the thumb drive and followed the graphical installer with a keyboard, selecting various choices like the hostname, partition layout, and passwords. I actually kind of enjoy doing this, however its very not feasible to do via a text console. In the past with libvirt I would use vnc to connect and use a graphical interface and follow similar steps, however for kubevirt I chose to use a [cloud image](https://cdimage.debian.org/images/cloud/) with [cloud-init](https://cloudinit.readthedocs.io/en/latest/reference/examples.html) which allows for automation to run on a new install which allows for quick unattended installations.
 
-I ended up with this cloud config, which 
+I ended up with this cloud config, which
 - Added peristent dhcp (because on kubevirt, the mac changes on destroy / create).
 - Installed wireguard and generated a private / public key
 - Added my public ssh key so I can ssh into the VM as root once its finished
@@ -162,7 +162,7 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 Last login: Mon Dec  2 09:11:18 2024 from 192.168.86.40
-root@debian-vm:~# 
+root@debian-vm:~#
 ```
 
 I was able to create this VM in minutes using the code, and I can make another ten if I wanted to just as quickly (if I have the disks / resources ) to support it.
@@ -173,6 +173,6 @@ I was able to create this VM in minutes using the code, and I can make another t
 - libvirt is cool
 - kubevirt is cool
 
-If you want to create VM's, and already have a kubernetes cluster, I highly recommend kubevirt. You only need two files, a VirtualMachine and a DataVolume. 
+If you want to create VM's, and already have a kubernetes cluster, I highly recommend kubevirt. You only need two files, a VirtualMachine and a DataVolume.
 
 If you are looking for a commercial offering to replace VMware, I would recommend offerings which are powered by kubevirt.

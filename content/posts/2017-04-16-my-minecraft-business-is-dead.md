@@ -14,11 +14,3 @@ categories:
 
 ---
 I started a minecraft business to help pay for hosting my own minecraft server. It blew up and I ended up getting alot of customers really quick. I stopped marketing to get new clients about 2-3 years ago and when I checked today the last of my word of mouth people stopped paying about 3 months ago. So I am cancelling my whmcs license and redirecting the website to the open source code the business generated (which I am also doing a poor job of maintaining).
-
-<a href="https://standouthost.com" target="_blank">standouthost.com</a> now redirects to <a href="https://github.com/standouthost/multicraft" target="_blank">github.com/standouthost/multicraft</a>.
-
-I was able to do this with the following haproxy code
-
-acl host_standouthost hdr(host) -i standouthost.com
-  
-redirect location https://github.com/standouthost/multicraft if host_standouthost

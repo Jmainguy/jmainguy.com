@@ -1,0 +1,4 @@
+{{define "content"}}<article>
+  <header class="article-header"><a href="/logbook/" class="eyebrow no-underline hover:underline">← Return to the logbook</a><h1 class="article-title">{{.Post.Title}}</h1><div class="article-meta"><div><span>Published</span><time datetime="{{.Post.ISODate}}">{{.Post.LongDate}}</time></div><div><span>Author</span><strong>Jonathan Mainguy</strong></div></div></header>
+  <div class="prose-custom article-body mt-12 lg:mt-16">{{.Post.HTML}}</div>
+</article>{{end}}

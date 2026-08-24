@@ -13,8 +13,6 @@ categories:
   - General
 
 ---
-[FSU vs Tulane][1]
-
 Casey Weldon, and Amp Lee tear up the Tulane Defense all game, doing anything they want. 31 points before getting pulled at the end of the third.
 
 Brad Johnson comes in at the beginning of the 4th. A pick bounces off a receiver and into the hands of a defender, not the QB&#8217;s fault. Next drive Brad completes a TD pass to one of the tight ends. Marking 4 TE touchdowns in this game. The announcers do not believe any TE&#8217;s caught touchdown passes last year
@@ -26,5 +24,3 @@ Tulane never had a chance, FSU is just bigger, faster, and has Charlie ward as t
 Bobby said Tulane runs the same offense as Michigan and Miami, both whom the Noles will face later this year. They got good reps and learned alot.
 
 This was a cupcake / warm up game, which was a welcome relief following a crazy opening day in California. Overall pretty boring game to watch, but interesting.
-
- [1]: https://www.youtube.com/watch?v=zR9sCuLxcco

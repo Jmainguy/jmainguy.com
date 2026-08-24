@@ -144,7 +144,7 @@ func reap(db *sql.DB, name string) {
 }
 ```
 
-After adding some more logging I saw that the string being returned for false was 
+After adding some more logging I saw that the string being returned for false was
 
 ```bash
 Nov 26 16:54:57 vm1.soh.re soh-router[3394994]: 2023/11/26 16:54:57 Did not reap 93061D4B16339792BAAF because isRunning returned ''false'
@@ -156,3 +156,5 @@ This revelation unveiled that the string returned by Podman was 'false'\n. Recti
 Remarkably, the system demonstrated resilience by functioning even when unable to write to the database on disk. This characteristic was highlighted during the installation of the new code. To ensure seamless future deployments, I created a configuration file, /etc/soh-router/config.yaml, and established the database directory at /opt/soh-router. Consequently, the database began to be written to disk as expected. Additional code for these configurations was incorporated into the .gorelease.yml for streamlined assistance in future releases.
 
 [Link to pull request on GitHub](https://github.com/Jmainguy/soh-router/pull/13)
+
+> **Editor's note, August 24, 2026:** The soh.re stack has changed considerably since this debugging session. The old pair of VMs running soh-router, Podman containers, and a SQLite-backed pool has been replaced by Kubernetes, Istio, and the Go-based isolation-proxy operator. Istio routes the WebSocket connection to isolation-proxy, which maintains a warm pool of ready pods, assigns one fresh pod to each session, and deletes it when the connection closes. [Read about the current soh.re project →](/projects/soh-re/)

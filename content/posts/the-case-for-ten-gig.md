@@ -62,7 +62,7 @@ Pod created kubestr-fio-pod-fwf8r
 Running FIO test (default-fio) on StorageClass (longhorn) with a PVC of Size (10G)
 Elapsed time- 7m1.388394244s
 FIO test results:
-  
+
 FIO version - fio-3.36
 Global options - ioengine=libaio verify=0 direct=1 gtod_reduce=1
 
@@ -125,7 +125,7 @@ I then remembered I had an extra laptop dock lying around that supported usb3 an
 Running FIO test (default-fio) on StorageClass (longhorn) with a PVC of Size (10G)
 Elapsed time- 59.649235912s
 FIO test results:
-  
+
 FIO version - fio-3.36
 Global options - ioengine=libaio verify=0 direct=1 gtod_reduce=1
 

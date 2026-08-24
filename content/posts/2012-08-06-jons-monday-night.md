@@ -15,12 +15,8 @@ The Hall of Fame NFL game was this past weekend, and I missed it (Was helping a 
 
 OpenVPN wasn&#8217;t as easy as I remembered it, last time I used a great guide from BuyVM, however they deleted it. So after struggeling through multiple guides and bringing down the node completely once, I found a guide that made alot of sense and worked the first time I tried it.
 
-<https://forum.ramhost.us/bbs/viewtopic.php?id=160>
-
 After shelling out $200 to Roger Goodell I am now watching the Hall of Fame game in HD on the computer.  Go Phins
-
-&nbsp;
 
 EDIT:
 
-Got tired of the ugly link structure on the site, added mod rewrite to lighttpd following this guide <http://emil.haukeland.name/webservers/2010/url-rewriting-for-wordpress-and-lighttpd/> very well written, Thank you Emil.
+Got tired of the ugly link structure on the site and added mod rewrite to lighttpd with help from a very well-written guide. Thank you Emil.

@@ -1,0 +1,16 @@
+name: Golang CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
+jobs:
+  golang-ci:
+    uses: Jmainguy/golang-workflows/.github/workflows/golang-ci.yml@v1
+    with:
+      docker: true

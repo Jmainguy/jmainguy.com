@@ -15,8 +15,6 @@ categories:
 ---
 The Blake hotel in Charlotte is awful, but they asked me to fill out a survey to get a grip on my experience. Here it is, [ Warning curse words]
 
-&nbsp;
-
 There is nowhere to idle car while checking in. Doorman disappeared when they saw us pull up.
 
 Website site WiFi, once checked in you find out it is $9 a day. This is free at every hotel I have ever stayed at, or choose to stay at again in the future.
@@ -33,5 +31,7 @@ The Website clearly states a Coffee maker is in every room, however there was no
 
 The hotel is old, up charges for every little thing, and employees refused to look at me, never ever staying at the Blake again. I am also strongly advocating for the South East Linux Festival to never go back to the Blake and host somewhere else that treats their guests like paying customers, instead of people to fuck over after they have checked in.
 
-Fuck you,  
+Fuck you,
 Jon Mainguy
+
+> **Editor's note, August 24, 2026:** I was extremely disappointed by how this stay turned out. I had been excited to stay at the Blake, and the experience was a huge letdown. I have not stayed in Charlotte since. I stand by my recommendation to stay elsewhere, although the vitriol in this survey was excessive.

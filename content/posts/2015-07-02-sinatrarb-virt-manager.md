@@ -18,7 +18,5 @@ A client asked me to write him a web app, which would let him stop/start/restart
 I next need to add logins for this to be useful at all, but its neat how easy sinatrarb makes creating a web app.
 
 <https://github.com/Jmainguy/sinatrarb-virt-manager> is the code
-  
-<http://phy01.standouthost.com:8080/> is the demo, go nuts.
 
 I am basically just capturing the action requested from the browser, and passing it to bash.
