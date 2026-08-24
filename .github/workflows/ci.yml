@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   golang-ci:
-    uses: Jmainguy/golang-workflows/.github/workflows/golang-ci.yml@v1
+    uses: Jmainguy/golang-workflows/.github/workflows/golang-ci.yml@v2.1.1
     with:
       docker: true

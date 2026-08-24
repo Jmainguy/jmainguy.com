@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   release:
-    uses: Jmainguy/golang-workflows/.github/workflows/golang-release.yml@main
+    uses: Jmainguy/golang-workflows/.github/workflows/golang-release.yml@v2.1.1
     secrets:
       token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
       docker_username: ${{ secrets.DOCKER_USERNAME }}

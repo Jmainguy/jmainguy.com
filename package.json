@@ -9,9 +9,9 @@
     "dev": "npm run build -- --watch"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "esbuild": "^0.25.9",
-    "tailwindcss": "^4.1.12",
-    "typescript": "^5.9.2"
+    "@tailwindcss/cli": "^4.3.3",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
   }
 }
