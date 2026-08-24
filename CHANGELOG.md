@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/Jmainguy/jmainguy.com/compare/v1.0.0...v1.0.1) (2026-08-24)
+
+
+### Bug Fixes
+
+* use current shared release workflow ([2c235b8](https://github.com/Jmainguy/jmainguy.com/commit/2c235b80d277ab96ac93ceeeebdcaafba4e39085))
+* use shared signed OCI release workflow ([bce8cd4](https://github.com/Jmainguy/jmainguy.com/commit/bce8cd4ae2483ec78314a16afa24d4e00963916a))
+
 ## 1.0.0 (2026-08-24)
 
 
