@@ -40,7 +40,7 @@ kos:
     main: .
     base_image: cgr.dev/chainguard/static:latest
     repositories:
-      - zot.soh.re/jmainguy/jmainguy.com
+      - zot.soh.re/jmainguy
     platforms:
       - linux/amd64
       - linux/arm64
