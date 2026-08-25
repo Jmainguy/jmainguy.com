@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/Jmainguy/jmainguy.com/compare/v1.0.1...v1.0.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* **family:** correct Terri Creel's name ([0abbfd4](https://github.com/Jmainguy/jmainguy.com/commit/0abbfd4e57409ac19c77d2c281d83c77d96d39bf))
+* **family:** keep Hazel Clanton's maiden name ([e82a55c](https://github.com/Jmainguy/jmainguy.com/commit/e82a55cce9f49fa5d13bb055e92af52fac199cd5))
+
 ## [1.0.1](https://github.com/Jmainguy/jmainguy.com/compare/v1.0.0...v1.0.1) (2026-08-24)
 
 
