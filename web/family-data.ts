@@ -1101,7 +1101,7 @@ export const family: Record<string, FamilyPerson> = {
     ]
   },
   "hazel": {
-    "name": "Hazel Clanton Mainguy",
+    "name": "Hazel Clanton",
     "facts": [
       "Born March 20, 1929 in Hahira, Georgia",
       "Married 1949",
