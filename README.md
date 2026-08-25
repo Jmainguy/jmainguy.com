@@ -5,6 +5,8 @@ templates, compiled TypeScript and Tailwind CSS, and Markdown posts are embedded
 at build time. Blog media is hosted by Immich and tracked in
 `immich-assets.json`.
 
+**[Visit jmainguy.com →](https://jmainguy.com/)**
+
 ## Add new posts
 ```sh
 cp content/posts/example.md content/posts/my-first-post.md
