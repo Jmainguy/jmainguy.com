@@ -1466,7 +1466,7 @@ export const family: Record<string, FamilyPerson> = {
     ]
   },
   "terry-creel": {
-    "name": "Terry Creel",
+    "name": "Terri Creel",
     "facts": [
       "Born 1954 in Florida",
       "Married 1977"
