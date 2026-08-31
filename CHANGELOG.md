@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Jmainguy/jmainguy.com/compare/v1.0.2...v1.1.0) (2026-08-31)
+
+
+### Features
+
+* **family:** connect ancestral and regional family branches ([2e68c2a](https://github.com/Jmainguy/jmainguy.com/commit/2e68c2a4407464e8c1fa62bafd92d2a915837fc2))
+
 ## [1.0.2](https://github.com/Jmainguy/jmainguy.com/compare/v1.0.1...v1.0.2) (2026-08-25)
 
 
