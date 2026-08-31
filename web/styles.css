@@ -108,7 +108,7 @@
   .family-parents { @apply mx-auto grid max-w-4xl gap-3 sm:grid-cols-2; }
   .family-parent-connector { @apply mx-auto h-12 w-1 bg-ink dark:bg-white; }
   .family-focus { @apply mx-auto max-w-4xl border-4 border-ink bg-acid p-5 text-ink sm:p-7; box-shadow: 8px 8px 0 var(--color-moss); }
-  .family-couple { @apply flex flex-col items-stretch justify-center sm:flex-row sm:items-center; }
+  .family-couple { @apply flex flex-col items-stretch justify-center sm:flex-row sm:flex-wrap sm:items-center; }
   .family-member { @apply min-w-0 flex-1 p-4 text-center; }
   .family-member > span { @apply font-mono text-[.6rem] font-black uppercase tracking-[.12em] opacity-55; }
   .family-member h2, .family-member h3 { @apply mt-2 text-3xl leading-none font-black uppercase tracking-[-.04em] sm:text-4xl; }
@@ -128,6 +128,7 @@
   .family-children:empty { @apply border-0 pt-0; }
   .family-person { @apply relative min-h-36 cursor-pointer border-2 border-ink bg-paper p-5 text-left text-ink hover:-translate-y-1 hover:bg-acid focus-visible:bg-acid focus-visible:text-ink dark:border-white dark:text-white dark:hover:bg-acid dark:hover:text-ink; }
   .dark .family-person { background-color: var(--palette-dark-bg); }
+  .dark .family-person:hover, .dark .family-person:focus-visible { background-color: var(--color-acid); }
   .family-person::before { content: ""; @apply absolute -top-10 left-1/2 h-10 w-0.5 -translate-x-1/2 bg-ink dark:bg-white; }
   .family-person strong { @apply block text-lg leading-tight font-black uppercase; }
   .family-person span { @apply mt-4 block text-sm opacity-65; }
@@ -139,6 +140,9 @@
   .family-person--parent span { @apply mt-0 font-mono text-[.58rem] font-black uppercase tracking-[.12em] text-signal opacity-100; }
   .family-member--spouse { @apply min-h-0 border-0 bg-transparent text-center shadow-none hover:translate-y-0; }
   .dark .family-member--spouse { background-color: transparent; }
+  .family-focus .family-member { @apply sm:basis-48; }
+  .family-focus .family-member--spouse { @apply text-ink; }
+  .family-focus .family-member--spouse .family-card-facts { @apply text-moss; }
   .family-member--spouse::before { display: none; }
   .family-member--spouse strong { @apply mt-2 text-2xl leading-none font-black uppercase tracking-[-.04em] sm:text-3xl; }
   .family-member--spouse span { @apply mt-0 font-mono text-[.6rem] font-black uppercase tracking-[.12em] opacity-55; }

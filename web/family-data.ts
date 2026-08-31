@@ -1,8 +1,11 @@
+import importedFamily from './family-imports.json';
+
 export type FamilyPerson = {
   name: string;
   facts: string[];
   notes?: string[];
   source?: { label: string; url: string };
+  sources?: { label: string; url: string }[];
   parents: string[];
   spouses: string[];
   children: string[];
@@ -2521,5 +2524,7 @@ export const family: Record<string, FamilyPerson> = {
     "children": []
   }
 } as Record<string, FamilyPerson>;
+
+Object.assign(family, importedFamily);
 
 export const familyStart = "holden-leonard-mainguy";

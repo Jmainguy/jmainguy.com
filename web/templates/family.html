@@ -6,6 +6,15 @@
 </section>
 
 <section class="shell mt-10" data-family-explorer>
+  <label for="family-search" class="eyebrow">Find a person</label>
+  <input id="family-search" class="w-full border-2 border-ink bg-transparent px-4 py-4 mb-2 dark:border-white" type="search" list="family-options" data-family-search placeholder="Type a name, then select a person" autocomplete="off">
+  <datalist id="family-options" data-family-options></datalist>
+  <p class="family-credit">Explore branches:
+    <button type="button" class="hover:underline" data-family-id="maingi-0">Early Maingi</button> ·
+    <button type="button" class="hover:underline" data-family-id="pierre-8">Maingay / Nicholas</button> ·
+    <button type="button" class="hover:underline" data-family-id="pierre-45">James / Western Canada</button> ·
+    <button type="button" class="hover:underline" data-family-id="holden-leonard-mainguy">Holden and Hazel</button>
+  </p>
   <div class="family-stage">
     <div class="family-parents" data-family-parents></div>
     <div class="family-parent-connector" aria-hidden="true"></div>
@@ -16,5 +25,6 @@
     <div class="family-children" data-family-children></div>
   </div>
   <p class="family-credit">Thank you to <a href="http://mainguy.ca/">Mainguy.ca</a> for researching and documenting this family tree.</p>
+  <p class="family-credit">Relationships follow the published charts and have not been independently verified. Source discrepancies are noted on affected people; an absent parent means the imported sources do not establish that link.</p>
 </section>
 {{end}}

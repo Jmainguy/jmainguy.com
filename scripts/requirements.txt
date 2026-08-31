@@ -1,0 +1,2 @@
+# Latest stable pdfplumber, pinned for reproducible family-chart imports.
+pdfplumber==0.11.10

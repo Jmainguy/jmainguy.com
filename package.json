@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test:family": "node --test scripts/family.test.mjs",
     "build": "npm run build:css && npm run build:js",
     "build:css": "tailwindcss -i web/styles.css -o web/dist/styles.css --minify",
     "build:js": "esbuild web/app.ts --bundle --minify --outfile=web/dist/app.js",

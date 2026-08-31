@@ -1,4 +1,5 @@
 import { family, familyStart, type FamilyPerson } from "./family-data";
+import { orderedParents } from "./family-parent-layout";
 
 const root = document.documentElement;
 const themeButton = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
@@ -50,6 +51,7 @@ if (familyExplorer) {
   const parents = familyExplorer.querySelector<HTMLElement>("[data-family-parents]")!;
   const connector = familyExplorer.querySelector<HTMLElement>(".family-connector")!;
   const parentConnector = familyExplorer.querySelector<HTMLElement>(".family-parent-connector")!;
+  const escape = (value: string) => value.replace(/[&<>"']/g, (char) => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]!));
 
   const orderedFacts = (person: FamilyPerson) => [...person.facts].sort((left, right) => {
     const rank = (fact: string) => fact.startsWith("Born") ? 0 : fact.startsWith("Married") ? 1 : fact.startsWith("Died") ? 2 : 3;
@@ -57,12 +59,14 @@ if (familyExplorer) {
   });
 
   const facts = (person: FamilyPerson) => person.facts.length
-    ? `<ul class="family-facts">${orderedFacts(person).map((fact) => `<li>${fact}</li>`).join("")}</ul>`
+    ? `<ul class="family-facts">${orderedFacts(person).map((fact) => `<li>${escape(fact)}</li>`).join("")}</ul>`
     : "";
 
-  const notes = (person: FamilyPerson) => person.notes?.length
-    ? `<div class="family-notes">${person.notes.map((note) => `<p>${note}</p>`).join("")}${person.source ? `<a href="${person.source.url}">${person.source.label} ↗</a>` : ""}</div>`
-    : "";
+  const notes = (person: FamilyPerson) => {
+    const sources = [...(person.source ? [person.source] : []), ...(person.sources ?? [])];
+    if (!person.notes?.length && !sources.length) return "";
+    return `<div class="family-notes">${(person.notes ?? []).map(note => `<p>${escape(note)}</p>`).join("")}${sources.map(source => `<a href="${escape(source.url)}">${escape(source.label)} ↗</a>`).join(" · ")}</div>`;
+  };
 
   const familySummary = (node: FamilyPerson) => {
     const parts: string[] = [];
@@ -74,29 +78,48 @@ if (familyExplorer) {
   const personCard = (id: string, relation: string, extraClass = "") => {
     const person = family[id];
     const summary = familySummary(person);
-    return `<button type="button" class="family-person ${extraClass}" data-family-id="${id}"><span>${relation}</span><strong>${person.name}</strong>${person.facts.length ? `<ul class="family-card-facts">${orderedFacts(person).map((fact) => `<li>${fact}</li>`).join("")}</ul>` : ""}${summary ? `<em>${summary}</em>` : ""}</button>`;
+    return `<button type="button" class="family-person ${extraClass}" data-family-id="${id}"><span>${relation}</span><strong>${escape(person.name)}</strong>${person.facts.length ? `<ul class="family-card-facts">${orderedFacts(person).map((fact) => `<li>${escape(fact)}</li>`).join("")}</ul>` : ""}${summary ? `<em>${summary}</em>` : ""}</button>`;
   };
 
   const renderFamily = (id: string, updateHash = true) => {
     const node = family[id];
     if (!node) return;
     const spouseMarkup = node.spouses.map((spouseID) => `<div class="family-marriage"><span aria-hidden="true"></span></div>${personCard(spouseID, "Spouse", "family-member family-member--spouse")}`).join("");
-    focus.innerHTML = `<div class="family-couple"><div class="family-member family-member--primary"><span>Selected</span><h2>${node.name}</h2>${facts(node)}</div>${spouseMarkup}</div>${notes(node)}${node.children.length ? `<p class="family-count">${node.children.length} ${node.children.length === 1 ? "child" : "children"}</p>` : ""}`;
-    parents.innerHTML = node.parents.map((parentID) => personCard(parentID, "Parent", "family-person--parent")).join("");
+    focus.innerHTML = `<div class="family-couple"><div class="family-member family-member--primary"><span>Selected</span><h2>${escape(node.name)}</h2>${facts(node)}</div>${spouseMarkup}</div>${notes(node)}${node.children.length ? `<p class="family-count">${node.children.length} ${node.children.length === 1 ? "child" : "children"}</p>` : ""}`;
+    parents.innerHTML = orderedParents(node).map((parentID) => personCard(parentID, "Parent", "family-person--parent")).join("");
     children.innerHTML = node.children.map((childID) => personCard(childID, "Child")).join("");
     connector.hidden = node.children.length === 0;
     parentConnector.hidden = node.parents.length === 0;
     if (updateHash) {
-      history.replaceState(null, "", `#${id}`);
+      history.pushState(null, "", `#${id}`);
       focus.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
-  familyExplorer.querySelector(".family-stage")?.addEventListener("click", (event) => {
+  familyExplorer.addEventListener("click", (event) => {
     const target = (event.target as HTMLElement).closest<HTMLButtonElement>("[data-family-id]");
     if (!target?.dataset.familyId) return;
     renderFamily(target.dataset.familyId);
   });
+
+  const search = familyExplorer.querySelector<HTMLInputElement>("[data-family-search]")!;
+  const options = familyExplorer.querySelector<HTMLDataListElement>("[data-family-options]")!;
+  const names = new Map(Object.entries(family).map(([id, person]) => [
+    `${person.name} — ${person.facts.find(f => f.startsWith('Born')) ?? 'birth unknown'} [${id}]`, id
+  ]));
+  for (const label of [...names.keys()].sort()) {
+    const option = document.createElement('option');
+    option.value = label;
+    options.append(option);
+  }
+  const selectSearchResult = () => {
+    const id = names.get(search.value);
+    if (id) { renderFamily(id); search.value = ''; }
+  };
+  search.addEventListener('input', selectSearchResult);
+  search.addEventListener('change', selectSearchResult);
+  window.addEventListener('popstate', () => renderFamily(family[location.hash.slice(1)] ? location.hash.slice(1) : familyStart, false));
+  window.addEventListener('hashchange', () => renderFamily(location.hash.slice(1), false));
 
   const initialID = location.hash.slice(1);
   renderFamily(family[initialID] ? initialID : familyStart, false);
