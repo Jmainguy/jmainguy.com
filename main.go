@@ -16,11 +16,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yuin/goldmark"
-	"github.com/yuin/goldmark/extension"
-	"github.com/yuin/goldmark/parser"
-	"github.com/yuin/goldmark/renderer/html"
-	"gopkg.in/yaml.v3"
+	"github.com/yuin/goldmark/v2/extension"
+	"github.com/yuin/goldmark/v2/parser"
+	"github.com/yuin/goldmark/v2/renderer/html"
+	"go.yaml.in/yaml/v3"
 )
 
 // Everything needed at runtime is compiled into the executable.
@@ -206,7 +205,8 @@ func loadPosts() ([]*post, map[string]*post, error) {
 	if err != nil {
 		return nil, nil, err
 	}
-	md := goldmark.New(goldmark.WithExtensions(extension.GFM), goldmark.WithParserOptions(parser.WithAutoHeadingID()), goldmark.WithRendererOptions(html.WithUnsafe()))
+	mdParser := parser.New(parser.WithExtensions(extension.GFMParser), parser.WithAutoHeadingID())
+	mdRenderer := html.New(html.WithExtensions(extension.GFMHTMLRenderer), html.WithUnsafe())
 	var posts []*post
 	legacy := map[string]*post{}
 	for _, entry := range entries {
@@ -230,7 +230,7 @@ func loadPosts() ([]*post, map[string]*post, error) {
 		}
 		body := youtube.ReplaceAll(parts[2], []byte(`<iframe src="https://www.youtube-nocookie.com/embed/$1" title="YouTube video" loading="lazy" allowfullscreen></iframe>`))
 		var rendered bytes.Buffer
-		if err := md.Convert(body, &rendered); err != nil {
+		if err := mdRenderer.Render(&rendered, body, mdParser.Parse(body)); err != nil {
 			return nil, nil, err
 		}
 		plain := strings.TrimSpace(spaces.ReplaceAllString(tags.ReplaceAllString(rendered.String(), " "), " "))
