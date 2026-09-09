@@ -3,6 +3,18 @@
   "sharedLinkId": "051dff8e-c369-4b14-ad90-9d6191314179",
   "sharedLinkKey": "te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak",
   "assets": {
+    "/images/line6-tt-control-gui.png": {
+      "id": "e0bd6064-1c56-42fe-b224-0accf3d595f6",
+      "url": "https://immich.soh.re/api/assets/e0bd6064-1c56-42fe-b224-0accf3d595f6/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
+    "/images/line6-tt-sharc-flash.jpg": {
+      "id": "72dd5f54-78fa-4f2d-9238-9328d1d81456",
+      "url": "https://immich.soh.re/api/assets/72dd5f54-78fa-4f2d-9238-9328d1d81456/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
+    "/images/line6-tt-main-board.jpg": {
+      "id": "6fc8cbec-50b4-4567-a98c-167e775a7663",
+      "url": "https://immich.soh.re/api/assets/6fc8cbec-50b4-4567-a98c-167e775a7663/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
     "/images/20161225_133402007.jpg": {
       "id": "d7e3ccd0-71d6-4cc2-bd97-ac3b30fa3cd2",
       "url": "https://immich.soh.re/api/assets/d7e3ccd0-71d6-4cc2-bd97-ac3b30fa3cd2/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
