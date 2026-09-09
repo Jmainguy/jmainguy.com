@@ -3,6 +3,22 @@
   "sharedLinkId": "051dff8e-c369-4b14-ad90-9d6191314179",
   "sharedLinkKey": "te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak",
   "assets": {
+    "/images/line6-tt-front.jpg": {
+      "id": "0e1c687a-3e6e-4aca-889a-f321137daa04",
+      "url": "https://immich.soh.re/api/assets/0e1c687a-3e6e-4aca-889a-f321137daa04/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
+    "/images/line6-tt-rear.jpg": {
+      "id": "29f8ab0e-b849-4356-927a-7c941d2f4952",
+      "url": "https://immich.soh.re/api/assets/29f8ab0e-b849-4356-927a-7c941d2f4952/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
+    "/images/codex-three-percent-usage-hd.png": {
+      "id": "ba1a6b29-9531-46ed-9e20-a2ffbed9d7dd",
+      "url": "https://immich.soh.re/api/assets/ba1a6b29-9531-46ed-9e20-a2ffbed9d7dd/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
+    "/images/line6-tt-microsd-before-removal.jpg": {
+      "id": "53041902-284a-4fdb-b809-e5d2d6298d88",
+      "url": "https://immich.soh.re/api/assets/53041902-284a-4fdb-b809-e5d2d6298d88/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"
+    },
     "/images/line6-tt-control-gui.png": {
       "id": "e0bd6064-1c56-42fe-b224-0accf3d595f6",
       "url": "https://immich.soh.re/api/assets/e0bd6064-1c56-42fe-b224-0accf3d595f6/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak"

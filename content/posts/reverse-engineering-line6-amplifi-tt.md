@@ -4,122 +4,56 @@ date: 2026-09-09T12:55:00-04:00
 draft: false
 ---
 
-The Line 6 AMPLIFi TT is a capable guitar processor and audio interface trapped behind software I did not enjoy using. Its mobile editor depends on Bluetooth, the desktop updater is old, and Linux gets none of the tone-management experience. I wanted the TT to sit beside my Roland OCTA-CAPTURE and QUAD-CAPTURE as a useful part of my Linux audio setup: guitar in, predictable outputs, clean signal when requested, and complete tone control over USB.
+Reverse engineering and disassembly have intrigued me for a while. However, tools like Ghidra intimidated me, and I had no idea how to get started with them. That was about where I stayed until recently.
 
-I spent ten days reverse engineering it with Codex. The recorded agent effort was **59.9 active hours and 35,549,156 tokens**, from August 30 through September 9, 2026. I supplied the hardware, power cycles, listening tests, cables, photos, and course corrections. Codex disassembled firmware and applications, generated experiments, wrote the Rust tools, and repeatedly prompted me to put the unit into recovery mode or reboot it. This entry records what worked, what failed, and where the physical hardware set the final boundary.
+I have been having so much fun using LLM tools that I figured I would see if one could disassemble a simple program. I picked *Lords of the Realm*, a DOS game from the '90s that I enjoyed playing as a kid. The binary was small, so I figured it was a good place to start.
 
-The resulting source, documentation, tests, and curated evidence are public in [Jmainguy/line6-tt](https://github.com/Jmainguy/line6-tt). The repository intentionally excludes Line 6 firmware, installers, manuals, SD-card images, packet captures, and other proprietary or bulky inputs.
+It turns out GPT-5.6 Sol is pretty great at using Ghidra and disassembling things. It made significant progress figuring out how the game worked and found all sorts of cool information. I had burned a week's worth of tokens letting it work on that when I saw [Everything I own, owned](https://news.ycombinator.com/item?id=49413320) on Hacker News. It inspired me to dig the AMPLIFi TT out of my closet.
+
+![The front of my Line 6 AMPLIFi TT](https://immich.soh.re/api/assets/0e1c687a-3e6e-4aca-889a-f321137daa04/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+I originally bought the device using my company karma points at Red Hat. You could give away so many points per month, and the person receiving them could cash them in for things like this or gift cards. You got taxed as if the points converted 1:1 to USD, but you could not actually redeem them at that rate. Flawed, but still free money.
+
+The TT advertised the ability to match its guitar tone to songs, like some kind of magical AI. I could not figure out how that would work and was skeptical, but I had the karma points to spend and it looked interesting. I wanted a way to plug my guitar into the computer and get cool metal sounds without buying a whole pedalboard.
+
+I was sorely disappointed when I got it. The hardware looked and felt great. The software was hot garbage, even back in 2014 or 2015.
+
+Despite having USB, it did not let me operate the device from my computer. USB was basically there to use it as a glorified headphone amp and install firmware updates. To use the tones and presets, I had to connect a phone or tablet over Bluetooth, which worked poorly. The device would fail to pair, disconnect halfway through a session, and make browsing community tones a chore.
+
+![The rear of the AMPLIFi TT, with its amp, RCA, main, optical, USB, FBV, and power connections](https://immich.soh.re/api/assets/29f8ab0e-b849-4356-927a-7c941d2f4952/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+The magical AI turned out to be song metadata. It grabbed the artist and song title, then searched the Line 6 database for those tags. The tones sounded great, but the mobile app was horrendous. I got so fed up with it that I put the TT in my closet, where it stayed for the next decade.
+
+Now, a decade later, AI is actually a thing, and it can do disassembly and reverse engineering. With this in mind, and inspired by the Hacker News post, I plugged the TT in and began prompting GPT-5.6 Sol through Codex.
+
+It burned tons of credits, but OpenAI kept resetting them before it had to. I would burn through my week's tokens, wait a few hours, and OpenAI would give me more credits to keep burning. It is addicting, like gambling. [codex-reset.com](https://codex-reset.com/) is a fun site that tracks the resets and predicts when it thinks another one is coming.
+
+![My Codex usage down to 3% remaining](https://immich.soh.re/api/assets/ba1a6b29-9531-46ed-9e20-a2ffbed9d7dd/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+Over ten days, Codex recorded **59.9 active hours and 35,549,156 tokens**. I prompted it, and then it began prompting me: reboot the device, hold different buttons while it starts, move cables around, play guitar, listen for distortion, take pictures, and finally take the whole thing apart.
+
+![The AMPLIFi TT main board after I opened the case](https://immich.soh.re/api/assets/6fc8cbec-50b4-4567-a98c-167e775a7663/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+I found it quite amusing when Codex prompted me to get a hobby knife and begin scraping glue off the microSD card that Line 6 surely did not want me unplugging. I was scared at first, but after watching it get stuck trying to figure out how to flash the firmware it was writing, I was convinced.
+
+![The AMPLIFi TT microSD card still glued into its socket](https://immich.soh.re/api/assets/53041902-284a-4fdb-b809-e5d2d6298d88/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+It was actually quite easy to take the device apart and begin scraping. Once the glue was gone, the microSD card popped out with extremely minimal force, just like it was intended to.
+
+Companies ship the hardware, the firmware to run it, and the computer and mobile drivers used to talk to it. They have given you literally everything you need to understand the device. Now, with AI, you have the skills to use those resources and figure it out.
+
+![A close look at the AMPLIFi TT's SHARC DSP and flash](https://immich.soh.re/api/assets/72dd5f54-78fa-4f2d-9238-9328d1d81456/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
+
+You cannot violate their licenses or publish their software, but you can brick and customize your own devices to work the way you want them to, limited only by the physical hardware and your LLM token budget.
+
+## And it worked
+
+I can now plug the TT into my Linux computer over USB and control the thing without touching the old mobile app. I can browse all 100 tones stored on it, switch between them, and edit the amps, cabinets, microphones, effects, and their settings. I can make a change in the GUI and hear it on the TT while I am playing.
+
+I can back up the entire tone bank, import and export Line 6 presets, replace any of the 100 slots, and restore everything if I screw it up. The computer can hold as many tones as I want, so I am no longer limited to the 100 that fit on the box. I can also search Line 6's community tones and download them without fighting the mobile app.
+
+I can switch between the processed guitar sound and a properly clean signal, mute the guitar without muting audio from the computer, and control the outputs the hardware supports. I can also identify the installed firmware and recover or reflash the device over USB. I had to pull the microSD card to get there, but I do not have to keep pulling it every time I want to change something.
+
+The source, documentation, tests, and evidence I can redistribute are in [Jmainguy/line6-tt](https://github.com/Jmainguy/line6-tt). I am looking forward to improving the CLI and GUI and coming up with some cool tones now that the TT works the way I want it to. No longer do I need to throw away a device because the software is horrible. I can just write my own, suited to my needs.
 
 ![The Rust Line 6 TT control application showing the tone designer](https://immich.soh.re/api/assets/e0bd6064-1c56-42fe-b224-0accf3d595f6/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
-
-## What I wanted
-
-The minimum useful result was straightforward:
-
-- control the TT from Linux over USB instead of relying on its Bluetooth app;
-- select, inspect, edit, import, export, and replace tones;
-- reach the amp, cabinet, microphone, effect, and parameter catalog;
-- switch between colored and clean guitar paths, and mute guitar independently from computer playback;
-- understand and control the analog, S/PDIF, optical, headphone, and amp outputs where the existing hardware permits it;
-- recover or reflash the device without opening it again;
-- determine whether 96 kHz and 192 kHz operation could be added in firmware.
-
-I also wanted an honest answer. A menu item that says 192 kHz while the converters still run at 48 kHz would be worse than leaving the option out.
-
-## The first wrong path: make the official updater run
-
-The obvious beginning was the Windows updater under Wine. It first failed to create an OpenGL context. Once that was handled, it opened to an empty “Select device to update” screen. We tried USB access, the Windows driver, Wine shims, and the macOS updater. The TT still did not appear as an update target.
-
-This was useful mainly because it exposed a bad working pattern. I was repeatedly holding B and D, rebooting the TT, and reporting combinations of lit buttons while Codex changed one hypothesis at a time. Several probes left all four tone lights on or froze the unit with A and D lit. I finally told the agent to stop guessing: we already had the updater, drivers, and firmware, so it should disassemble them and learn the exact handshake.
-
-That correction changed the project. The official applications became protocol documentation. Static analysis recovered the updater command framing, transfer bounds, checksums, and state transitions without needing Wine to own the USB device.
-
-## The SD card opened the boot chain
-
-The TT contains a 4 GB microSD card held in its socket with black adhesive. I carefully removed it, attached it to the Linux machine, and made a complete image before allowing any writes. We mapped firmware images 0 through 9, their placement rules, and the relationships among the bootloader, the NXP controller, and the SHARC DSP. There was no mysterious image 10 waiting to solve the problem.
-
-The board also contains separate flash and several processors. Having the SD card was an important key, though it was never the whole kingdom. The main board includes an NXP LPC1820, an Analog Devices ADSP-21489 SHARC DSP, EtronTech memory, and converter hardware including Cirrus Logic CS4272 and CS4392 parts.
-
-![The AMPLIFi TT main board, including the microSD slot, NXP controller, SHARC DSP, and memory](https://immich.soh.re/api/assets/6fc8cbec-50b4-4567-a98c-167e775a7663/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
-
-Early custom images were intentionally tiny. We changed only pinned locations, retained rollback copies, checked hashes before writes, and treated every unexpected response as a stop condition. My suggestion was to make the first visible change as harmless as a version string. The difficult part was not inventing features. It was finding enough safe code space and a durable transport path without damaging normal audio behavior.
-
-We eventually built a bounded USB bridge and volatile diagnostic agents. Those let the host query state, exercise narrowly defined operations, and return to stock behavior. Once USB recovery and exact rollback worked, removing the card stopped being part of the normal development loop.
-
-## A breadcrumb trail made of jokes
-
-Disassembly uncovered three memorable framing values:
-
-- `0xFACEF00D`, which reads as “face food”;
-- `0xDEADBEEF`, the classic “dead beef” marker;
-- `0xD00FECAF`, the hexadecimal digits of `FACEF00D` written backwards.
-
-That last one is a character reversal, not a byte-order reversal. These values look like developer humor, although we have no testimony from the original developers about their intent. They were also genuinely useful landmarks. Matching them across the LPC and DSP images helped trace the internal transport path.
-
-![Close view of the SHARC DSP and adjacent flash on the AMPLIFi TT board](https://immich.soh.re/api/assets/72dd5f54-78fa-4f2d-9238-9328d1d81456/original?key=te_XqV_KVlnJ167prVYS86fw22xZkdwf_ny-FFpOPmhbHEdY8AEgLb2BAkLI3hZdMak)
-
-## Reusing the editor protocol over USB
-
-The breakthrough for useful control was recognizing that the product already had a rich editor protocol. Line 6 exposed it to the mobile application over Bluetooth, while its USB interface exposed a different set of services. We recovered the message router, editor handshake, symbol tables, object and property identifiers, fixed-width value types, preset records, and complete model catalog. The custom bridge carries those editor operations over USB.
-
-That work became a Rust CLI and desktop GUI. The application can read the live device version, show whether installed firmware is stock or custom, browse the 100 onboard slots by name, select a tone, back up the bank, import official `.l6p` presets, edit known typed properties, and deploy a replacement through a recovery journal. It also maintains an unlimited library on the computer, so the device’s 100-slot bank is a deployment limit rather than a library limit.
-
-The visual tone designer presents the recovered amp and cabinet catalog, microphones, effects, and parameter controls. Live audition sends bounded changes to the attached TT while the user works. Every persistent preset write first captures the complete bank and records enough information to restore it.
-
-We also reverse engineered Line 6’s cloud calls. Authentication, search, browsing, sorting, tone downloads, and the gap between API fields and friendly model names are documented. The API’s idea of “popular” produced implausibly small download counts in some responses, including a supposed leading result with only 133 downloads. The client therefore labels and sorts only the counts the service actually returns instead of presenting them as an unquestioned global ranking.
-
-## Proving the clean path with audio, not a button label
-
-I asked a fair question early in the project: how could we be sure “clean” was actually clean and not simply a less obvious Line 6 tone? We answered it with measurement.
-
-I connected the TT’s main left, main right, and amp output into input 8 on my Roland OCTA-CAPTURE. We used JACK and PipeWire routing, reference tones, channel-specific stimuli, and the existing Roland control tools. There were several very human moments in this loop. I moved cables while Codex watched the measurements, reported a static-filled connection, and let it correct the OCTA-CAPTURE route. I played guitar while it captured short windows and told it when the clean sound returned to distortion after a test.
-
-The accepted clean measurement showed a 0.124 dB passband span, THD+N of -57.85 dB, and at least 4.54 dB of headroom. Left and right channel probes remained correctly separated. We verified that guitar could be muted while YouTube audio continued, and that restore returned both paths to their original levels. Amp output and main-output behavior were tested separately rather than inferred from labels.
-
-The repository includes the small derived JSON reports for these results. Raw recordings and captures stay out of Git.
-
-## Recovery mattered as much as features
-
-The TT locked up many times during this work. A and D lit became our familiar sign that a candidate had failed before normal operation. B and D was the recovery posture I repeatedly supplied. Sometimes all four lights appeared after a command. Once A, B, and C were lit while Bluetooth behavior was under test.
-
-Those failures shaped the tooling. Risky actions require an explicit confirmation bound to the exact image hash. Transfers are bounded. Responses are length- and checksum-checked. Persistent changes use a journal. Restore is verified before the journal is removed. The tools distinguish stock reflash, custom reflash, volatile diagnostics, and preset writes, and explain the consequence of each operation.
-
-The public repository does not redistribute firmware. A user must provide their own lawfully obtained image, and the tools verify expected structure and hashes before using it.
-
-## Why 96 kHz and 192 kHz stopped here
-
-The final investigation focused only on 96 kHz and 192 kHz because those are the useful higher-rate targets supported by my Roland interfaces. On paper, the USB packet sizes, LPC buffers, SHARC SPORT cadence, and DSP memory can be described for both rates. We produced static manifests and a 96 kHz dry-run plan.
-
-The board evidence set the boundary. Its 24.576 MHz clock family and the sampled Cirrus converter control state point to hardware-strapped rate selection. The necessary converter mode changes are not exposed through a proven software-controlled GPIO, I2C, or SPI route on this board revision. Changing only USB descriptors and DSP cadence would create a device that reports one rate while parts of the physical audio chain operate at another.
-
-I decided we would not modify the hardware. Within that constraint, 96 kHz and 192 kHz are not honest firmware-only features. The application keeps them unavailable and explains why. The same evidence also limits arbitrary independent routing of every physical output. Existing route families can be controlled and characterized; the TT is not transformed into an OCTA-CAPTURE by software alone.
-
-## What is complete
-
-For the scope I accepted, the project is complete:
-
-- Linux USB tone selection and editing;
-- onboard bank backup, export, import, replacement, and recovery;
-- an unlimited host-side tone library;
-- official preset parsing and the recovered model catalog;
-- Line 6 cloud authentication, discovery, sorting, and downloads;
-- live tone audition in the Rust GUI;
-- clean, mute, level, and supported output controls;
-- measured analog and digital playback behavior;
-- stock and custom firmware identification;
-- guarded stock/custom flashing and recovery over USB;
-- documented firmware, boot-chain, memory, DSP, and hardware findings.
-
-The remaining exclusions are physical limits or optional lab work: 96/192 kHz without board modification, arbitrary per-jack routing beyond the implemented route families, and exhaustive external measurements of every RCA and optical combination.
-
-The Rust suite currently has 132 passing tests and passes formatting plus strict Clippy checks. The repository also contains a much larger Python research harness. Many of those tests intentionally depend on copyrighted firmware, manuals, generated binaries, or raw evidence that cannot be redistributed, so the public checkout does not pretend that entire historical harness is self-contained.
-
-## Working with an agent for ten days
-
-This project was not a one-prompt code generation exercise. Codex asked me to reboot and enter recovery mode many times. I reported lights, moved cables, listened to tones, played guitar, connected and disconnected Bluetooth, removed the glued SD card, and challenged conclusions that were not yet supported. I also interrupted paths that had become repetitive. “Disassemble the updater instead of guessing” was one of the most productive prompts in the whole effort.
-
-The agent was strongest when it could turn a concrete observation into a pinned test, then preserve that result in code and documentation. It was weakest when an ambiguous hardware state encouraged another speculative probe. The recovery journal, exact hash gates, evidence ledger, and phase audits came from learning that distinction the hard way.
-
-The final 35.5 million-token number is large. It includes disassembly, code generation, tests, repeated audits, tool output, GUI work, and long stretches of hardware-guided debugging. The useful artifact is the trail it left: a public implementation, explicit safety gates, measurements that can be checked, and a written boundary between features we proved and features the board cannot honestly provide through firmware alone.
-
-If you have an AMPLIFi TT and want to explore the work, start with the [project README](https://github.com/Jmainguy/line6-tt#readme) and the completion audit. Read the recovery warnings before attaching a device. This is experimental reverse-engineering software, and a failed flash can leave the unit needing recovery.
