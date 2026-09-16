@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#071629"/>
+  <rect x="42" y="42" width="1116" height="546" fill="none" stroke="#EDF8FC" stroke-width="6"/>
+  <rect x="42" y="42" width="1116" height="66" fill="#EDF8FC"/>
+  <text x="78" y="85" fill="#071629" font-family="DejaVu Sans Mono, monospace" font-size="23" font-weight="700" letter-spacing="4">JONATHAN MAINGUY / LOGBOOK</text>
+  <text x="78" y="205" fill="#9BDDEA" font-family="DejaVu Sans Mono, monospace" font-size="22" font-weight="700" letter-spacing="5">GO / MARKDOWN / GITOPS</text>
+  <text x="78" y="295" fill="#EDF8FC" font-family="DejaVu Sans, sans-serif" font-size="65" font-weight="900">REBUILDING</text>
+  <text x="78" y="369" fill="#EDF8FC" font-family="DejaVu Sans, sans-serif" font-size="65" font-weight="900">JMAINGUY.COM AS</text>
+  <text x="78" y="443" fill="#EDF8FC" font-family="DejaVu Sans, sans-serif" font-size="65" font-weight="900">ONE GO BINARY</text>
+  <rect x="78" y="484" width="690" height="8" fill="#007C83"/>
+  <text x="78" y="542" fill="#9BDDEA" font-family="DejaVu Sans Mono, monospace" font-size="25" font-weight="700">JMAINGUY.COM</text>
+  <image href="../brand-mark-dark.png" x="876" y="218" width="226" height="226"/>
+</svg>
