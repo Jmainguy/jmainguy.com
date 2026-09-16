@@ -13,17 +13,21 @@
   <meta property="og:type" content="{{if .Post}}article{{else}}website{{end}}">
   <meta property="og:url" content="https://jmainguy.com{{.Canonical}}">
   <meta property="og:site_name" content="Jonathan Mainguy">
-  {{if .Project}}<meta property="og:image" content="https://jmainguy.com{{.Project.Image}}">{{end}}
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://jmainguy.com{{if .Post}}{{if .Post.SocialImage}}{{.Post.SocialImage}}{{else}}/images/social/default.png{{end}}{{else if .Project}}{{.Project.Image}}{{else}}/images/social/default.png{{end}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{if .Post}}{{.Post.Title}}{{else}}{{.MetaTitle}}{{end}}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{.MetaTitle}}">
   <meta name="twitter:description" content="{{.Description}}">
+  <meta name="twitter:image" content="https://jmainguy.com{{if .Post}}{{if .Post.SocialImage}}{{.Post.SocialImage}}{{else}}/images/social/default.png{{end}}{{else if .Project}}{{.Project.Image}}{{else}}/images/social/default.png{{end}}">
   <link rel="canonical" href="https://jmainguy.com{{.Canonical}}">
   <link rel="alternate" type="application/rss+xml" title="Jonathan Mainguy" href="https://jmainguy.com/feed.xml">
   <link rel="icon" href="/images/favicon-mark.png?v=6" type="image/png" sizes="1024x1024">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/styles.css">
   <script>(()=>{const r=document.documentElement,t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))r.classList.add('dark')})()</script>
-  {{if .Post}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{.Post.Title}},"description":{{.Description}},"datePublished":"{{.Post.ISODate}}","dateModified":"{{.Post.ISODate}}","mainEntityOfPage":"https://jmainguy.com{{.Canonical}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"},"publisher":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else if .Project}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":{{.Project.Name}},"description":{{.Project.Summary}},"url":{{.Project.URL}},"image":"https://jmainguy.com{{.Project.Image}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else}}<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://jmainguy.com/#jonathan-mainguy","name":"Jonathan Mainguy","url":"https://jmainguy.com/","homeLocation":{"@type":"Place","name":"Garner, North Carolina"},"sameAs":["https://github.com/jmainguy","https://www.linkedin.com/in/jonathan-mainguy-76174a54/"]},{"@type":"WebSite","@id":"https://jmainguy.com/#website","url":"https://jmainguy.com/","name":"Jonathan Mainguy","inLanguage":"en-US","author":{"@id":"https://jmainguy.com/#jonathan-mainguy"}}]}</script>{{end}}
+  {{if .Post}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{.Post.Title}},"description":{{.Description}},"datePublished":"{{.Post.ISODate}}","dateModified":"{{.Post.ISODate}}","image":"https://jmainguy.com{{if .Post.SocialImage}}{{.Post.SocialImage}}{{else}}/images/social/default.png{{end}}","mainEntityOfPage":"https://jmainguy.com{{.Canonical}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"},"publisher":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else if .Project}}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":{{.Project.Name}},"description":{{.Project.Summary}},"url":{{.Project.URL}},"image":"https://jmainguy.com{{.Project.Image}}","author":{"@type":"Person","name":"Jonathan Mainguy","url":"https://jmainguy.com/"}}</script>{{else}}<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://jmainguy.com/#jonathan-mainguy","name":"Jonathan Mainguy","url":"https://jmainguy.com/","homeLocation":{"@type":"Place","name":"Garner, North Carolina"},"sameAs":["https://github.com/jmainguy","https://www.linkedin.com/in/jonathan-mainguy-76174a54/"]},{"@type":"WebSite","@id":"https://jmainguy.com/#website","url":"https://jmainguy.com/","name":"Jonathan Mainguy","inLanguage":"en-US","author":{"@id":"https://jmainguy.com/#jonathan-mainguy"}}]}</script>{{end}}
 </head>
 <body>
   <header class="site-header">

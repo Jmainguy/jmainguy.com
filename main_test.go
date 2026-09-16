@@ -36,10 +36,10 @@ func TestLoadPosts(t *testing.T) {
 func TestFrontMatterDates(t *testing.T) {
 	for _, value := range []string{"2026-08-31", "2026-08-31T12:30:00Z"} {
 		var meta frontMatter
-		if err := yaml.Unmarshal([]byte("title: Example\ndate: "+value+"\ncategories: [family, history]\ndraft: true\n"), &meta); err != nil {
+		if err := yaml.Unmarshal([]byte("title: Example\ndate: "+value+"\nimage: /images/social/example.png\ncategories: [family, history]\ndraft: true\n"), &meta); err != nil {
 			t.Fatal(err)
 		}
-		if meta.Date.Format("2006-01-02") != "2026-08-31" || meta.Title != "Example" || !meta.Draft || len(meta.Categories) != 2 {
+		if meta.Date.Format("2006-01-02") != "2026-08-31" || meta.Title != "Example" || meta.Image != "/images/social/example.png" || !meta.Draft || len(meta.Categories) != 2 {
 			t.Errorf("front matter decoded incorrectly: %+v", meta)
 		}
 	}

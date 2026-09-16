@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EDF4F8"/>
+  <rect x="42" y="42" width="1116" height="546" fill="none" stroke="#0B1F3A" stroke-width="6"/>
+  <rect x="42" y="42" width="1116" height="66" fill="#0B1F3A"/>
+  <text x="78" y="85" fill="#EDF4F8" font-family="DejaVu Sans Mono, monospace" font-size="23" font-weight="700" letter-spacing="4">JONATHAN MAINGUY / LOGBOOK</text>
+  <text x="78" y="226" fill="#007C83" font-family="DejaVu Sans Mono, monospace" font-size="22" font-weight="700" letter-spacing="5">FAITH / FAMILY / OPEN SOURCE</text>
+  <text x="78" y="330" fill="#0B1F3A" font-family="DejaVu Sans, sans-serif" font-size="78" font-weight="900">NOTES FROM THE</text>
+  <text x="78" y="415" fill="#0B1F3A" font-family="DejaVu Sans, sans-serif" font-size="78" font-weight="900">LOGBOOK</text>
+  <rect x="78" y="475" width="590" height="8" fill="#9BDDEA"/>
+  <text x="78" y="535" fill="#005EA8" font-family="DejaVu Sans Mono, monospace" font-size="25" font-weight="700">JMAINGUY.COM</text>
+  <image href="../brand-mark.png" x="800" y="160" width="290" height="290"/>
+</svg>

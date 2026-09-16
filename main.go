@@ -32,6 +32,7 @@ type frontMatter struct {
 	Date       date     `yaml:"date"`
 	Draft      bool     `yaml:"draft"`
 	URL        string   `yaml:"url"`
+	Image      string   `yaml:"image"`
 	Categories []string `yaml:"categories"`
 }
 
@@ -49,7 +50,7 @@ func (d *date) UnmarshalYAML(node *yaml.Node) error {
 
 type post struct {
 	Title, Slug, Excerpt, Search, ISODate, ShortDate, LongDate, RSSDate string
-	LegacyURL                                                           string
+	LegacyURL, SocialImage                                              string
 	Categories                                                          []string
 	HTML                                                                template.HTML
 }
@@ -242,7 +243,7 @@ func loadPosts() ([]*post, map[string]*post, error) {
 		if len(slug) > 11 && slug[4] == '-' && slug[7] == '-' && slug[10] == '-' {
 			slug = slug[11:]
 		}
-		p := &post{Title: meta.Title, Slug: slug, Excerpt: plain, HTML: template.HTML(rendered.String()), LegacyURL: meta.URL, Categories: meta.Categories, ISODate: meta.Date.Format("2006-01-02"), ShortDate: strings.ToUpper(meta.Date.Format("02 Jan 2006")), LongDate: meta.Date.Format("January 2, 2006"), RSSDate: meta.Date.Format(time.RFC1123Z)}
+		p := &post{Title: meta.Title, Slug: slug, Excerpt: plain, HTML: template.HTML(rendered.String()), LegacyURL: meta.URL, SocialImage: meta.Image, Categories: meta.Categories, ISODate: meta.Date.Format("2006-01-02"), ShortDate: strings.ToUpper(meta.Date.Format("02 Jan 2006")), LongDate: meta.Date.Format("January 2, 2006"), RSSDate: meta.Date.Format(time.RFC1123Z)}
 		p.Search = strings.ToLower(strings.Join([]string{p.Title, p.Excerpt, p.ISODate, strings.Join(p.Categories, " ")}, " "))
 		posts = append(posts, p)
 		if meta.URL != "" {
