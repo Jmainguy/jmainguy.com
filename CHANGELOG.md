@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/Jmainguy/jmainguy.com/compare/v1.2.0...v1.2.1) (2026-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/yuin/goldmark/v2 to v2.1.6 ([e155e0c](https://github.com/Jmainguy/jmainguy.com/commit/e155e0c74770007aaa3ee6602ab3069ee327c493))
+* **deps:** update module github.com/yuin/goldmark/v2 to v2.1.6 ([4732f23](https://github.com/Jmainguy/jmainguy.com/commit/4732f23d8ccaf2dff16bc753c0ddc8da8207710f))
+
 ## [1.2.0](https://github.com/Jmainguy/jmainguy.com/compare/v1.1.2...v1.2.0) (2026-09-16)
 
 
